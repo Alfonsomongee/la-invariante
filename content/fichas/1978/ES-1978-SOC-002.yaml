@@ -1,0 +1,71 @@
+id: ES-1978-SOC-002
+anuario: 1978
+categoria: SOC
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: Navarra
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Aval del Estado de 9.000 millones y seguro de cambio para la Autopista de Navarra (Ley 21/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 21/1978, de 8 de mayo (BOE del 9 de mayo), que autorizó un aval del
+  Tesoro Público hasta 9.000.000.000 de pesetas (54.091.089,39 euros) para préstamos exteriores de
+  la concesionaria de la Autopista de Navarra (artículo 1) y seguro de cambio asumido por el Estado
+  (artículo 4).
+descargo: >-
+  El aval estatal tenía carácter subsidiario respecto de la garantía de la Diputación Foral de
+  Navarra, devengaba una comisión anual del 2 por mil a favor del Tesoro (artículo 2) y el Estado
+  repercutiría a la Diputación Foral los resultados del riesgo de cambio al revertir la autopista
+  (artículo 4.2).
+cifras:
+  - concepto: Límite máximo del aval del Tesoro Público a créditos exteriores de la primera fase de la Autopista de Navarra (art. 1.2)
+    valor: 9000000000
+    moneda: ESP
+    anio_moneda: 1978
+    valor_eur_conversion: 54091089.39
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-12389
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 21/1978, de 8 de mayo, sobre concesión de aval del Estado a la construcción de la Autopista de Navarra (BOE núm. 110, de 9 de mayo de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-12389
+    sha256: b0062166ec5d372ab10689c7b879332032290cab22c386466d5b684578dc7b30
+    capturado: "2026-11-25"
+    pagina: 10922
+    fragmento: >-
+      Ley 21/1978, de 8 de mayo, sobre concesión de aval del Estado a la construcción de la
+      Autopista de Navarra [BOE núm. 110, 9 de mayo de 1978]. De conformidad con la Ley aprobada por
+      las Cortes, vengo en sancionar. Artículo 1. Se autoriza la concesión del aval del Estado, en
+      garantía de las operaciones de crédito exterior [...]. Dos. [...] no se rebase en ningún caso
+      la cifra de nueve mil millones de pesetas [9.000.000.000] [...]. Artículo 3. [...] aval del
+      Tesoro Público [...]. Artículo 4. Uno. El Estado facilitará a la sociedad o sociedades
+      concesionarias de la autopista de Navarra las divisas o monedas precisas para el pago de los
+      principales e intereses [...] al mismo tipo de cambio de compra vigente el día en que se
+      constituya el depósito [...] [seguro de cambio].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/05/09/pdfs/A10922-10922.pdf
+  archivo: /facsimiles/1978/ES-1978-SOC-002.png
+  alt: Facsímil del BOE núm. 110 (9 de mayo de 1978) con la Ley 21/1978 de aval a la Autopista de Navarra
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-12389 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-12389 (arts. 1–4, pág. 10922)"
+    - "https://www.boe.es/boe/dias/1978/05/09/pdfs/A10922-10922.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Liquidación final del coste acumulado del seguro de cambio de la concesionaria"
+  intento_de_refutacion: >-
+    Se verificó la existencia de contraprestación: la concesionaria paga una comisión anual del 2
+    por mil y una prima de seguro de cambio fijada por Consejo de Ministros (recogido en descargo),
+    pero el art. 4 traslada al Estado y finalmente a la Diputación Foral el riesgo de depreciación
+    cambiaria de la deuda exterior privada.

@@ -1,0 +1,69 @@
+id: ES-1978-DEC-001
+anuario: 1978
+categoria: DEC
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Detención prolongada, registros sin orden y escuchas gubernativas por decreto-ley (RDL 21/1978)
+resumen: >-
+  Mientras las Cortes tramitaban el proyecto de ley, el Gobierno de Adolfo Suárez aprobó el Real
+  Decreto-ley 21/1978 (BOE del 1 de julio), que permitió prolongar la detención gubernativa con
+  aceptación judicial tácita (artículo 2), habilitó registros con comunicación posterior al juez
+  (artículo 3) y facultó al Ministro del Interior a ordenar escuchas (artículos 4 y 7).
+descargo: >-
+  La exposición de motivos invocó el repunte de atentados armados y una moción aprobada por el Pleno
+  del Congreso el 28 de junio de 1978; fijó vigencia máxima de un año, deber de informar al juez
+  competente para confirmar o revocar las escuchas y obligación de rendir cuentas periódicas a las
+  Cortes (artículo 7.2).
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 21/1978, de 30 de junio, sobre medidas en relación con los delitos cometidos por grupos o bandas armados (BOE núm. 156, de 1 de julio de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-16969
+    sha256: 8a37bae11651c4069f613d8497a3742ff018582875c99bfeaff4a1851c50d5e1
+    capturado: "2026-11-25"
+    pagina: "15670-15671"
+    fragmento: >-
+      Real Decreto-ley 21/1978, de 30 de junio [BOE núm. 156, 1 de julio de 1978]. El Proyecto de
+      Ley antes citado se encuentra actualmente en tramitación en las Cortes [...]. Artículo segundo
+      [2]. [...] la detención gubernativa podrá prolongarse el tiempo necesario para los fines
+      investigadores [...], entendiéndose que acepta tácitamente la prórroga si dejare transcurrir
+      aquel plazo sin rechazarla. Artículo tercero [3]. [...] los delitos comprendidos en este Real
+      Decreto-ley se considerarán siempre como flagrantes. La autoridad gubernativa comunicará al
+      Juez competente el registro efectuado [...]. Artículo cuarto [4]. La autoridad gubernativa
+      podrá ordenar la observación postal, telegráfica y telefónica [...]. Artículo séptimo [7]. Uno.
+      Las facultades que en este Real Decreto-ley se atribuyen a la autoridad gubernativa se
+      ejercerán exclusivamente por el Ministro del Interior. [...] El Presidente del Gobierno,
+      Adolfo Suárez González.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/07/01/pdfs/A15670-15671.pdf
+  archivo: /facsimiles/1978/ES-1978-DEC-001.png
+  alt: Facsímil del BOE núm. 156 (1 de julio de 1978) con el Real Decreto-ley 21/1978
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-16969 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-16969 (arts. 2, 3, 4 y 7, págs. 15670-15671)"
+    - "https://www.boe.es/boe/dias/1978/07/01/pdfs/A15670-15671.pdf (facsímil PNG pág. 2, pág. BOE 15671)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la posterior Ley 56/1978 (BOE-A-1978-29845, 8-dic-1978), que sustituyó este RDL
+    acotando la prórroga a 7 días adicionales y fijando plazo judicial de 72 horas para confirmar o
+    revocar escuchas; el RDL 21/1978 ilustra el uso del decreto-ley sobre derechos procesales
+    mientras las Cortes estaban en pleno trámite legislativo.
