@@ -28,13 +28,21 @@ const { code, nombre, registros } = Astro.props;
   title={`${code} — ${nombre}`}
   description={`Registros publicados en la categoría ${code} (${nombre}) de La Invariante.`}
 >
-  <p class="mono muted" style="margin-bottom:0.4rem;">
-    <a href="/fichas/">← Todas las fichas</a> · Categoría {code}
-  </p>
-  <h1>{code} — {nombre} ({registros.length})</h1>
+  <nav class="breadcrumb" aria-label="Ruta de categoría">
+    <div class="breadcrumb-trail">
+      <a href="/fichas/" class="crumb">← Archivo</a>
+      <span>/</span>
+      <span class="mono">{code}</span>
+    </div>
+  </nav>
+
+  <section class="reading">
+    <span class="section-kicker">Categoría {code}</span>
+    <h1>{nombre} ({registros.length})</h1>
+  </section>
 
   {registros.length === 0 ? (
-    <div class="box box--notice reading">
+    <div class="box reading">
       Sin registros publicados todavía en la categoría <code>{code}</code>. Consulta el criterio mínimo
       de entrada en <a href="/metodologia/">Metodología</a>.
     </div>

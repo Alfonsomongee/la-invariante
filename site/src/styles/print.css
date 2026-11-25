@@ -21,6 +21,9 @@
   .site-footer,
   .no-print,
   .site-nav,
+  .subnav,
+  .breadcrumb,
+  .action-row,
   .filter-bar {
     display: none !important;
   }

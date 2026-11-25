@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArchiveSubnav from '../../components/ArchiveSubnav.astro';
 import RecordCard from '../../components/RecordCard.astro';
 import { getPromesas, type AnyRecord } from '../../lib/content.js';
 
@@ -15,15 +16,18 @@ const promesas: AnyRecord[] = getPromesas().map((p) => ({
   description="Comparativa documental entre compromisos literales fechados y normas o actos contrarios publicados en el BOE."
 >
   <section class="reading">
-    <h1>Promesas frente a BOE — Dijo / Firmó ({promesas.length})</h1>
-    <p>
+    <span class="section-kicker">Promesas frente a BOE</span>
+    <h1>Dijo / Firmó ({promesas.length})</h1>
+    <p class="lead">
       Cada entrada contrasta una cita literal fechada (programa electoral, Diario de Sesiones o
       documento oficial) con la norma o acto contrario publicado posteriormente en el BOE.
     </p>
   </section>
 
+  <ArchiveSubnav active="promesas" />
+
   {promesas.length === 0 ? (
-    <div class="box box--notice reading">
+    <div class="box reading">
       Sin fichas Dijo / Firmó publicadas todavía.
     </div>
   ) : (

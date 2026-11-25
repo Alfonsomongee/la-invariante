@@ -31,16 +31,20 @@ const canonicalUrl = `${siteBase}${currentPath}`;
 const ogUrl = ogImage.startsWith('http') ? ogImage : `${siteBase}${ogImage}`;
 const fechaConsulta = new Date().toISOString().slice(0, 10);
 
+const isArchiveSection =
+  currentPath.startsWith('/fichas/') ||
+  currentPath.startsWith('/promesas/') ||
+  currentPath.startsWith('/votaciones/') ||
+  currentPath.startsWith('/categorias/') ||
+  currentPath.startsWith('/partidos/') ||
+  currentPath.startsWith('/personas/');
+
 const navItems = [
-  { href: '/anuarios/', label: 'Anuarios' },
-  { href: '/fichas/', label: 'Fichas' },
-  { href: '/promesas/', label: 'Dijo / Firmó' },
-  { href: '/votaciones/', label: 'Votan juntos' },
-  { href: '/series/', label: 'Series' },
-  { href: '/contraprueba/', label: 'Contraprueba' },
-  { href: '/partidos/', label: 'Partidos' },
-  { href: '/metodologia/', label: 'Metodología' },
-  { href: '/buscar/', label: 'Buscar' },
+  { href: '/anuarios/', label: 'Anuarios', active: currentPath.startsWith('/anuarios/') },
+  { href: '/fichas/', label: 'Archivo', active: isArchiveSection },
+  { href: '/series/', label: 'Series', active: currentPath.startsWith('/series/') },
+  { href: '/contraprueba/', label: 'Contraprueba', active: currentPath.startsWith('/contraprueba/') },
+  { href: '/metodologia/', label: 'Metodología', active: currentPath.startsWith('/metodologia/') },
 ];
 ---
 
@@ -66,20 +70,27 @@ const navItems = [
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
-        <div class="masthead">
+      <div class="container header-inner">
+        <div class="brand-group">
           <a href="/" class="site-brand">La Invariante</a>
-          <span class="site-edition">Archivo documental · España 1977–hoy</span>
+          <span class="site-edition">1977–hoy</span>
         </div>
         <nav class="site-nav" aria-label="Navegación principal">
           {navItems.map((item) => (
             <a
               href={item.href}
-              aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
+              aria-current={item.active ? 'page' : undefined}
             >
               {item.label}
             </a>
           ))}
+          <a
+            href="/buscar/"
+            class="nav-search"
+            aria-current={currentPath.startsWith('/buscar/') ? 'page' : undefined}
+          >
+            Buscar
+          </a>
         </nav>
       </div>
     </header>
@@ -95,16 +106,17 @@ const navItems = [
 
     <footer class="site-footer">
       <div class="container footer-grid">
-        <div>
-          <strong>La Invariante</strong> — Archivo hemerográfico y documental (1977–hoy).
-          Sin adjetivos valorativos, sin colores de partido y con documento primario obligatorio.
+        <div class="footer-note">
+          <strong>La Invariante</strong> — Archivo documental de las instituciones españolas desde 1977.
+          Documento primario obligatorio, sin colores de partido ni adjetivos valorativos.
         </div>
         <div class="footer-links">
-          <a href="/metodologia/">Metodología</a>
-          <a href="/contraprueba/">Contraprueba</a>
-          <a href="/erratas/">Fe de erratas (CHANGELOG)</a>
-          <a href="/rectificacion/">Réplica y rectificación</a>
+          <a href="/promesas/">Dijo / Firmó</a>
+          <a href="/votaciones/">Votan juntos</a>
+          <a href="/partidos/">Partidos</a>
           <a href="/personas/">Cargos públicos</a>
+          <a href="/erratas/">Fe de erratas</a>
+          <a href="/rectificacion/">Rectificación</a>
         </div>
       </div>
     </footer>

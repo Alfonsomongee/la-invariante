@@ -12,29 +12,30 @@ const seriesList = getSeries();
   description="Indicadores históricos desagregados por gobierno desde 1977, con gráficas SVG generadas en compilación y sin colores de partido."
 >
   <section class="reading">
+    <span class="section-kicker">Indicadores históricos · 1977–hoy</span>
     <h1>Series cuantitativas por gobierno</h1>
-    <p>
+    <p class="lead">
       Cada indicador de <code>content/series/*.csv</code> se publica segmentado por gobierno con
       gráficas SVG generadas en compilación (cero JavaScript de cliente, sin colores de partido).
-      Cuando una serie cambia de forma relevante entre gobiernos, la web lo declara y la enlaza
-      en <a href="/contraprueba/">Contraprueba</a>.
+      Cuando una serie cambia de forma relevante entre gobiernos, la web lo declara y la enlaza en{' '}
+      <a href="/contraprueba/">Contraprueba</a>.
     </p>
   </section>
 
   {seriesList.map((s) => (
-    <section id={s.id} style="margin-top:2.5rem;" aria-labelledby={`heading-${s.id}`}>
-      <div class="record-meta" style="margin-bottom:0.35rem;">
+    <section id={s.id} class="section-block" aria-labelledby={`heading-${s.id}`}>
+      <div class="record-meta" style="margin-bottom:0.45rem;">
         <span>{s.categoria}</span>
         <span>·</span>
-        <span>Fuente: {s.fuente_institucional}</span>
+        <span>{s.fuente_institucional}</span>
         {s.variaPorGobierno && <StampBadge label="Varía por gobierno → Contraprueba" />}
       </div>
       <h2 id={`heading-${s.id}`} style="margin-top:0;">{s.titulo}</h2>
       <p class="reading">{s.descripcion}</p>
 
-      <div class:list={['box', s.variaPorGobierno ? 'box--stamp' : 'box--notice', 'reading']}>
+      <div class:list={['box', { 'box--stamp': s.variaPorGobierno }, 'reading']}>
         <strong>Lectura por gobierno:</strong> {s.notaVariacion}
-        <div class="muted" style="font-size:0.86rem; margin-top:0.35rem;">
+        <div class="muted" style="font-size:0.85rem; margin-top:0.35rem;">
           Criterio de falsabilidad: {s.criterio_variacion_gobierno}
         </div>
       </div>

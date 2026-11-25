@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArchiveSubnav from '../../components/ArchiveSubnav.astro';
 import RecordCard from '../../components/RecordCard.astro';
 import { getVotaciones, type AnyRecord } from '../../lib/content.js';
 
@@ -15,16 +16,19 @@ const votaciones: AnyRecord[] = getVotaciones().map((v) => ({
   description="Votaciones parlamentarias documentadas en Diario de Sesiones sobre arquitectura del sistema, reglas electorales, órganos de control y autoprotección."
 >
   <section class="reading">
+    <span class="section-kicker">Votaciones parlamentarias</span>
     <h1>Cuando todos votan juntos ({votaciones.length})</h1>
-    <p>
+    <p class="lead">
       Registro de votaciones en el Congreso, Senado y parlamentos autonómicos sobre reglas electorales,
-      elección de órganos de control, financiación de partidos y arquitectura institucional, acreditadas
-      mediante Diario de Sesiones.
+      órganos de control, financiación de partidos y arquitectura institucional, acreditadas mediante
+      Diario de Sesiones.
     </p>
   </section>
 
+  <ArchiveSubnav active="votaciones" />
+
   {votaciones.length === 0 ? (
-    <div class="box box--notice reading">Sin votaciones publicadas todavía.</div>
+    <div class="box reading">Sin votaciones publicadas todavía.</div>
   ) : (
     <ul class="record-list">
       {votaciones.map((v) => (

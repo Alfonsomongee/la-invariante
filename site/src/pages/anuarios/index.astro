@@ -11,6 +11,16 @@ const countByYear = new Map<number, number>();
 for (const r of records) {
   countByYear.set(r.anuario, (countByYear.get(r.anuario) ?? 0) + 1);
 }
+
+const decades = Array.from(
+  years.reduce((map, y) => {
+    const dec = Math.floor(y / 10) * 10;
+    const list = map.get(dec) ?? [];
+    list.push(y);
+    map.set(dec, list);
+    return map;
+  }, new Map<number, number[]>()),
+);
 ---
 
 <BaseLayout
@@ -18,30 +28,58 @@ for (const r of records) {
   description="Índice cronológico anual de La Invariante desde las elecciones de 1977 hasta la actualidad."
 >
   <section class="reading">
+    <span class="section-kicker">Índice cronológico</span>
     <h1>Anuarios (1977–{years[years.length - 1]})</h1>
-    <p>
-      Cada anuario reúne el contexto parlamentario y gubernamental del año, la declaración del efecto de
-      exposición, las fichas documentadas, la contraprueba anual y la tabla de descartes justificados.
+    <p class="lead">
+      Cada anuario reúne el contexto parlamentario y gubernamental del año, la nota de exposición,
+      los registros documentados, la contraprueba anual y la tabla de descartes justificados.
     </p>
   </section>
 
-  <div class="year-grid">
-    {years.map((y) => {
-      const anuario = anuarioByYear.get(y);
-      const count = countByYear.get(y) ?? 0;
-      const activo = Boolean(anuario) || count > 0;
-      return (
-        <a href={`/anuarios/${y}/`} class:list={['year-cell', { 'year-cell--active': activo }]}>
-          <span>{y}</span>
-          <small>
-            {anuario
-              ? `${count} reg. · ${anuario.gobiernos[0]?.partido ?? ''}`
-              : count > 0
-                ? `${count} reg.`
-                : 'Pendiente'}
-          </small>
-        </a>
-      );
-    })}
-  </div>
+  {anuarios.length > 0 && (
+    <section class="section-block" aria-labelledby="disponibles-heading" style="margin-top:2rem;">
+      <div class="section-header">
+        <h2 id="disponibles-heading">Disponibles ahora ({anuarios.length})</h2>
+      </div>
+      <div class="active-years">
+        {anuarios.map((a) => (
+          <a href={`/anuarios/${a.anio}/`} class="year-feature">
+            <span class="year-feature__year">{a.anio}</span>
+            <span class="year-feature__meta">
+              {countByYear.get(a.anio) ?? 0} registros · {a.gobiernos[0]?.partido ?? ''} →
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="section-block" aria-labelledby="decadas-heading">
+    <div class="section-header">
+      <h2 id="decadas-heading">Cronología por década</h2>
+    </div>
+    <div class="decade-list">
+      {decades.map(([dec, decYears]) => (
+        <div class="decade-row">
+          <div class="decade-label">{dec}s</div>
+          <div class="year-strip">
+            {decYears.map((y) => {
+              const anuario = anuarioByYear.get(y);
+              const count = countByYear.get(y) ?? 0;
+              const activo = Boolean(anuario) || count > 0;
+              return (
+                <a
+                  href={`/anuarios/${y}/`}
+                  class:list={['year-chip', { 'year-chip--active': activo }]}
+                >
+                  <span>{y}</span>
+                  {activo && <small>{count}</small>}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 </BaseLayout>

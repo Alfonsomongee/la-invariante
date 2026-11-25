@@ -38,19 +38,24 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
   noindex={noindex}
   ogImage={esRetirada ? '/og/default.png' : `/og/${ficha.id}.png`}
 >
-  <p class="mono muted" style="margin-bottom:0.5rem;">
-    <a href="/fichas/">← Fichas</a> · <a href={`/anuarios/${ficha.anuario}/`}>Anuario {ficha.anuario}</a> ·{' '}
-    <a href={`/categorias/${ficha.categoria.toLowerCase()}/`}>{cat.codigo} ({cat.nombre})</a>
-  </p>
+  <nav class="breadcrumb" aria-label="Ruta de la ficha">
+    <div class="breadcrumb-trail">
+      <a href="/fichas/" class="crumb">← Archivo</a>
+      <span>/</span>
+      <a href={`/anuarios/${ficha.anuario}/`} class="crumb">Anuario {ficha.anuario}</a>
+      <span>/</span>
+      <a href={`/categorias/${ficha.categoria.toLowerCase()}/`} class="crumb">{cat.nombre}</a>
+    </div>
+  </nav>
 
   {esRetirada ? (
     <article class="reading">
-      <div style="margin-bottom:0.75rem;">
+      <div style="margin-bottom:0.85rem;">
         <StampBadge label="Ficha retirada" />
       </div>
       <h1>{ficha.id}</h1>
       <div class="box box--stamp">
-        <p style="margin-bottom:0.4rem;">
+        <p style="margin-bottom:0.45rem;">
           <strong>Esta ficha ha sido retirada del archivo.</strong> Los identificadores nunca se reutilizan.
         </p>
         <p style="margin-bottom:0;">
@@ -61,8 +66,8 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
   ) : (
     <article class="doc-grid" data-pagefind-body>
       <div class="doc-main">
-        <header style="margin-bottom:1.25rem;">
-          <div class="record-meta" style="margin-bottom:0.65rem;">
+        <header style="margin-bottom:1.75rem;">
+          <div class="record-meta" style="margin-bottom:0.8rem;">
             <strong>{ficha.id}</strong>
             <span>·</span>
             <span>Anuario {ficha.anuario}</span>
@@ -76,13 +81,9 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
             )}
           </div>
 
-          <div style="margin-bottom:0.85rem;">
+          <div style="display:flex; flex-wrap:wrap; gap:0.45rem; margin-bottom:1rem;">
             <StampBadge label={estadoLabel} neutral={neutralStamp} />
-            {ficha.contraprueba && (
-              <span style="margin-left:0.5rem;">
-                <StampBadge label="Contraprueba" neutral />
-              </span>
-            )}
+            {ficha.contraprueba && <StampBadge label="Contraprueba" neutral />}
           </div>
 
           <h1>{ficha.titulo}</h1>
@@ -97,20 +98,20 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
         </header>
 
         <section aria-labelledby="resumen-heading">
-          <h2 id="resumen-heading">Resumen factual</h2>
-          <p>{ficha.resumen}</p>
+          <h2 id="resumen-heading" style="margin-top:0;">Resumen factual</h2>
+          <p class="prose-serif">{ficha.resumen}</p>
         </section>
 
         {ficha.contraprueba && ficha.contraprueba_motivo && (
-          <div class="box box--notice">
+          <div class="box">
             <strong>Por qué figura en Contraprueba:</strong> {ficha.contraprueba_motivo}
           </div>
         )}
 
         <section aria-labelledby="descargo-heading">
-          <h2 id="descargo-heading">Descargo y contexto de defensa</h2>
+          <h2 id="descargo-heading">Descargo y contexto</h2>
           {ficha.descargo ? (
-            <div class="box box--notice">
+            <div class="box">
               <p style="margin-bottom:0;">{ficha.descargo}</p>
             </div>
           ) : (
@@ -134,9 +135,9 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
                   <div class="mono">
                     <strong>{h.fecha}</strong> · {ESTADOS_PROCESALES[h.estado].etiqueta}
                   </div>
-                  {h.nota && <div>{h.nota}</div>}
-                  <div class="mono">
-                    <a href={h.documento} target="_blank" rel="noopener noreferrer">Documento acreditativo</a>
+                  {h.nota && <div style="margin-top:0.2rem;">{h.nota}</div>}
+                  <div class="source-links">
+                    <a href={h.documento} target="_blank" rel="noopener noreferrer">Documento acreditativo ↗</a>
                   </div>
                 </li>
               ))}
@@ -155,9 +156,9 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
             )}
             <figcaption>
               <strong>{ficha.imagen.tipo === 'facsimil' ? 'Facsímil documental' : 'Fotografía'}:</strong>{' '}
-              {ficha.imagen.alt ?? ficha.titulo}. Autoría/institución: {ficha.imagen.autor}. Licencia:{' '}
+              {ficha.imagen.alt ?? ficha.titulo}. Autoría: {ficha.imagen.autor}. Licencia:{' '}
               <span class="mono">{ficha.imagen.licencia}</span>.{' '}
-              <a href={ficha.imagen.origen} target="_blank" rel="noopener noreferrer">Origen</a>.
+              <a href={ficha.imagen.origen} target="_blank" rel="noopener noreferrer">Origen ↗</a>
             </figcaption>
           </figure>
         )}
@@ -191,8 +192,8 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
               </tbody>
             </table>
           </div>
-          <p class="mono no-print" style="margin-top:0.85rem;">
-            <a href={`/rectificacion/?ficha=${encodeURIComponent(ficha.id)}`}>
+          <p class="no-print" style="margin-top:1rem;">
+            <a href={`/rectificacion/?ficha=${encodeURIComponent(ficha.id)}`} class="inline-action">
               Solicitar réplica, descargo o rectificación para {ficha.id} →
             </a>
           </p>
@@ -200,7 +201,7 @@ const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicia
       </div>
 
       <aside class="doc-margin" aria-label="Fuentes y notas al margen">
-        <h3 style="margin-top:0;">Fuentes ({ficha.fuentes.length})</h3>
+        <h3>Fuentes ({ficha.fuentes.length})</h3>
         <MarginSources fuentes={ficha.fuentes} />
       </aside>
     </article>

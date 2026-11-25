@@ -7,11 +7,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Búsqueda estática mediante Pagefind sobre fichas, promesas y votaciones publicadas en La Invariante."
 >
   <section class="reading">
+    <span class="section-kicker">Búsqueda estática · Pagefind</span>
     <h1>Buscar en el archivo</h1>
-    <p>
-      El índice se genera estáticamente con <strong>Pagefind</strong> en compilación (ver ADR 0003).
-      Los nombres marcados con <code>cargo_publico: false</code> quedan excluidos del índice en
-      cumplimiento de la STC 58/2018.
+    <p class="lead">
+      Busca por número de BOE, año, norma, partido, categoría o cargo público. Los nombres marcados
+      con <code>cargo_publico: false</code> quedan excluidos del índice (STC 58/2018).
     </p>
   </section>
 

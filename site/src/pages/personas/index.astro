@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArchiveSubnav from '../../components/ArchiveSubnav.astro';
 import { getPersonasPublicas } from '../../lib/content.js';
 
 const personas = getPersonasPublicas();
@@ -10,17 +11,18 @@ const personas = getPersonasPublicas();
   description="Índice exclusivo de personas que ostentaron cargo público (STC 58/2018), restringido a hechos vinculados al ejercicio de su cargo."
 >
   <section class="reading">
+    <span class="section-kicker">Privacidad y STC 58/2018</span>
     <h1>Cargos públicos ({personas.length})</h1>
-    <p>
-      En cumplimiento de la doctrina del Tribunal Constitucional (<strong>STC 58/2018</strong>) y de
-      las reglas jurídicas del archivo, este índice incluye exclusivamente a personas que ostentaban
-      cargo público en el momento de los hechos (<code>cargo_publico: true</code>), y solo recoge actos
-      vinculados al ejercicio de dicho cargo.
+    <p class="lead">
+      Este índice incluye exclusivamente a personas que ostentaban cargo público en el momento de los
+      hechos (<code>cargo_publico: true</code>), y solo recoge actos vinculados al ejercicio de dicho cargo.
     </p>
   </section>
 
+  <ArchiveSubnav active="personas" />
+
   {personas.length === 0 ? (
-    <div class="box box--notice reading">Sin fichas de cargos públicos publicadas todavía.</div>
+    <div class="box reading">Sin fichas de cargos públicos publicadas todavía.</div>
   ) : (
     <div class="table-wrap">
       <table>

@@ -22,13 +22,19 @@ const { sigla, registros } = Astro.props;
   title={`Partido: ${sigla}`}
   description={`Registros documentales en los que figura ${sigla} en La Invariante.`}
 >
-  <p class="mono muted" style="margin-bottom:0.4rem;">
-    <a href="/partidos/">← Todos los partidos</a>
-  </p>
-  <h1>{sigla} ({registros.length})</h1>
-  <p class="reading muted">
-    Agrupación estrictamente analítica por siglas vigentes en la fecha de los hechos.
-  </p>
+  <nav class="breadcrumb" aria-label="Ruta de partido">
+    <div class="breadcrumb-trail">
+      <a href="/partidos/" class="crumb">← Todos los partidos</a>
+    </div>
+  </nav>
+
+  <section class="reading">
+    <span class="section-kicker">Siglas en el momento de los hechos</span>
+    <h1>{sigla} ({registros.length})</h1>
+    <p class="muted">
+      Agrupación estrictamente analítica por siglas vigentes en la fecha de los hechos.
+    </p>
+  </section>
 
   <ul class="record-list">
     {registros.map((r) => (
