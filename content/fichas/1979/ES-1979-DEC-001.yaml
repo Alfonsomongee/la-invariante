@@ -1,0 +1,70 @@
+id: ES-1979-DEC-001
+anuario: 1979
+categoria: DEC
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Tipos penales, prisión provisional y bloqueo de excarcelaciones por decreto-ley (RDL 3/1979)
+resumen: >-
+  Con las Cortes disueltas tras promulgarse la Constitución, el Gobierno de Adolfo Suárez dictó el
+  Real Decreto-ley 3/1979 (BOE del 1 de febrero), que castigó con prisión menor la apología en
+  prensa (artículo 1), amplió la prisión provisional incondicional (artículo 5), bloqueó
+  excarcelaciones si recurre el fiscal (artículo 6) y obligó a declarar alquileres a Interior
+  (artículo 8).
+descargo: >-
+  El preámbulo invocó el artículo 86 de la Constitución frente al terrorismo y la delincuencia,
+  presentó la norma como provisional hasta aprobar nuevos Código Penal y Ley de Enjuiciamiento
+  Criminal y derogó íntegramente el Decreto-ley 10/1975 del régimen anterior.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 3/1979, de 26 de enero, sobre protección de la seguridad ciudadana (BOE núm. 28, de 1 de febrero de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-3062
+    sha256: 975c6500e31a512971c96483357b00e7a1b5d00a860043d3d37d8dbaf7523152
+    capturado: "2026-11-25"
+    pagina: "2636-2637"
+    fragmento: >-
+      Real Decreto-ley 3/1979, de 26 de enero, sobre protección de la seguridad ciudadana [BOE
+      núm. 28, 1 de febrero de 1979]. [...] en uso de la facultad prevista en el artículo 86 de la
+      Constitución [...]. Artículo primero [1]. La apología pública, oral o escrita o por medio de
+      la imprenta [prensa] [...] será castigada con la pena de prisión menor. [...] Artículo quinto
+      [5]. El Juez de Instrucción o Central [...] podrá decretar la prisión provisional
+      incondicional, aunque el delito tenga señalada pena inferior a la de presidio o prisión
+      mayores. Artículo sexto [6]. [...] No se llevará a cabo la excarcelación de los presos o
+      detenidos cuya libertad se hubiese acordado, en tanto la resolución no sea firme, cuando el
+      recurrente fuese el Ministerio Fiscal [...]. Artículo octavo [8]. Todas las personas [...] que
+      vendan o arrienden viviendas o locales [alquileres] estarán obligadas a facilitar [...] datos
+      [...] en la forma que determine el Ministerio del Interior. [...] El Presidente del Gobierno,
+      Adolfo Suárez González.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/02/01/pdfs/A02636-02637.pdf
+  archivo: /facsimiles/1979/ES-1979-DEC-001.png
+  alt: Facsímil del BOE núm. 28 (1 de febrero de 1979, pág. 2636) con el Real Decreto-ley 3/1979 sobre protección de la seguridad ciudadana
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-3062 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-3062 (arts. 1–11, págs. 2636-2637)"
+    - "https://www.boe.es/boe/dias/1979/02/01/pdfs/A02636-02637.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la fecha de disolución de las Cortes (RD 3073/1978, BOE 1-ene-1979) y la derogación
+    del Decreto-ley 10/1975 en la disposición derogatoria (recogida en descargo); el RDL 3/1979
+    introdujo tipos penales de prisión menor y restricciones procesales de libertad mediante
+    decreto-ley a los 28 días de entrar en vigor el art. 86 de la Constitución.

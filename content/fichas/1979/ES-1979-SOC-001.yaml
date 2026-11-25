@@ -1,0 +1,89 @@
+id: ES-1979-SOC-001
+anuario: 1979
+categoria: SOC
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Subvenciones directas de 1.342 millones a empresas periodísticas privadas y papel prensa
+resumen: >-
+  Las Cortes aprobaron en 1979 dos créditos extraordinarios financiados con anticipos del Banco de
+  España para prensa privada: la Ley 10/1979 (BOE del 6 de octubre) destinó 900.000.000 de pesetas
+  (2 pesetas por ejemplar) resueltas por la Secretaría de Estado para la Información, y la Ley
+  65/1978 (BOE del 3 de enero) asignó 442.616.346 pesetas a papel prensa.
+descargo: >-
+  El artículo 1 de la Ley 10/1979 justificó la subvención extraordinaria y por una sola vez en
+  compensar la falta de ingresos durante el segundo semestre de 1978 al no incrementarse el precio
+  de la prensa diaria, y el artículo 2 dispuso anular cualquier sobrante no aplicado.
+cifras:
+  - concepto: Crédito extraordinario para subvención directa a empresas periodísticas privadas por difusión en el 2.º semestre de 1978 (Ley 10/1979, art. 2)
+    valor: 900000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 5409108.94
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23762
+  - concepto: Crédito extraordinario para subvencionar papel prensa de producción nacional del 2.º semestre de 1977 (Ley 65/1978, BOE 3-ene-1979)
+    valor: 442616346
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 2660177.82
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-91
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 10/1979, de 2 de octubre, de crédito extraordinario de 900.000.000 de pesetas para subvencionar a empresas periodísticas privadas (BOE núm. 240, de 6 de octubre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23762
+    sha256: 75d96ddbd029a97f28d711e8dd5116de1f524da694531335411722b7980e2cae
+    capturado: "2026-11-25"
+    pagina: "23278-23279"
+    fragmento: >-
+      Ley 10/1979, de 2 de octubre [BOE núm. 240, 6 de octubre de 1979]. Las Cortes Generales han
+      aprobado [...]. Artículo 1. Se concede una subvención, con carácter extraordinario y por una
+      sola vez, de dos [2] pesetas a las Empresas periodísticas privadas y a las Asociaciones de
+      Prensa [...] por ejemplar [...] vendida durante el segundo semestre de 1978 [...]. La
+      Secretaría de Estado para la Información será el Organo competente para resolver los
+      expedientes de concesión [...]. Artículo 2. [...] crédito extraordinario, por un importe
+      máximo de novecientos millones de pesetas [900.000.000] [...]. Artículo 3. La financiación
+      [...] se realizará con anticipos a facilitar por el Banco de España al Tesoro Público.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 65/1978, de 26 de diciembre, de concesión de un crédito extraordinario de 442.616.346 pesetas para subvencionar la adquisición de papel prensa (BOE núm. 3, de 3 de enero de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-91
+    sha256: 8176b8f5f4ec3a4b278a90d06076b4432ac9fe12bcf06d89cdd2d42f2e2f6723
+    capturado: "2026-11-25"
+    pagina: 79
+    fragmento: >-
+      Ley 65/1978, de 26 de diciembre [BOE núm. 3, 3 de enero de 1979]. Artículo 1. Se concede un
+      crédito extraordinario por importe de cuatrocientos cuarenta y dos millones seiscientas
+      dieciséis mil trescientas cuarenta y seis pesetas [442.616.346] [...] Para subvencionar la
+      adquisición de papel prensa de producción nacional. Artículo 2. La financiación [...] se
+      realizará con anticipos a facilitar por el Banco de España al Tesoro Público.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/10/06/pdfs/A23278-23279.pdf
+  archivo: /facsimiles/1979/ES-1979-SOC-001.png
+  alt: Facsímil del BOE núm. 240 (6 de octubre de 1979, pág. 23278) con la Ley 10/1979 de subvención a empresas periodísticas privadas
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Textos literales BOE-A-1979-23762 y BOE-A-1979-91 verificados
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23762 (págs. 23278-23279)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-91 (pág. 79)"
+    - "https://www.boe.es/boe/dias/1979/10/06/pdfs/A23278-23279.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Relación nominal de cantidades liquidadas por periódico por la Secretaría de Estado para la Información"
+  intento_de_refutacion: >-
+    Se verificó que la Ley 10/1979 vinculó la ayuda a la contención del precio de portada en el
+    segundo semestre de 1978 y ordenó anular sobrantes (recogido en descargo); no obstante, dejó en
+    manos de Presidencia del Gobierno la resolución de subvenciones directas a prensa privada
+    financiadas con anticipos del Banco de España.

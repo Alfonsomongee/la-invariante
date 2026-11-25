@@ -1,0 +1,68 @@
+id: ES-1979-CTL-001
+anuario: 1979
+categoria: CTL
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Designación política, prórroga en funciones y legitimación cerrada en la Ley del TC (LO 2/1979)
+resumen: >-
+  Las Cortes aprobaron la Ley Orgánica 2/1979 (BOE del 5 de octubre), que desarrolló el
+  nombramiento de magistrados del Tribunal Constitucional por Cámaras, Gobierno y CGPJ (artículo
+  16), fijó su prórroga indefinida hasta toma de posesión de sucesores (artículo 17.2), restringió
+  el recurso de inconstitucionalidad a cargos públicos (artículo 32) y creó el recurso previo
+  suspensivo (artículo 79).
+descargo: >-
+  La ley declaró la independencia del Tribunal Constitucional (artículo 1), fijó incompatibilidades
+  con cargos directivos de partidos (artículo 19) y habilitó en los artículos 41 a 58 el recurso de
+  amparo directo para que cualquier ciudadano defendiera derechos fundamentales vulnerados.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley Orgánica 2/1979, de 3 de octubre, del Tribunal Constitucional (BOE núm. 239, de 5 de octubre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23709
+    sha256: c38b81c0a8b507f9ef1fa8d6c929cf33262892b31bac734ca30d7a5349845e38
+    capturado: "2026-11-25"
+    pagina: "23186-23195"
+    fragmento: >-
+      Ley Orgánica 2/1979, de 3 de octubre, del Tribunal Constitucional [BOE núm. 239, 5 de octubre
+      de 1979]. Artículo dieciséis [16]. Uno. Los Magistrados del Tribunal Constitucional serán
+      nombrados por el Rey, a propuesta de las Cámaras, del Gobierno y del Consejo General del
+      Poder Judicial [CGPJ] [...]. Artículo diecisiete [17.2]. Dos. Los Magistrados del Tribunal
+      Constitucional continuarán en el ejercicio de sus funciones hasta que hayan tomado posesión
+      quienes hubieren de sucederles. [...] Artículo treinta y dos [32]. Uno. Están legitimados
+      para el ejercicio del recurso de inconstitucionalidad [...]: a) El Presidente del Gobierno.
+      b) El Defensor del Pueblo. c) Cincuenta Diputados. d) Cincuenta Senadores [y órganos
+      autonómicos]. [...] Artículo setenta y nueve [79]. Uno. Son susceptibles de recurso de
+      inconstitucionalidad, con carácter previo, los proyectos de Estatuto de Autonomía y de Leyes
+      orgánicas. [...] La interposición del recurso suspenderá automáticamente la tramitación [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/10/05/pdfs/A23186-23195.pdf
+  archivo: /facsimiles/1979/ES-1979-CTL-001.png
+  alt: Facsímil del BOE núm. 239 (5 de octubre de 1979, pág. 23188) con los artículos 17 a 26 de la Ley Orgánica 2/1979 del Tribunal Constitucional
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-23709 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23709 (arts. 1, 16, 17, 19, 25, 26, 32 y 79)"
+    - "https://www.boe.es/boe/dias/1979/10/05/pdfs/A23186-23195.pdf (facsímil PNG pág. 3, BOE pág. 23188)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación final de la LO 2/1979 (se atribuye a institucional/Cortes)"
+  intento_de_refutacion: >-
+    Se incorporaron en descargo las garantías de independencia (art. 1), incompatibilidades con
+    cargos directivos partidistas (art. 19) y la apertura del recurso de amparo individual (arts.
+    41-58); la ley consolidó el mecanismo de prórroga indefinida (art. 17.2), la exclusión de
+    legitimación ciudadana en el recurso de inconstitucionalidad (art. 32) y el recurso previo con
+    efecto suspensivo automático (art. 79).

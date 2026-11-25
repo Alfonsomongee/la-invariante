@@ -1,0 +1,67 @@
+id: ES-1979-CTL-003
+anuario: 1979
+categoria: CTL
+contraprueba: true
+contraprueba_motivo: >-
+  España ratificó el Convenio Europeo de Derechos Humanos y reconoció la jurisdicción obligatoria
+  del Tribunal Europeo de Derechos Humanos (artículo 46), sometiendo al Estado a control jurídico
+  externo en derechos fundamentales.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Ratificación del Convenio Europeo de Derechos Humanos y jurisdicción obligatoria del TEDH
+resumen: >-
+  España publicó el 10 de octubre de 1979 el Instrumento de Ratificación del Convenio Europeo de
+  Derechos Humanos de Roma (1950), vigente desde el 4 de octubre de 1979, y reconoció por tres años
+  desde el 15 de octubre la jurisdicción obligatoria del Tribunal Europeo de Derechos Humanos en
+  virtud del artículo 46.
+descargo: >-
+  España formuló reservas a los artículos 5 y 6 respecto del régimen disciplinario militar del
+  Código de Justicia Militar y al artículo 11 respecto de los artículos 28 y 127 de la
+  Constitución, interpretó el artículo 10 compatible con el régimen de radio y televisión y aplazó
+  la aceptación de demandas individuales del artículo 25 al desarrollo legislativo posterior.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Instrumento de Ratificación del Convenio para la Protección de los Derechos Humanos y de las Libertades Fundamentales, hecho en Roma el 4 de noviembre de 1950 (BOE núm. 243, de 10 de octubre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-24010
+    sha256: a07d7188cc2fdfd1d2f5e223a4126c90ba0e09ac82fa444956f99cee5cd9a7a2
+    capturado: "2026-11-25"
+    pagina: "23564-23570"
+    fragmento: >-
+      Instrumento de Ratificación del Convenio para la Protección de los Derechos Humanos y de las
+      Libertades Fundamentales [Convenio Europeo de Derechos Humanos], hecho en Roma el 4 de
+      noviembre de 1950 [BOE núm. 243, 10 de octubre de 1979]. [...] España declara, de conformidad
+      con las disposiciones del artículo 46, que reconoce, por un período de tres años a partir del
+      15 de octubre de 1979, como obligatoria de pleno derecho [...] la jurisdicción del Tribunal
+      Europeo de Derechos Humanos [...]. El presente Convenio entró en vigor [...] para España el
+      4 de octubre de 1979 [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/10/10/pdfs/A23564-23570.pdf
+  archivo: /facsimiles/1979/ES-1979-CTL-003.png
+  alt: Facsímil del BOE núm. 243 (10 de octubre de 1979, pág. 23564) con el Instrumento de Ratificación del Convenio Europeo de Derechos Humanos
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1979 para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-24010 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-24010 (págs. 23564-23570)"
+    - "https://www.boe.es/boe/dias/1979/10/10/pdfs/A23564-23570.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificaron las reservas militares (arts. 5 y 6), la reserva sobre radiodifusión (art. 10) y
+    el aplazamiento explícito del derecho de demanda individual del art. 25 (todos detallados en
+    descargo); pese a esas limitaciones iniciales, la entrada en vigor del Convenio y del art. 46
+    abrió el sometimiento jurisdiccional externo de España en Estrasburgo.

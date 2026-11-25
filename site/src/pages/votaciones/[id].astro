@@ -114,6 +114,24 @@ const sentidoLabel: Record<string, string> = {
           )}
         </section>
 
+        {votacion.imagen && (
+          <figure class="doc-figure">
+            {votacion.imagen.archivo && (
+              <img
+                src={votacion.imagen.archivo}
+                alt={votacion.imagen.alt ?? votacion.titulo}
+                loading="lazy"
+              />
+            )}
+            <figcaption>
+              <strong>{votacion.imagen.tipo === 'facsimil' ? 'Facsímil documental' : 'Fotografía'}:</strong>{' '}
+              {votacion.imagen.alt ?? votacion.titulo}. Autoría: {votacion.imagen.autor}. Licencia:{' '}
+              <span class="mono">{votacion.imagen.licencia}</span>.{' '}
+              <a href={votacion.imagen.origen} target="_blank" rel="noopener noreferrer">Origen ↗</a>
+            </figcaption>
+          </figure>
+        )}
+
         <div class="mobile-only">
           <details>
             <summary>Fuentes primarias ({votacion.fuentes.length})</summary>

@@ -1,0 +1,141 @@
+id: ES-1979-VOT-001
+anuario: 1979
+categoria: VOT
+partidos:
+  - UCD
+  - CD
+  - PSA-PA
+  - PAR
+  - UPN
+  - PSOE
+  - PCE
+  - PNV
+  - CiU
+  - UN
+  - EE
+  - ERC
+  - UPC
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Candidato a la Presidencia del Gobierno
+    cargo_publico: true
+  - nombre: Landelino Lavilla Alsina
+    cargo_en_el_momento: Presidente interino del Congreso de los Diputados
+    cargo_publico: true
+titulo: Primera investidura constitucional votada sin debate previo en el Congreso (30 de marzo de 1979)
+resumen: >-
+  El 30 de marzo de 1979, el Presidente interino Landelino Lavilla impidió debatir antes de votar
+  la investidura de Adolfo Suárez pese a las cuestiones de orden de PSOE, PCE, CD y otros grupos;
+  Suárez obtuvo 183 votos a favor (UCD, CD, PSA-PA, PAR y UPN), 149 en contra y 8 abstenciones
+  (CiU) sobre 340 emitidos.
+sesion:
+  fecha: "1979-03-30"
+  legislatura: I Legislatura
+  camara: congreso
+  numero_sesion: "Pleno núm. 3 (Sesión de Investidura)"
+  asunto: Otorgamiento de confianza al candidato a la Presidencia del Gobierno (artículo 99 CE)
+  norma_resultante: Real Decreto 681/1979, de 31 de marzo, por el que se nombra Presidente del Gobierno a don Adolfo Suárez González
+resultado:
+  a_favor: 183
+  en_contra: 149
+  abstenciones: 8
+  total_emitidos: 340
+grupos:
+  - grupo: Unión de Centro Democrático
+    partido: UCD
+    sentido: a_favor
+  - grupo: Coalición Democrática
+    partido: CD
+    sentido: a_favor
+  - grupo: Partido Socialista de Andalucía
+    partido: PSA-PA
+    sentido: a_favor
+  - grupo: Mixto (Partido Aragonés Regionalista — Gómez de las Roces)
+    partido: PAR
+    sentido: a_favor
+  - grupo: Mixto (Unión del Pueblo Navarro — Aizpún)
+    partido: UPN
+    sentido: a_favor
+  - grupo: Socialistas del Congreso / Cataluña / Euskadi
+    partido: PSOE
+    sentido: en_contra
+  - grupo: Comunista (PCE / PSUC)
+    partido: PCE
+    sentido: en_contra
+  - grupo: Minoría del Partido Nacionalista Vasco
+    partido: PNV
+    sentido: en_contra
+  - grupo: Minoría Catalana (Convergència i Unió)
+    partido: CiU
+    sentido: abstencion
+  - grupo: Mixto (Unión Nacional — Blas Piñar)
+    partido: UN
+    sentido: en_contra
+  - grupo: Mixto (Euskadiko Ezkerra — Bandrés)
+    partido: EE
+    sentido: en_contra
+  - grupo: Mixto (Esquerra Republicana — Barrera)
+    partido: ERC
+    sentido: en_contra
+  - grupo: Mixto (Unión del Pueblo Canario — Sagaseta)
+    partido: UPC
+    sentido: en_contra
+descargo: >-
+  La Presidencia invocó el artículo 23 del Reglamento provisional de 1977 (anterior a la
+  Constitución) para dictar la resolución del 29 de marzo sobre el desarrollo de la sesión y
+  habilitó un turno de intervenciones de todas las formaciones políticas a partir de las 17:10 de
+  la tarde, una vez proclamada la investidura. En el recuento inicial (pág. 62) se anunciaron 184
+  síes y 7 abstenciones, rectificados a 183 y 8 tras advertirlo Miquel Roca (CiU).
+fuentes:
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados, I Legislatura, Pleno núm. 3, Sesión de Investidura de 30 de marzo de 1979
+    url: https://www.congreso.es/public_oficiales/L1/CONG/DS/PL/PL_003.PDF
+    sha256: b06949ce58e4e1abcdd3403bbd9fd67198caa3d48d12713ae03a110bc2e662de
+    capturado: "2026-11-25"
+    pagina: "31-33, 57-62"
+    fragmento: >-
+      Sesión Plenaria de Investidura celebrada el viernes, 30 de marzo de 1979. Presidencia
+      interina del Excmo. Sr. D. Landelino Lavilla Alsina. [...] el señor González Márquez (PSOE)
+      plantea una cuestión de orden [...]. A continuación el señor Carrillo Solares (PCE) [...].
+      Seguidamente el señor Fraga Iribarne (CD) [...]. Contestación del señor Presidente interino
+      en el sentido de que no ha lugar a admitir las cuestiones de orden planteadas [...].
+      Terminado el discurso del señor Suárez González [...], se procede seguidamente a la votación
+      [UCD, CD, PSA-PA, PAR, UPN a favor; CiU abstención]. [...] Revisados los cómputos, el
+      resultado es el siguiente: 183 síes, 149 noes, ocho [8] abstenciones y 10 ausencias [votos
+      emitidos, 340]. En consecuencia, el Congreso de los Diputados [...] otorga su confianza al
+      candidato don Adolfo Suárez González.
+  - tipo: boe
+    subtipo: resolucion_administrativa
+    titulo_documento: Real Decreto 681/1979, de 31 de marzo, por el que se nombra Presidente del Gobierno a don Adolfo Suárez González (BOE núm. 79, de 2 de abril de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-9031
+    sha256: 7f9608d4c86c7545c43d3b98a76303f077f1efde98b3b8b339a0372292c1f574
+    capturado: "2026-11-25"
+    pagina: 7838
+    fragmento: >-
+      Real Decreto 681/1979, de 31 de marzo, por el que se nombra Presidente del Gobierno a don
+      Adolfo Suárez González [BOE núm. 79, 2 de abril de 1979].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Cortes Generales — Diario de Sesiones del Congreso de los Diputados
+  origen: https://www.congreso.es/public_oficiales/L1/CONG/DS/PL/PL_003.PDF
+  archivo: /facsimiles/1979/ES-1979-VOT-001.png
+  alt: Página 62 del Diario de Sesiones del Congreso (30 de marzo de 1979) con la rectificación del recuento de investidura y el turno posterior de intervenciones
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de registro de votación nominal para revisión humana con facsímil PNG oficial
+    motivo: Verificación directa de PL_003.PDF (págs. 31-33 y 57-62) y BOE-A-1979-9031
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.congreso.es/public_oficiales/L1/CONG/DS/PL/PL_003.PDF (págs. 31-62)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-9031 (pág. 7838)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificaron uno a uno los nombres de los 183 síes, 149 noes (148 listados más Silva
+    Cienfuegos incorporado en pág. 61), 8 abstenciones (los 8 diputados de CiU) y 10 ausencias
+    (entre ellas los 3 electos de HB). La justificación reglamentaria de Lavilla y el turno
+    vespertino posterior constan íntegramente en descargo.
