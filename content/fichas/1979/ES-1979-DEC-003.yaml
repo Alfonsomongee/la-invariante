@@ -1,0 +1,77 @@
+id: ES-1979-DEC-003
+anuario: 1979
+categoria: DEC
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Emisión anticipada de 70.000 millones de Deuda y 80.000 del ICO por decreto-ley (RDL 9/1979)
+resumen: >-
+  Pese a citar la reserva de ley del artículo 135.1 de la Constitución para emitir deuda, el
+  Gobierno de Adolfo Suárez aprobó el Real Decreto-ley 9/1979 (BOE del 22 de mayo), anticipando
+  antes de aprobarse los Presupuestos de 1979 la autorización de 70.000.000.000 de pesetas en Deuda
+  Interior y 80.000.000.000 de pesetas para el Instituto de Crédito Oficial.
+descargo: >-
+  El artículo 2 limitó la utilización efectiva al 60 por 100 de dichas cuantías hasta la entrada en
+  vigor de la Ley de Presupuestos Generales del Estado de 1979 (aprobada en julio) y computó las
+  emisiones anticipadas dentro de los topes definitivos aprobados por las Cortes.
+cifras:
+  - concepto: Autorización anticipada de emisión de Deuda Interior (50.000M iniciales + 20.000M de ampliación, RDL 9/1979, art. 1)
+    valor: 70000000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 420708473.07
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12953
+  - concepto: Autorización anticipada de operaciones de crédito del Instituto de Crédito Oficial (60.000M + 20.000M, RDL 9/1979, art. 1)
+    valor: 80000000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 480809683.51
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12953
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 9/1979, de 18 de mayo, por el que se anticipa la aplicación de determinados preceptos del Proyecto de Ley de Presupuestos de 1979 relativos a Deuda Pública (BOE núm. 122, de 22 de mayo de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12953
+    sha256: 30f713b1833d03ca96e51199d68c9b3715f3d44f99356c0821cebf0d7d787167
+    capturado: "2026-11-25"
+    pagina: "11291-11292"
+    fragmento: >-
+      Real Decreto-ley 9/1979, de 18 de mayo [BOE núm. 122, 22 de mayo de 1979]. El artículo 135.1
+      de la Constitución Española dispone que el Gobierno habrá de estar autorizado por Ley para
+      emitir Deuda Pública [...]. El Proyecto de Ley de Presupuestos [...] actualmente en las
+      Cortes [...] autoriza la emisión de Deuda Interior [...] por un importe de setenta mil
+      millones de pesetas [70.000.000.000] [...] y fija dichos recursos [del Instituto de Crédito
+      Oficial] en ochenta mil millones de pesetas [80.000.000.000]. Artículo primero. Se anticipa
+      [...] la aplicación de los siguientes preceptos [...]. El Presidente del Gobierno, Adolfo
+      Suárez González.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/05/22/pdfs/A11291-11292.pdf
+  archivo: /facsimiles/1979/ES-1979-DEC-003.png
+  alt: Facsímil del BOE núm. 122 (22 de mayo de 1979, pág. 11292) con la parte dispositiva del Real Decreto-ley 9/1979 sobre Deuda Pública
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-12953 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12953 (págs. 11291-11292)"
+    - "https://www.boe.es/boe/dias/1979/05/22/pdfs/A11291-11292.pdf (facsímil PNG pág. 2)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la limitación temporal al 60 % del art. 2 y su posterior integración en la Ley
+    1/1979 de Presupuestos (recogido en descargo); el RDL 9/1979 ilustra la utilización del
+    decreto-ley para anticipar autorizaciones presupuestarias de emisión de deuda pública mientras
+    las Cortes debatían la Ley de Presupuestos.

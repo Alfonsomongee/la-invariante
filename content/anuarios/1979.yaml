@@ -1,0 +1,175 @@
+anio: 1979
+legislatura: I Legislatura (1979–1982)
+moneda_curso: ESP
+gobiernos:
+  - presidente: Adolfo Suárez González
+    partido: UCD
+    tipo_mayoria: minoria_apoyo_parlamentario
+    desde: "1977-07-05"
+    hasta: "1979-04-06"
+  - presidente: Adolfo Suárez González
+    partido: UCD
+    tipo_mayoria: minoria_apoyo_parlamentario
+    desde: "1979-04-06"
+    hasta: "1981-02-26"
+composicion_congreso:
+  - partido: UCD
+    escanos: 168
+  - partido: PSOE
+    escanos: 121
+  - partido: PCE
+    escanos: 23
+  - partido: CD
+    escanos: 9
+  - partido: CiU
+    escanos: 8
+  - partido: PNV
+    escanos: 7
+  - partido: PSA-PA
+    escanos: 5
+  - partido: HB
+    escanos: 3
+  - partido: UN
+    escanos: 1
+  - partido: EE
+    escanos: 1
+  - partido: ERC
+    escanos: 1
+  - partido: PAR
+    escanos: 1
+  - partido: UPC
+    escanos: 1
+  - partido: UPN
+    escanos: 1
+gobiernos_autonomicos:
+  - comunidad: Cataluña (Generalidad provisional)
+    presidente: Josep Tarradellas i Joan
+    partido: institucional
+  - comunidad: País Vasco (Consejo General Vasco)
+    presidente: Carlos Garaikoetxea Urriza
+    partido: PNV
+contexto_resumen: >-
+  Primer ejercicio completo bajo la Constitución de 1978. Tras las elecciones generales del 1 de
+  marzo (UCD 168 escaños, PSOE 121, PCE 23), Adolfo Suárez fue investido el 30 de marzo por 183
+  votos a favor sin debate parlamentario previo, y el 3 de abril se celebraron las primeras
+  elecciones municipales democráticas. El Ejecutivo dictó 19 reales decretos-ley (7 Suárez II y 12
+  Suárez III) y las Cortes aprobaron 4 leyes orgánicas (Penitenciaria, Tribunal Constitucional y
+  Estatutos del País Vasco y Cataluña) y 42 leyes ordinarias, además de ratificar el Convenio
+  Europeo de Derechos Humanos y los Acuerdos con la Santa Sede de 3 de enero de 1979.
+nota_exposicion: >-
+  Durante todo 1979 gobernó UCD (Suárez II hasta abril y Suárez III después) en minoría con apoyos
+  puntuales. Los 19 reales decretos-ley, los 16 reales decretos de aval estatal en divisas a
+  concesionarias privadas de autopistas y la resolución de investidura sin debate corresponden a la
+  acción del Ejecutivo y la mayoría parlamentaria de UCD; las leyes de créditos extraordinarios,
+  leyes orgánicas y ratificaciones de tratados sin votación nominal publicada en esta entrega se
+  atribuyen al marco institucional de las Cortes Generales.
+hitos:
+  - fecha: "1979-01-03"
+    descripcion: Publicación de la Ley 68/1978 (1.727 millones para acciones de Trasmediterránea) y la Ley 65/1978 (442 millones en papel prensa).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-94
+  - fecha: "1979-02-01"
+    descripcion: Real Decreto-ley 3/1979 de seguridad ciudadana aprobado con Cortes disueltas (delitos de apología y prisión provisional).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-3062
+  - fecha: "1979-03-30"
+    descripcion: Primera investidura constitucional en el Congreso sin debate previo (Adolfo Suárez, 183 a favor, 149 en contra, 8 abstenciones).
+    fuente_url: https://www.congreso.es/public_oficiales/L1/CONG/DS/PL/PL_003.PDF
+  - fecha: "1979-05-14"
+    descripcion: Reales Decretos 1117/1979 y 1118/1979 de garantías solidarias del Estado en dólares y francos suizos para concesionarias de autopistas.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12441
+  - fecha: "1979-05-22"
+    descripcion: Real Decreto-ley 9/1979 anticipando 70.000 millones de Deuda Pública y 80.000 millones del ICO antes de aprobarse los PGE.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12953
+  - fecha: "1979-10-05"
+    descripcion: Publicación de la Ley Orgánica 1/1979 General Penitenciaria y la Ley Orgánica 2/1979 del Tribunal Constitucional.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23709
+  - fecha: "1979-10-06"
+    descripcion: Publicación simultánea de las Leyes 10/1979 (900M a prensa privada), 12/1979 (1.651M a partidos) y 14/1979 (3.458M electorales).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23764
+  - fecha: "1979-10-10"
+    descripcion: Ratificación en el BOE del Convenio Europeo de Derechos Humanos y jurisdicción obligatoria del TEDH (artículo 46).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-24010
+  - fecha: "1979-12-03"
+    descripcion: Real Decreto-ley 19/1979 que modifica la Audiencia Nacional y prorroga un año la Ley 56/1978 antiterrorista.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-28526
+  - fecha: "1979-12-15"
+    descripcion: Publicación de los cuatro Acuerdos entre el Estado español y la Santa Sede firmados el 3 de enero de 1979.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29490
+  - fecha: "1979-12-22"
+    descripcion: Publicación de los Estatutos de Autonomía del País Vasco (LO 3/1979) y Cataluña (LO 4/1979), tras referéndum el 25 de octubre.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-30177
+descartes:
+  - pista: Incendio del Hotel Corona de Aragón (Zaragoza, 12 de julio de 1979)
+    motivo_descarte: >-
+      Falta localizar y descargar con sha256 las sentencias firmes del Tribunal Supremo (contencioso-
+      administrativo y penal) y el Diario de Sesiones del Congreso con las explicaciones oficiales
+      sobre las causas del incendio.
+    requisito_entrada: >-
+      Descarga directa de la sentencia del Tribunal Supremo (CENDOJ) o del Diario de Sesiones de la
+      I Legislatura relativo al siniestro.
+  - pista: Crisis bancaria de 1979 y saneamientos de Corporación Bancaria S.A.
+    motivo_descarte: >-
+      Pendiente de descarga directa de la Memoria Anual 1979 del Banco de España o de las actas de
+      la Comisión parlamentaria con cifras oficiales de pérdidas asumidas por entidad intervenida.
+    requisito_entrada: >-
+      Informe oficial del Banco de España o del Tribunal de Cuentas con el detalle contable por
+      banco en 1979.
+  - pista: Clasificación de 167 indultos individuales publicados en el BOE durante 1979
+    motivo_descarte: >-
+      Se contabilizaron 167 reales decretos de indulto en los 313 boletines de 1979, pero los XML
+      históricos del BOE carecen del cuerpo textual del delito (solo imagen PDF).
+    requisito_entrada: >-
+      Revisión u OCR de los 167 PDF del BOE de 1979 para separar delitos de corrupción según la
+      tipología del CGPJ.
+cobertura:
+  notas: >-
+    Cobertura de 1979 en 7 categorías (FIN, SOC, SOB, DEC, CTL, LMD y VOT), inaugurando SOB en el
+    archivo, con 13 facsímiles PNG oficiales verificados del BOE y del Congreso, 2 contrapruebas y
+    recuento íntegro de los 19 reales decretos-ley (7 Suárez II y 12 Suárez III) en 365 días de BOE.
+  huecos:
+    - "COR, PRM, GRA, PGI, LEN, CRI y DET sin fichas en esta primera entrega de 1979."
+    - "indultos_corrupcion.csv pendiente para 1979 hasta clasificar los 167 PDF de indultos."
+    - "paro_epa.csv y deuda_publica_pib.csv pendientes de descarga directa de tablas homogéneas de INE y Banco de España."
+  documentos_manuales:
+    - "Sentencia del Tribunal Supremo sobre el incendio del Hotel Corona de Aragón (CENDOJ)"
+    - "Memoria Anual 1979 del Banco de España (crisis bancaria y Corporación Bancaria)"
+    - "Diarios de Sesiones de la votación de los Acuerdos con la Santa Sede y la Ley Orgánica 2/1979"
+fuentes:
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados, I Legislatura, Pleno núm. 3 (30 de marzo de 1979, sesión de investidura)
+    url: https://www.congreso.es/public_oficiales/L1/CONG/DS/PL/PL_003.PDF
+    sha256: b06949ce58e4e1abcdd3403bbd9fd67198caa3d48d12713ae03a110bc2e662de
+    capturado: "2026-11-25"
+    pagina: "31-62"
+    fragmento: >-
+      Sesión Plenaria de Investidura celebrada el viernes, 30 de marzo de 1979. [...] Revisados los
+      cómputos, el resultado es el siguiente: 183 síes, 149 noes, ocho abstenciones y 10 ausencias.
+      En consecuencia, el Congreso de los Diputados, por el voto de la mayoría absoluta de sus
+      miembros, otorga su confianza al candidato don Adolfo Suárez González.
+  - tipo: boe
+    subtipo: resolucion_administrativa
+    titulo_documento: Acuerdos de la Junta Electoral Central sobre los referéndums de Estatutos del País Vasco y Cataluña (BOE núm. 269, de 9 de noviembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-26725
+    sha256: 2108f10f76787d7d4be5d46847f8878611e821c95752f0bc7bd93bc4afbb9847
+    capturado: "2026-11-25"
+    pagina: 26027
+    fragmento: >-
+      Resumen de la votación en el Referéndum del Proyecto de Estatuto de Autonomía para el País
+      Vasco: Electores 1.565.541; Votantes 921.436; Votos en pro 831.839; Votos en contra 47.529;
+      Papeletas en blanco 31.419; Papeletas nulas 10.649.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 1/1979, de 19 de julio, de Presupuestos Generales del Estado para el ejercicio de 1979 (BOE núm. 173, de 20 de julio de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-17464
+    sha256: 4d779d19dfeabde553df603c0d60a28f7262efb602fb194a4ddf13c4c6813352
+    capturado: "2026-11-25"
+    pagina: "16865-16907"
+    fragmento: >-
+      Ley 1/1979, de 19 de julio, de Presupuestos Generales del Estado para el ejercicio económico
+      de mil novecientos setenta y nueve [...]: gastos por importe de un billón setecientos cuarenta
+      y siete mil quinientos millones de pesetas [...] ingresos por un total de un billón
+      seiscientos ochenta mil millones de pesetas.
+estado_anuario: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Borrador inicial de Anuario 1979 pasado a revisión humana
+    motivo: Escaneo completo de 313 BOE de 1979 y verificación de documentos primarios en BOE y Congreso

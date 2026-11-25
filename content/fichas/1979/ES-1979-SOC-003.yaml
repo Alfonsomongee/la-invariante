@@ -1,0 +1,67 @@
+id: ES-1979-SOC-003
+anuario: 1979
+categoria: SOC
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Crédito extraordinario de 1.727 millones para adquirir acciones de Compañía Trasmediterránea
+resumen: >-
+  Las Cortes aprobaron la Ley 68/1978, de 26 de diciembre (BOE del 3 de enero de 1979), que
+  concedió un crédito extraordinario de 1.727.333.423 pesetas (10.381.482,96 euros) a la Dirección
+  General del Patrimonio del Estado para adquirir acciones de la privada «Compañía Trasmediterránea,
+  S. A.», financiado mediante anticipos del Banco de España.
+descargo: >-
+  La operación se articuló como adquisición de activos financieros (capítulo 8 del Presupuesto) por
+  la Dirección General del Patrimonio del Estado, pasando la naviera al sector público empresarial
+  en el marco de las líneas marítimas de interés nacional.
+cifras:
+  - concepto: Crédito extraordinario para adquisición de acciones de Compañía Trasmediterránea S. A. (Ley 68/1978, BOE 3-ene-1979)
+    valor: 1727333423
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 10381482.96
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-94
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 68/1978, de 26 de diciembre, de concesión de un crédito extraordinario hasta 1.727.333.423 pesetas para la adquisición de acciones de la «Compañía Trasmediterránea» (BOE núm. 3, de 3 de enero de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-94
+    sha256: c6a9689000d8d2ed48eeef0376ec4f9ecf93c08fb7734914f9c377661b3f9eab
+    capturado: "2026-11-25"
+    pagina: 79
+    fragmento: >-
+      Ley 68/1978, de 26 de diciembre [BOE núm. 3, 3 de enero de 1979]. De conformidad con la Ley
+      aprobada por las Cortes, vengo en sancionar. Artículo 1. Se concede un crédito extraordinario
+      de mil setecientos veintisiete millones trescientas treinta y tres mil cuatrocientas
+      veintitrés pesetas [1.727.333.423] [...] Dirección General del Patrimonio del Estado [...]
+      Para la adquisición de acciones de la "Compañía Trasmediterránea, Sociedad Anónima" [S. A.].
+      Artículo 2. Los recursos que financiarán el crédito extraordinario procederán de anticipos a
+      facilitar por el Banco de España al Tesoro Público.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/01/03/pdfs/A00079-00079.pdf
+  archivo: /facsimiles/1979/ES-1979-SOC-003.png
+  alt: Facsímil del BOE núm. 3 (3 de enero de 1979, pág. 79) con la Ley 68/1978 de adquisición de acciones de Compañía Trasmediterránea
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-94 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-94 (pág. 79)"
+    - "https://www.boe.es/boe/dias/1979/01/03/pdfs/A00079-00079.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Informe de valoración patrimonial previa de las acciones adquiridas a los accionistas privados"
+  intento_de_refutacion: >-
+    Se verificó la naturaleza contable (capítulo 8, variación de activos financieros, recogida en
+    descargo); la ley no incluye tasación ni auditoría pública previa y monetiza la compra con
+    anticipos del Banco de España.

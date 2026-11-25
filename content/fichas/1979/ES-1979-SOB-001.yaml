@@ -1,0 +1,98 @@
+id: ES-1979-SOB-001
+anuario: 1979
+categoria: SOB
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Marcelino Oreja Aguirre
+    cargo_en_el_momento: Ministro de Asuntos Exteriores
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Acuerdos con la Santa Sede de 3 de enero de 1979 con rango de tratado internacional
+resumen: >-
+  Firmados cinco días después de entrar en vigor la Constitución y ratificados como tratados
+  internacionales (BOE del 15 de diciembre de 1979), los Acuerdos con la Santa Sede obligaron al
+  Estado a dotación presupuestaria y asignación tributaria (artículo II), exenciones permanentes de
+  Contribución Territorial Urbana y renta (artículo IV) y religión católica en escuelas públicas.
+descargo: >-
+  Los acuerdos sustituyeron el Concordato de 1953, declararon en el artículo II.5 el propósito de
+  la Iglesia Católica de lograr autofinanciación, excluyeron de la exención fiscal las
+  explotaciones económicas y ganancias de capital (artículo IV.1.B) y declararon voluntaria la
+  asignatura de religión para el alumnado.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Instrumento de Ratificación del Acuerdo entre el Estado español y la Santa Sede sobre asuntos económicos, firmado en Ciudad del Vaticano el 3 de enero de 1979 (BOE núm. 300, de 15 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29490
+    sha256: 9fa456bc3061b31fc785d5071602eb02f6f69cab21e42a9309258c5c820b7b73
+    capturado: "2026-11-25"
+    pagina: "28782-28783"
+    fragmento: >-
+      Acuerdo entre el Estado español y la Santa Sede sobre asuntos económicos, firmado en Ciudad
+      del Vaticano el 3 de enero de 1979 [BOE núm. 300, 15 de diciembre de 1979]. [...] Artículo II.
+      2. [...] el Estado podrá asignar a la Iglesia Católica un porcentaje del rendimiento de la
+      imposición sobre la renta [...] [asignación tributaria]. 4. En tanto no se aplique el nuevo
+      sistema, el Estado consignará en sus Presupuestos Generales la adecuada dotación [...].
+      Artículo IV. 1. [...] A) Exención total y permanente de la Contribución Territorial Urbana
+      [...]. B) Exención total y permanente de los impuestos reales o de producto, sobre la renta y
+      sobre el patrimonio. [...] Artículo VI. La Santa Sede y el Gobierno español procederán de
+      común acuerdo [...]. El Ministro de Asuntos Exteriores, Marcelino Oreja Aguirre.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Instrumento de Ratificación del Acuerdo entre el Estado español y la Santa Sede sobre Enseñanza y Asuntos Culturales, firmado el 3 de enero de 1979 (BOE núm. 300, de 15 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29491
+    sha256: 62a2db6e78621ca8844a22419a7c0d621bd2dc219d1aea37e61e48da0ae747c4
+    capturado: "2026-11-25"
+    pagina: "28784-28785"
+    fragmento: >-
+      Acuerdo entre el Estado español y la Santa Sede sobre Enseñanza y Asuntos Culturales [3 de
+      enero de 1979]. Artículo II. Los planes educativos [...] incluirán la enseñanza de la
+      religión católica en todos los Centros de educación [escuelas públicas], en condiciones
+      equiparables a las demás disciplinas fundamentales. [...] Artículo III. [...] designadas por
+      la autoridad académica entre aquellas que el Ordinario diocesano proponga [...]. Marcelino
+      Oreja Aguirre.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Instrumento de Ratificación del Acuerdo entre el Estado español y la Santa Sede sobre asuntos jurídicos, firmado el 3 de enero de 1979 (BOE núm. 300, de 15 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29489
+    sha256: 21b49a15724ee14363140e099e1845e1cfb811a76b223e01faf04a2b57587f42
+    capturado: "2026-11-25"
+    pagina: "28781-28782"
+    fragmento: >-
+      Acuerdo entre el Estado español y la Santa Sede sobre asuntos jurídicos [3 de enero de 1979].
+      Artículo I. 5) Los lugares de culto tienen garantizada su inviolabilidad [...]. 6) El Estado
+      respeta y protege la inviolabilidad de los archivos, registros y demás documentos [...].
+      Artículo VI. 1) El Estado reconoce los efectos civiles al matrimonio celebrado según las
+      normas del Derecho Canónico.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/12/15/pdfs/A28782-28783.pdf
+  archivo: /facsimiles/1979/ES-1979-SOB-001.png
+  alt: Facsímil del BOE núm. 300 (15 de diciembre de 1979, pág. 28783) con el Acuerdo sobre Asuntos Económicos entre España y la Santa Sede
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Textos literales BOE-A-1979-29490, 29491 y 29489 verificados
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29490 (Asuntos Económicos)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29491 (Enseñanza)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-29489 (Asuntos Jurídicos)"
+    - "https://www.boe.es/boe/dias/1979/12/15/pdfs/A28782-28783.pdf (facsímil PNG pág. 2)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación parlamentaria de autorización en septiembre de 1979"
+  intento_de_refutacion: >-
+    Se verificó la naturaleza bilateral del tratado (art. VI) y sus límites internos (exclusión de
+    explotaciones económicas en art. IV.1.B, carácter voluntario de la asignatura y objetivo de
+    autofinanciación en art. II.5, todos recogidos en descargo); al suscribirse como tratado
+    internacional cinco días tras entrar en vigor la Constitución, quedó sustraído a la reforma
+    unilateral por ley ordinaria de las Cortes.

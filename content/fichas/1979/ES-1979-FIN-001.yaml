@@ -1,0 +1,88 @@
+id: ES-1979-FIN-001
+anuario: 1979
+categoria: FIN
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Créditos extraordinarios de 5.109 millones a partidos financiados por el Banco de España
+resumen: >-
+  Las Cortes aprobaron las Leyes 12/1979 y 14/1979 (BOE del 6 de octubre de 1979), que concedieron
+  en un mismo boletín 1.651.585.520 pesetas para gastos ordinarios de partidos de 1978 y
+  3.458.000.000 de pesetas para subvenciones electorales generales y locales, financiados ambos
+  con anticipos del Banco de España al Tesoro Público.
+descargo: >-
+  Ambas leyes ejecutaron los pagos previstos legalmente en el Real Decreto-ley 20/1977 de normas
+  electorales, la Ley 39/1978 de elecciones locales y el artículo 6 de la Ley 54/1978 de Partidos
+  Políticos, al carecer de dotación específica en los Presupuestos vigentes.
+cifras:
+  - concepto: Crédito extraordinario para subvenciones ordinarias a partidos políticos correspondientes a 1978 (Ley 12/1979, art. 1)
+    valor: 1651585520
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 9926228.89
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23764
+  - concepto: Crédito extraordinario para subvenciones electorales generales y locales (Ley 14/1979, art. 1)
+    valor: 3458000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 20782998.57
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23766
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 12/1979, de 2 de octubre, de crédito extraordinario de 1.651.585.520 pesetas para subvenciones a partidos políticos (BOE núm. 240, de 6 de octubre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23764
+    sha256: 6c6f3a6f80293c3993b2588a66bfe0901b6db737511eaadacf51e6be603608ba
+    capturado: "2026-11-25"
+    pagina: 23279
+    fragmento: >-
+      Ley 12/1979, de 2 de octubre [BOE núm. 240, 6 de octubre de 1979]. Las Cortes Generales han
+      aprobado [...]. Artículo 1. Se concede un crédito extraordinario por importe de mil
+      seiscientos cincuenta y un millones quinientas ochenta y cinco mil quinientas veinte pesetas
+      [1.651.585.520] [...] Para abono de las subvenciones previstas en el artículo sexto de la Ley
+      54/1978 [...] correspondiente al año 1978. Artículo 2. El importe [...] se cubrirá con
+      anticipos a facilitar al Tesoro por el Banco de España.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 14/1979, de 2 de octubre, sobre concesión de un crédito extraordinario de 3.458.000.000 de pesetas para satisfacer las subvenciones previstas en el Real Decreto 20/1977 y en la Ley 39/1978 (BOE núm. 240, de 6 de octubre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23766
+    sha256: dc769230be07b5aa714033addea19476448b0ce7f669bdae75985e4bc4c5512e
+    capturado: "2026-11-25"
+    pagina: "23279-23280"
+    fragmento: >-
+      Ley 14/1979, de 2 de octubre [BOE núm. 240, 6 de octubre de 1979]. Artículo 1. Se concede un
+      crédito extraordinario por importe de tres mil cuatrocientos cincuenta y ocho millones de
+      pesetas [3.458.000.000] [...] A Instituciones sin fines de lucro [...] Para satisfacer las
+      subvenciones previstas en el Real Decreto ley 20/1977, de Elecciones Generales, y en la Ley
+      39/1978, de Elecciones Locales. Artículo 2. El importe [...] se financiará con anticipos a
+      facilitar por el Banco de España al Tesoro Público.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/10/06/pdfs/A23279-23279.pdf
+  archivo: /facsimiles/1979/ES-1979-FIN-001.png
+  alt: Facsímil del BOE núm. 240 (6 de octubre de 1979, pág. 23279) con las Leyes 12/1979 y 14/1979 de créditos a partidos políticos
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Textos literales BOE-A-1979-23764 y BOE-A-1979-23766 verificados
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23764 (pág. 23279)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-23766 (págs. 23279-23280)"
+    - "https://www.boe.es/boe/dias/1979/10/06/pdfs/A23279-23279.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la Comisión de Presupuestos (20 de julio de 1979) con competencia legislativa plena"
+  intento_de_refutacion: >-
+    Se verificó la naturaleza de ambos créditos extraordinarios: cumplen obligaciones fijadas en
+    leyes previas (recogido en descargo), pero evidencian la monetización mediante anticipos del
+    Banco de España de 5.109.585.520 pesetas en subvenciones directas a partidos en el primer año
+    constitucional.

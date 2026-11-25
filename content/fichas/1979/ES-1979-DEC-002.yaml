@@ -1,0 +1,66 @@
+id: ES-1979-DEC-002
+anuario: 1979
+categoria: DEC
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Reforma de la Audiencia Nacional y prórroga antiterrorista por decreto-ley (RDL 19/1979)
+resumen: >-
+  Estando ya en las Cortes el Proyecto de Ley Orgánica del Poder Judicial, el Gobierno de Adolfo
+  Suárez aprobó el Real Decreto-ley 19/1979 (BOE del 3 de diciembre), que reformó la competencia
+  penal de la Audiencia Nacional incluyendo delitos en medios de comunicación y escándalo público
+  (artículo 1) y prorrogó un año la Ley 56/1978 antiterrorista (artículo 2).
+descargo: >-
+  El preámbulo invocó la extraordinaria y urgente necesidad de evitar que expirase el plazo anual
+  de la Ley 56/1978 antes de aprobarse la Ley de Seguridad Ciudadana, y el artículo 3 dispuso el
+  cese automático de ambas medidas al entrar en vigor la futura Ley Orgánica del Poder Judicial y
+  la ley del artículo 55.2 de la Constitución.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 19/1979, de 23 de noviembre, por el que se modifica el RDL 1/1977 de la Audiencia Nacional y se prorroga la Ley 56/1978 (BOE núm. 289, de 3 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-28526
+    sha256: 3c8184e88ea1b3e14d8a7268ac03e973993d7e66ff5f65ebe870fef98f236bac
+    capturado: "2026-11-25"
+    pagina: "27820-27821"
+    fragmento: >-
+      Real Decreto-ley 19/1979, de 23 de noviembre [BOE núm. 289, 3 de diciembre de 1979]. Aunque la
+      competencia de la Audiencia Nacional es objeto de especial consideración en el Proyecto de
+      Ley Orgánica del Poder Judicial remitido a las Cortes Generales [...]. Artículo primero [1].
+      Los apartados a) y c) del párrafo uno del artículo cuarto del Real Decreto-ley 1/1977 [...]
+      cuando se cometan utilizando medios de comunicación social [...] así como los de escándalo
+      público [...]. Artículo segundo [2]. Se prorroga durante un año la vigencia de la Ley
+      56/1978, de 4 de diciembre, de medidas especiales en relación con los delitos de terrorismo
+      [...]. El Presidente del Gobierno, Adolfo Suárez González.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/12/03/pdfs/A27820-27821.pdf
+  archivo: /facsimiles/1979/ES-1979-DEC-002.png
+  alt: Facsímil del BOE núm. 289 (3 de diciembre de 1979, pág. 27820) con el Real Decreto-ley 19/1979 sobre la Audiencia Nacional
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1979-28526 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-28526 (arts. 1–3, págs. 27820-27821)"
+    - "https://www.boe.es/boe/dias/1979/12/03/pdfs/A27820-27821.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se incorporó en descargo la cláusula de vigencia transitoria del art. 3 y la justificación de
+    urgencia del preámbulo; el decreto-ley modificó competencias de un tribunal penal y prorrogó
+    facultades gubernativas sobre derechos fundamentales (art. 55.2 CE) pese a hallarse la LOPJ en
+    trámite parlamentario.

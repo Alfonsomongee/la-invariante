@@ -1,0 +1,126 @@
+id: ES-1979-SOC-002
+anuario: 1979
+categoria: SOC
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Jaime García Añoveros
+    cargo_en_el_momento: Ministro de Hacienda
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Avales solidarios del Estado en divisas para autopistas privadas y tope de 65.000 millones
+resumen: >-
+  La Ley 1/1979 de Presupuestos fijó un tope de 65.000.000.000 de pesetas en avales estatales a
+  crédito exterior excluyendo refinanciaciones (artículo 20), y el Gobierno autorizó durante 1979
+  garantías solidarias en divisas a concesionarias privadas de autopistas como Mare Nostrum
+  (3.138.000.000 pesetas), Autopistas de Navarra (1.534.500.000 pesetas) y Autopistas del Atlántico.
+descargo: >-
+  Los Reales Decretos 1117/1979 y 1118/1979 condicionaron las garantías a cancelar deuda exterior
+  previamente avalada para no superar el límite de cada concesión y a la existencia de margen
+  presupuestario; el RD 1993/1979 mantuvo el carácter subsidiario respecto de la Diputación Foral
+  de Navarra aunque renunció al beneficio de excusión.
+cifras:
+  - concepto: Límite anual de avales del Estado a operaciones de crédito exterior en 1979, excluidas refinanciaciones (Ley 1/1979, art. 20.1)
+    valor: 65000000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 390657867.85
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-17464
+  - concepto: Contravalor máximo de la garantía solidaria del Estado a bonos en francos suizos de Autopistas del Mare Nostrum S. A. (RD 1118/1979)
+    valor: 3138000000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 18859759.84
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12441
+  - concepto: Contravalor máximo de la garantía del Estado a pagarés en francos suizos de Autopistas de Navarra S. A. (RD 1993/1979)
+    valor: 1534500000
+    moneda: ESP
+    anio_moneda: 1979
+    valor_eur_conversion: 9222530.74
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-20444
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 1/1979, de 19 de julio, de Presupuestos Generales del Estado para 1979 (BOE núm. 173, de 20 de julio de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-17464
+    sha256: 4d779d19dfeabde553df603c0d60a28f7262efb602fb194a4ddf13c4c6813352
+    capturado: "2026-11-25"
+    pagina: 16870
+    fragmento: >-
+      Ley 1/1979, de 19 de julio, de Presupuestos Generales del Estado [...]. Artículo veinte [20].
+      Uno. El importe total de los avales a prestar por el Estado durante el ejercicio de 1979, por
+      razón de operaciones de crédito exterior de cualquier naturaleza, no podrá exceder de sesenta
+      y cinco mil millones de pesetas [65.000.000.000]. No se imputará al citado límite el importe
+      de los avales que se presten con motivo de la refinanciación o sustitución de operaciones de
+      crédito que impliquen cancelación de avales anteriormente concedidos.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto 1118/1979, de 4 de mayo, de garantía del Estado a bonos de 80.000.000 francos suizos de Autopistas del Mare Nostrum S. A. (BOE núm. 115, de 14 de mayo de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12441
+    sha256: c28f7fc26f83e7c4425caa6c124bee596867878b6186fd83bb4518065f1d170e
+    capturado: "2026-11-25"
+    pagina: 10832
+    fragmento: >-
+      Real Decreto 1118/1979, de 4 de mayo [BOE núm. 115, 14 de mayo de 1979]. Artículo 1. Se
+      autoriza la garantía solidaria del Estado sobre todas las obligaciones patrimoniales
+      derivadas de la operación financiera que proyecta concertar «Autopistas del Mare Nostrum,
+      S. A.» [...] emisión pública de bonos por un importe máximo de ochenta millones de francos
+      suizos, sin que la cifra definitiva pueda exceder del contravalor de tres mil ciento treinta
+      y ocho millones de pesetas [3.138.000.000]. [...] El Ministro de Hacienda, Jaime García
+      Añoveros.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto 1993/1979, de 20 de julio, de garantía del Estado a préstamo de 40.000.000 francos suizos de Autopistas de Navarra S. A. (BOE núm. 200, de 21 de agosto de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-20444
+    sha256: 1f69cdfc18a5b386c58b528c423d5e397db150358d78248ce9b24e728fde2a61
+    capturado: "2026-11-25"
+    pagina: 19566
+    fragmento: >-
+      Real Decreto 1993/1979, de 20 de julio [BOE núm. 200, 21 de agosto de 1979]. Artículo 1. Se
+      autoriza la garantía del Estado [...] «Autopistas de Navarra, Sociedad Anónima» [...] cuarenta
+      millones de francos suizos, sin que la cifra definitiva [...] pueda producir un contravalor
+      superior a mil quinientos treinta y cuatro millones quinientas mil pesetas [1.534.500.000]
+      [...]. El Estado renuncia al beneficio de excusión. [...] Jaime García Añoveros.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto 1117/1979, de 4 de mayo, de garantía del Estado sobre el 60 % de un préstamo de 70.000.000 dólares USA a Autopistas del Atlántico S. A. (BOE núm. 115, de 14 de mayo de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12440
+    sha256: 824ab824c8d850fdbbf6028257f4120f55c294fc2244f90d98fe732416cd4b5f
+    capturado: "2026-11-25"
+    pagina: "10831-10832"
+    fragmento: >-
+      Real Decreto 1117/1979, de 4 de mayo. Artículo 1. Se autoriza la garantía solidaria del Estado
+      sobre el sesenta por ciento de todas las obligaciones patrimoniales derivadas del préstamo que
+      «Autopistas del Atlántico, Concesionaria Española, S. A.» proyecta concertar [...] por importe
+      máximo de setenta millones de dólares USA [...]. Jaime García Añoveros.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/05/14/pdfs/A10832-10832.pdf
+  archivo: /facsimiles/1979/ES-1979-SOC-002.png
+  alt: Facsímil del BOE núm. 115 (14 de mayo de 1979, pág. 10832) con el RD 1118/1979 de garantía solidaria del Estado a Autopistas del Mare Nostrum
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Textos literales BOE-A-1979-17464, 12441, 20444 y 12440 verificados
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-17464 (art. 20 PGE 1979)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12441 (RD 1118/1979)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-20444 (RD 1993/1979)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-12440 (RD 1117/1979)"
+    - "Escaneo íntegro 1979: 16 reales decretos de garantía estatal a concesionarias de autopistas"
+  documentos_no_localizados:
+    - "Liquidación acumulada de ejecuciones de aval y seguro de cambio de autopistas del Tribunal de Cuentas"
+  intento_de_refutacion: >-
+    Se verificó la existencia de condiciones de cancelación de avales previos en RD 1117 y 1118
+    (recogidas en descargo), pero el art. 20.1 de los PGE excluyó expresamente las refinanciaciones
+    del tope anual de 65.000M ptas y el Estado asumió garantía solidaria (y renuncia de excusión en
+    Navarra) en 16 decretos de concesionarias privadas durante 1979.

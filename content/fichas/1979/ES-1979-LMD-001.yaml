@@ -1,0 +1,78 @@
+id: ES-1979-LMD-001
+anuario: 1979
+categoria: LMD
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: País Vasco y Cataluña
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Extensión de aforamientos penales e inmunidad a parlamentos y ejecutivos autonómicos
+resumen: >-
+  Los dos primeros Estatutos de Autonomía (Leyes Orgánicas 3/1979 del País Vasco y 4/1979 de
+  Cataluña, BOE del 22 de diciembre) extendieron el fuero penal especial al nivel autonómico:
+  parlamentarios vascos (artículo 26.6), Gobierno Vasco (artículo 32.2) y diputados catalanes
+  (artículo 31.2) solo responden ante el Tribunal Superior de Justicia o el Supremo.
+descargo: >-
+  Ambos Estatutos fueron ratificados en referéndum autonómico el 25 de octubre de 1979 (831.839
+  votos afirmativos en País Vasco y 2.327.038 en Cataluña), no impusieron suplicatorio previo de la
+  cámara autonómica para procesar a diputados y mantuvieron la detención en delito descubierto en el
+  acto.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley Orgánica 3/1979, de 18 de diciembre, de Estatuto de Autonomía para el País Vasco (BOE núm. 306, de 22 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-30177
+    sha256: bcf9324232dad981e734f70ec14eda065da81587f974c5b605558eedda7ac5d9
+    capturado: "2026-11-25"
+    pagina: "29357-29363"
+    fragmento: >-
+      Ley Orgánica 3/1979, de 18 de diciembre, de Estatuto de Autonomía para el País Vasco [BOE
+      núm. 306, 22 de diciembre de 1979]. Artículo 26. 6 [26.6]. Los miembros del Parlamento Vasco
+      serán inviolables [...]. Durante su mandato [...] correspondiendo decidir, en todo caso,
+      sobre su inculpación, prisión, procesamiento y juicio al Tribunal Superior de Justicia del
+      País Vasco. Fuera del ámbito territorial del País Vasco, la responsabilidad penal será
+      exigible [...] ante la Sala de lo Penal del Tribunal Supremo. Artículo 32. 2 [32.2]. El
+      Presidente del Gobierno y sus miembros [Gobierno Vasco] [...] ante el Tribunal Superior de
+      Justicia del País Vasco [...] Tribunal Supremo.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley Orgánica 4/1979, de 18 de diciembre, de Estatuto de Autonomía de Cataluña (BOE núm. 306, de 22 de diciembre de 1979)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-30178
+    sha256: 0fb7a39afce23b41a49e21719346f749fbc65d3d639a75704d24620b6b8f927f
+    capturado: "2026-11-25"
+    pagina: "29363-29370"
+    fragmento: >-
+      Ley Orgánica 4/1979, de 18 de diciembre, de Estatuto de Autonomía de Cataluña [BOE núm. 306,
+      22 de diciembre de 1979]. Artículo 31. 2 [31.2]. Los miembros del Parlamento de Cataluña
+      serán inviolables [...]. Durante su mandato [...] correspondiendo decidir, en todo caso,
+      sobre su inculpación, prisión, procesamiento y juicio al Tribunal Superior de Justicia de
+      Cataluña. Fuera de dicho territorio, la responsabilidad penal será exigible [...] ante la
+      Sala de lo Penal del Tribunal Supremo.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1979/12/22/pdfs/A29357-29363.pdf
+  archivo: /facsimiles/1979/ES-1979-LMD-001.png
+  alt: Facsímil del BOE núm. 306 (22 de diciembre de 1979, pág. 29360) con los artículos 26 y 32 de la Ley Orgánica 3/1979 del Estatuto del País Vasco
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Textos literales BOE-A-1979-30177 y BOE-A-1979-30178 verificados
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-30177 (arts. 26.6 y 32.2, pág. 29360)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1979-30178 (art. 31.2)"
+    - "https://www.boe.es/boe/dias/1979/12/22/pdfs/A29357-29363.pdf (facsímil PNG pág. 4)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó que la Constitución de 1978 solo preveía el aforamiento estatal de diputados,
+    senadores y miembros del Gobierno (arts. 71 y 102 CE), sin imponerlo a las Comunidades
+    Autónomas; los Estatutos de 1979 inauguraron la extensión del fuero especial penal a cargos
+    autonómicos, recogiendo en descargo la ratificación referendaria y la ausencia de suplicatorio.
