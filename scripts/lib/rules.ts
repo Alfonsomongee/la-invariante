@@ -591,7 +591,10 @@ export function validateVotacionCrossRules(
   ];
 
   const sumaResultado =
-    votacion.resultado.a_favor + votacion.resultado.en_contra + votacion.resultado.abstenciones;
+    votacion.resultado.a_favor +
+    votacion.resultado.en_contra +
+    votacion.resultado.abstenciones +
+    (votacion.resultado.nulos ?? 0);
   if (
     votacion.resultado.total_emitidos !== undefined &&
     votacion.resultado.total_emitidos !== sumaResultado
@@ -600,7 +603,7 @@ export function validateVotacionCrossRules(
       file: filePath,
       severity: 'error',
       rule: 'votacion-suma-emitidos',
-      message: `resultado.total_emitidos (${votacion.resultado.total_emitidos}) no coincide con a_favor + en_contra + abstenciones (${sumaResultado}).`,
+      message: `resultado.total_emitidos (${votacion.resultado.total_emitidos}) no coincide con a_favor + en_contra + abstenciones + nulos (${sumaResultado}).`,
     });
   }
 
