@@ -1,0 +1,120 @@
+id: ES-1977-VOT-001
+anuario: 1977
+categoria: VOT
+partidos:
+  - UCD
+  - PSOE
+  - PSC-PSOE
+  - PCE
+  - PSUC
+  - PDC
+  - PNV
+  - PSP-US
+  - AP
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+titulo: Votación conjunta de la Ley de Amnistía en el Congreso el 14 de octubre de 1977
+resumen: >-
+  El Congreso aprobó el 14 de octubre de 1977 la proposición conjunta de Ley de Amnistía impulsada
+  por UCD, PSOE, PCE, Minoría Vasco-Catalana, Mixto y PSC-PSOE con 296 votos a favor, 2 en contra,
+  18 abstenciones y 1 nulo sobre 317 emitidos.
+sesion:
+  fecha: "1977-10-14"
+  legislatura: Legislatura Constituyente
+  camara: congreso
+  numero_sesion: "Pleno núm. 11 (DSCD núm. 24)"
+  asunto: Proposición de Ley de Amnistía (formulada conjuntamente por los grupos UCD, Socialista del Congreso, Comunista, Minoría Vasco-Catalana, Mixto y Socialistes de Catalunya)
+  norma_resultante: Ley 46/1977, de 15 de octubre, de Amnistía
+resultado:
+  a_favor: 296
+  en_contra: 2
+  abstenciones: 18
+  nulos: 1
+  total_emitidos: 317
+grupos:
+  - grupo: Unión de Centro Democrático
+    partido: UCD
+    sentido: a_favor
+  - grupo: Socialista del Congreso
+    partido: PSOE
+    sentido: a_favor
+  - grupo: Socialistes de Catalunya
+    partido: PSC-PSOE
+    sentido: a_favor
+  - grupo: Comunista
+    partido: PCE
+    sentido: a_favor
+  - grupo: Comunista
+    partido: PSUC
+    sentido: a_favor
+  - grupo: Minorías Catalana y Vasca
+    partido: PNV
+    sentido: a_favor
+  - grupo: Minorías Catalana y Vasca
+    partido: PDC
+    sentido: a_favor
+  - grupo: Mixto (PSP a favor; EE y CAIC abstención)
+    partido: PSP-US
+    sentido: dividido
+  - grupo: Alianza Popular
+    partido: AP
+    sentido: abstencion
+descargo: >-
+  Los grupos proponentes (UCD, PSOE, PSC-PSOE, PCE-PSUC, Minorías Catalana y Vasca y PSP en el Mixto)
+  justificaron el voto conjunto como cierre político de la dictadura y liberación de presos
+  políticos. Alianza Popular se abstuvo alegando que las amnistías sucesivas debilitaban el Estado
+  de Derecho; Francisco Letamendia (EE) e Hipólito Gómez de las Roces (CAIC) explicaron su
+  abstención por motivos distintos. Al no imprimirse relación nominal del voto electrónico, no
+  consta en el Diario de Sesiones la identidad de los 2 votos en contra ni el reparto individual
+  exacto de las 18 abstenciones.
+fuentes:
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados, núm. 24, Sesión Plenaria núm. 11, de 14 de octubre de 1977
+    url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF
+    sha256: c2550b65de899726773a88fc259353867ed146824a616f4d0ce8218c66bc9700
+    capturado: "2026-11-25"
+    pagina: "954, 974"
+    fragmento: >-
+      [14 de octubre de 1977] Proposición de ley de amnistía que han formulado conjuntamente los
+      Grupos Parlamentarios de Unión de Centro Democrático [UCD], Socialista del Congreso [PSOE],
+      Comunista [PCE], Minoría Vasco-Catalana, Mixto y Socialistes de Catalunya [PSC-PSOE]. [...] El
+      resultado de la votación es el siguiente: 317 votos emitidos; 296 afirmativos; 2 negativos; 18
+      abstenciones, y 1 nulo, que ha votado con dos teclas. Queda aprobada la Ley de Amnistía.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 46/1977, de 15 de octubre, de Amnistía (BOE núm. 248, de 17 de octubre de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24937
+    sha256: ab8130c7111041e273f27ecdc57ff72c5f7719ba5d0ede62ab51cedd23770cd3
+    capturado: "2026-11-25"
+    pagina: "22765-22766"
+    fragmento: >-
+      Ley 46/1977, de 15 de octubre, de Amnistía. De conformidad con la Ley aprobada por las
+      Cortes, vengo en sancionar.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Cortes Generales — Diario de Sesiones del Congreso de los Diputados
+  origen: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF
+  alt: Página 974 del Diario de Sesiones del Congreso (14 de octubre de 1977) con el resultado de votación
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de registro de votación para revisión humana
+    motivo: Verificación directa sobre el PDF oficial C_1977_024.PDF y BOE-A-1977-24937
+  - fecha: "2026-11-25"
+    cambio: Adición de PSUC en grupos, aclaración sobre 2 votos en contra sin atribución nominal y corchetes en cita
+    motivo: Auditoría adversarial del Verificador
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF (págs. 954-974)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24937 (págs. 22765-22766)"
+  documentos_no_localizados:
+    - "Desglose nominal diputado a diputado (el sistema electrónico de 1977 registró únicamente el total en el Diario de Sesiones; ningún orador reivindicó los 2 votos en contra)"
+  intento_de_refutacion: >-
+    Se leyó íntegramente el PDF original C_1977_024.PDF (págs. 954–974) para confirmar que la
+    votación fue electrónica sin relación nominal impresa; por ello no se inventan recuentos por
+    grupo, se registra el sentido declarado en cada explicación de voto (incluyendo PCE y PSUC en
+    la Minoría Comunista) y se hace constar que los 2 votos en contra y el reparto exacto de las 18
+    abstenciones no constan nominalmente.

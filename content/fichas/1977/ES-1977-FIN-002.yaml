@@ -1,0 +1,150 @@
+id: ES-1977-FIN-002
+anuario: 1977
+categoria: FIN
+partidos:
+  - UCD
+  - AP
+  - PSOE
+  - PCE
+  - PNV
+  - PSC-PSOE
+  - PSP-US
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: sancion_administrativa
+  historial:
+    - fecha: "1978-07-13"
+      estado: sancion_administrativa
+      documento: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18445
+      nota: Resolución de la Junta Electoral Central imponiendo sanciones administrativas (art. 93 RDL 20/1977) tras devolución de expedientes por el Fiscal del Reino sin apreciar delito.
+titulo: Sanciones de la Junta Electoral Central por cuentas de la campaña de 1977
+resumen: >-
+  La Junta Electoral Central sancionó administrativamente en julio de 1978 (BOE núm. 170) por
+  irregularidades en las cuentas de las elecciones de 1977 a los partidos no exentos ni sobreseídos,
+  incluidos UCD, AP, PSOE, PCE y PNV, tras devolver el Fiscal del Reino los expedientes sin delito.
+descargo: >-
+  El Fiscal del Reino devolvió los expedientes al no apreciar hechos de naturaleza delictiva. La
+  Junta no encontró irregularidades en ocho partidos (entre ellos PDC, PSUC y UDC-CD) y sobreseyó
+  los expedientes del Partido Agrario Español y del Equipo de la Democracia Cristiana tras
+  subsanarse las deficiencias iniciales.
+cifras:
+  - concepto: Fondos recaudados declarados por UCD en la campaña de 1977
+    valor: 682920422
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 4104434.4
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por Alianza Popular en la campaña de 1977
+    valor: 538135016.83
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 3234256.59
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por PSOE en la campaña de 1977
+    valor: 297943584
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 1790677
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por PCE en la campaña de 1977
+    valor: 108174936
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 650144.46
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por Pacte Democràtic per Catalunya (sin irregularidades)
+    valor: 53769738
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 323162.63
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por Socialistes de Catalunya (PSC-PSOE) en la campaña de 1977
+    valor: 40592887
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 243968.16
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por PNV en la campaña de 1977
+    valor: 33880008.22
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 203622.95
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  - concepto: Fondos recaudados declarados por Partido Socialista Popular (PSP) en 1977
+    valor: 27061000
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 162639.89
+    fuente: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+fuentes:
+  - tipo: boe
+    subtipo: resolucion_administrativa
+    titulo_documento: Resolución de la Junta Electoral Central de 13 de julio de 1978 sobre rendiciones de cuentas electorales de 1977 (BOE núm. 170, de 18 de julio de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18445
+    sha256: 7b4fde6b47687f2fff695a3abd1331400e7cf68769d65ed05f8d84e5c41ca9dc
+    capturado: "2026-11-25"
+    pagina: 17001
+    fragmento: >-
+      Resolución de la Junta Electoral Central por la que se hacen públicas las rendiciones de
+      cuentas de gastos originados a las distintas Entidades políticas por la presentación de
+      candidaturas y propaganda electoral [BOE núm. 170, de 18 de julio de 1978, fecha de
+      disposición 13 de julio de 1978, pág. 17001; texto íntegro en el facsímil PDF oficial].
+  - tipo: oficial
+    subtipo: resolucion_administrativa
+    titulo_documento: Facsímil oficial del BOE núm. 170 (18 de julio de 1978) alojado por la Junta Electoral Central
+    url: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+    sha256: b0ab89c5afded578d3993e9889ccb2476b8ceca44345df019cc1a59faca86142
+    capturado: "2026-11-25"
+    pagina: 1
+    fragmento: >-
+      Segundo.—La cuantía de los fondos recaudados por cada Entidad política es la siguiente
+      [pesetas]: [...] Alianza Popular [AP] 538.135.016,83 [...] Pacte Democratic per Catalunya
+      53.769.738,00 [...] Partido Comunista de España [PCE] 108.174.936,00; Partido Nacionalista
+      Vasco [PNV] 33.880.008,22 [...] Partido Socialista Obrero Español [PSOE] 297.943.584,00 [...]
+      Partido Socialista Popular 27.061.000,00 [...] Socialistes de Catalunya (PSC-PSOE)
+      40.592.887,00; Unión de Centro Democrático [UCD] 682.920.422,00 [...]. Cuarto.—Por lo que se
+      refiere al juicio de la Junta sobre dichas cuentas, la Junta no encuentra irregularidades en
+      la contabilidad de los siguientes Partidos: Democracia Cristiana Aragonesa, Lliga de
+      Catalunya-Partit Liberal Català, Pacte Democratic per Catalunya, Partido Popular Canario,
+      Partido Socialista Galego, Partido Socialista Unificat de Catalunya, Partido Socialista Vasco,
+      Unió del Centre i la Democracia Cristiana de Catalunya. En relación con las demás Entidades
+      políticas, la Junta sometió en su momento al excelentísimo señor Fiscal del Reino las
+      irregularidades observadas, habiendo sido devueltos los expedientes por éste con la
+      manifestación de que «no apareciendo, por ahora, la existencia de hechos de naturaleza
+      delictiva, es prudente la devolución de la misma a la expresada Junta Electoral Central, a los
+      efectos que estime procedente»; en vista de ello se han instruido por la Junta los pertinentes
+      expedientes sancionadores ante la posibilidad de que existieran infracciones administrativas
+      de las previstas en el artículo 93 del Real Decreto-ley sobre Normas Electorales. Estos
+      expedientes han sido sobreseídos por haberse subsanado las irregularidades inicialmente
+      observadas en el caso de las siguientes Entidades políticas: Partido Agrario Español, Equipo
+      de la Democracia Cristiana. En los demás casos, la Junta ha impuesto las sanciones
+      correspondientes a tenor del mencionado artículo 93 del Real Decreto-ley sobre Normas
+      Electorales.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado / Junta Electoral Central
+  origen: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf
+  alt: Facsímil del BOE núm. 170 (18 de julio de 1978, pág. 17001) con la fiscalización electoral de 1977
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana
+    motivo: Resolución JEC BOE-A-1978-18445 y facsímil PDF oficial verificados
+  - fecha: "2026-11-25"
+    cambio: Transcripción literal íntegra del punto Cuarto desde el facsímil JEC y adición de cifra PSC-PSOE
+    motivo: Auditoría adversarial del Verificador sobre fidelidad textual
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18445 (pág. 17001)"
+    - "https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Fiscalizacion.pdf (pág. 1)"
+  documentos_no_localizados:
+    - "Cuantía exacta de la multa impuesta individualmente a cada partido (no publicada en la resolución del BOE; el art. 93 del RDL 20/1977 fijaba un rango general de 1.000 a 25.000 ptas para particulares y de 5.000 a 50.000 ptas para autoridades o funcionarios)"
+  intento_de_refutacion: >-
+    Se verificó la lista íntegra de los ocho partidos sin irregularidades y los dos sobreseídos en
+    el facsímil original del BOE pág. 17001: ninguno de UCD, AP, PSOE, PCE, PNV, PSC-PSOE ni PSP
+    figura entre los exentos ni sobreseídos. Se hace constar expresamente que el Fiscal del Reino
+    descartó relevancia penal (sanción únicamente administrativa).

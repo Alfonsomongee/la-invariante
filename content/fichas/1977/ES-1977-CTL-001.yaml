@@ -1,0 +1,66 @@
+id: ES-1977-CTL-001
+anuario: 1977
+categoria: CTL
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Adscripción y preferencia de destino en Madrid para magistrados del suprimido TOP
+resumen: >-
+  El Real Decreto-ley 2/1977, de 4 de enero (BOE del 5 de enero), suprimió el Tribunal de Orden
+  Público y dispuso en sus Disposiciones Transitorias la adscripción de sus magistrados y fiscales
+  a la Audiencia Territorial y Juzgados de Madrid sin merma retributiva y con preferencia en
+  concursos de destino.
+descargo: >-
+  Los artículos 1 y 2 suprimieron el tribunal político franquista y devolvieron sus competencias a
+  la jurisdicción ordinaria penal; la Disposición Transitoria Segunda estableció que la preferencia
+  regiría una sola vez y sin perjudicar la antigüedad de jueces ya destinados en Madrid.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 2/1977, de 4 de enero, por el que se suprimen el Tribunal y Juzgados de Orden Público (BOE núm. 4, de 5 de enero de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-167
+    sha256: d1a89d4d8f75abd9994139927a90754dcc083bd2d190e9e0dc683eec15d859b8
+    capturado: "2026-11-25"
+    pagina: "174-175"
+    fragmento: >-
+      Real Decreto-ley 2/1977, de 4 de enero [BOE núm. 4, 5 de enero de 1977]. Artículo primero. Se
+      suprimen el Tribunal y los Juzgados de Orden Público [TOP]. [...] Disposiciones Transitorias.
+      Primera. El Presidente y los Magistrados del suprimido Tribunal de Orden Público quedarán
+      adscritos, con carácter provisional, a las Salas o Secciones de la Audiencia Territorial de
+      Madrid. Segunda. [...] En los referidos concursos gozarán de preferencia, por una sola vez.
+      Tercera. Los Fiscales adscritos al Tribunal de Orden Público se incorporarán a la Fiscalía de
+      la Audiencia Territorial de Madrid. [...] Quinta. La adscripción provisional se hará sin
+      menoscabo alguno de los derechos económicos.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-167
+  alt: Real Decreto-ley 2/1977, de 4 de enero, de supresión del Tribunal de Orden Público
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana
+    motivo: Texto literal BOE-A-1977-167 verificado
+  - fecha: "2026-11-25"
+    cambio: Corchetes editoriales en cita y nota de revisión sobre encaje en categoría CTL
+    motivo: Auditoría adversarial del Verificador
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-167 (págs. 174-175)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    El Verificador señaló que la norma suprime el TOP y amortiza cinco plazas de magistrados en su
+    Disposición Adicional, mientras la adscripción se dirige a órganos judiciales ordinarios de
+    Madrid y no a un órgano de control autónomo en sentido estricto. Queda marcada en revisión
+    humana para decidir si mantenerla en CTL por continuidad del personal judicial o descartarla.
