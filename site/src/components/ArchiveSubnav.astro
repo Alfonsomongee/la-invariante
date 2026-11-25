@@ -1,0 +1,23 @@
+---
+interface Props {
+  active: 'fichas' | 'promesas' | 'votaciones' | 'partidos' | 'personas';
+}
+
+const { active } = Astro.props;
+
+const tabs = [
+  { key: 'fichas', href: '/fichas/', label: 'Todo el archivo' },
+  { key: 'promesas', href: '/promesas/', label: 'Dijo / Firmó' },
+  { key: 'votaciones', href: '/votaciones/', label: 'Votan juntos' },
+  { key: 'partidos', href: '/partidos/', label: 'Partidos' },
+  { key: 'personas', href: '/personas/', label: 'Cargos públicos' },
+] as const;
+---
+
+<nav class="subnav" aria-label="Secciones del archivo">
+  {tabs.map((tab) => (
+    <a href={tab.href} aria-current={active === tab.key ? 'page' : undefined}>
+      {tab.label}
+    </a>
+  ))}
+</nav>

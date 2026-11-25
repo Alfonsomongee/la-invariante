@@ -52,14 +52,13 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
       style: {
         width: '1200px',
         height: '630px',
-        backgroundColor: '#F6F3EC',
-        color: '#171614',
+        backgroundColor: '#FAFAF9',
+        color: '#111110',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        padding: '48px 56px',
+        padding: '54px 64px',
         fontFamily: 'Source Serif 4',
-        border: '12px solid #171614',
       },
       children: [
         {
@@ -69,8 +68,8 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              borderBottom: '2px solid #171614',
-              paddingBottom: '18px',
+              borderBottom: '1px solid #E5E5E0',
+              paddingBottom: '20px',
             },
             children: [
               {
@@ -78,8 +77,9 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                 props: {
                   style: {
                     fontFamily: 'IBM Plex Mono',
-                    fontSize: '20px',
-                    letterSpacing: '0.06em',
+                    fontSize: '18px',
+                    letterSpacing: '0.05em',
+                    color: '#71716B',
                   },
                   children: `LA INVARIANTE · ${card.id} · ${card.fecha}`,
                 },
@@ -89,11 +89,11 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                 props: {
                   style: {
                     fontFamily: 'IBM Plex Mono',
-                    fontSize: '18px',
-                    color: '#8C1D18',
-                    border: '2px solid #8C1D18',
-                    backgroundColor: '#F4E6E4',
-                    padding: '6px 14px',
+                    fontSize: '16px',
+                    color: '#991B1B',
+                    backgroundColor: '#FEF2F2',
+                    borderRadius: '999px',
+                    padding: '6px 16px',
                     textTransform: 'uppercase',
                   },
                   children: card.estadoEtiqueta,
@@ -120,6 +120,7 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                     fontSize: '42px',
                     fontWeight: 600,
                     lineHeight: 1.18,
+                    color: '#111110',
                   },
                   children: card.titulo,
                 },
@@ -130,9 +131,9 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                   style: {
                     display: 'flex',
                     flexDirection: 'column',
-                    backgroundColor: '#EEE9DE',
-                    borderLeft: '4px solid #171614',
-                    padding: '18px 22px',
+                    backgroundColor: '#F3F3F0',
+                    borderRadius: '12px',
+                    padding: '20px 24px',
                     gap: '10px',
                   },
                   children: [
@@ -141,8 +142,8 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                       props: {
                         style: {
                           fontSize: '21px',
-                          lineHeight: 1.42,
-                          color: '#171614',
+                          lineHeight: 1.44,
+                          color: '#111110',
                         },
                         children: `«${fragmentoCorto}»`,
                       },
@@ -152,8 +153,8 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
                       props: {
                         style: {
                           fontFamily: 'IBM Plex Mono',
-                          fontSize: '16px',
-                          color: '#524E46',
+                          fontSize: '15px',
+                          color: '#71716B',
                         },
                         children: `Fuente primaria: ${card.fuenteLabel}`,
                       },
@@ -170,11 +171,11 @@ export async function renderOgPng(card: OgCardData): Promise<Uint8Array> {
             style: {
               display: 'flex',
               justifyContent: 'space-between',
-              borderTop: '1px solid #CDC6B6',
-              paddingTop: '14px',
+              borderTop: '1px solid #E5E5E0',
+              paddingTop: '16px',
               fontFamily: 'IBM Plex Mono',
-              fontSize: '17px',
-              color: '#524E46',
+              fontSize: '16px',
+              color: '#71716B',
             },
             children: [
               { type: 'div', props: { children: 'Archivo hemerográfico y documental · España 1977–hoy' } },

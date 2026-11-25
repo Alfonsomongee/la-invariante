@@ -17,11 +17,27 @@ const years = getArchiveYears();
 const series = getSeries();
 const contraprueba = getContrapruebas();
 const publishedYears = new Set(anuarios.map((a) => a.anio));
+const countByYear = new Map<number, number>();
+for (const r of records) {
+  countByYear.set(r.anuario, (countByYear.get(r.anuario) ?? 0) + 1);
+}
 
 const countByCat = new Map<string, number>();
 for (const r of records) {
   countByCat.set(r.categoria, (countByCat.get(r.categoria) ?? 0) + 1);
 }
+
+const decades = Array.from(
+  years.reduce((map, y) => {
+    const dec = Math.floor(y / 10) * 10;
+    const list = map.get(dec) ?? [];
+    list.push(y);
+    map.set(dec, list);
+    return map;
+  }, new Map<number, number[]>()),
+);
+
+const latestYear = anuarios[0]?.anio;
 ---
 
 <BaseLayout
@@ -29,117 +45,136 @@ for (const r of records) {
   description="Registro anual de hechos documentados sobre el funcionamiento de las instituciones españolas desde 1977, con documento primario obligatorio y contraprueba."
 >
   <section class="reading" aria-labelledby="scope-heading">
-    <h1 id="scope-heading">Archivo documental de las instituciones españolas (1977–hoy)</h1>
-    <p>
-      <strong>La Invariante</strong> registra, año a año y con idéntico criterio para todos los partidos,
-      hechos acreditados mediante documentos primarios oficiales (BOE, sentencias y autos judiciales,
-      Diario de Sesiones, informes del Tribunal de Cuentas, series del INE y del Banco de España).
+    <span class="section-kicker">Archivo documental · España 1977–{years[years.length - 1]}</span>
+    <h1 id="scope-heading">Instituciones españolas bajo documento primario</h1>
+    <p class="lead">
+      Registro anual, verificable y neutral de hechos acreditados en BOE, sentencias, autos
+      judiciales, Diario de Sesiones y series oficiales. Con idéntico criterio para todos los
+      partidos y sección obligatoria de <a href="/contraprueba/">Contraprueba</a>.
     </p>
-    <p>
-      <strong>Tesis falsable:</strong> examina si la alternancia de partidos altera la frecuencia de un
-      conjunto definido de conductas institucionales. Cada serie se publica desagregada por gobierno;
-      cuando una serie varía con el gobierno o un contrapeso funciona, el archivo lo recoge en la sección{' '}
-      <a href="/contraprueba/">Contraprueba</a>.
-    </p>
-  </section>
-
-  <section aria-labelledby="estado-archivo-heading">
-    <h2 id="estado-archivo-heading">Estado actual del archivo</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Dimensión</th>
-            <th class="num">Publicados</th>
-            <th>Acceso</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Anuarios documentados (1977–{years[years.length - 1]})</td>
-            <td class="num">{anuarios.length} / {years.length}</td>
-            <td><a href="/anuarios/">Índice cronológico</a></td>
-          </tr>
-          <tr>
-            <td>Fichas, promesas y votaciones</td>
-            <td class="num">{records.length}</td>
-            <td><a href="/fichas/">Explorar fichas</a></td>
-          </tr>
-          <tr>
-            <td>Registros y series en Contraprueba</td>
-            <td class="num">{contraprueba.registros.length + contraprueba.seriesVariables.length}</td>
-            <td><a href="/contraprueba/">Ver Contraprueba</a></td>
-          </tr>
-          <tr>
-            <td>Series cuantitativas por gobierno</td>
-            <td class="num">{series.length}</td>
-            <td><a href="/series/">Consultar series</a></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="action-row">
+      <a href={latestYear ? `/anuarios/${latestYear}/` : '/anuarios/'} class="btn btn--primary">
+        {latestYear ? `Abrir Anuario ${latestYear} →` : 'Explorar anuarios →'}
+      </a>
+      <a href="/fichas/" class="btn">Explorar archivo</a>
+      <a href="/buscar/" class="btn">Buscar</a>
     </div>
   </section>
 
-  <section aria-labelledby="ultimas-heading">
-    <h2 id="ultimas-heading">Registros publicados</h2>
+  <section aria-label="Resumen del archivo">
+    <div class="stat-grid">
+      <a href="/anuarios/" class="stat-card">
+        <span class="stat-value">{anuarios.length}</span>
+        <span class="stat-label">Anuarios documentados</span>
+        <span class="stat-sub">de {years.length} años (1977–{years[years.length - 1]})</span>
+      </a>
+      <a href="/fichas/" class="stat-card">
+        <span class="stat-value">{records.length}</span>
+        <span class="stat-label">Registros publicados</span>
+        <span class="stat-sub">Fichas, promesas y votaciones</span>
+      </a>
+      <a href="/contraprueba/" class="stat-card">
+        <span class="stat-value">{contraprueba.registros.length + contraprueba.seriesVariables.length}</span>
+        <span class="stat-label">En Contraprueba</span>
+        <span class="stat-sub">Contrapesos y variaciones</span>
+      </a>
+      <a href="/series/" class="stat-card">
+        <span class="stat-value">{series.length}</span>
+        <span class="stat-label">Series cuantitativas</span>
+        <span class="stat-sub">Desagregadas por gobierno</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section-block" aria-labelledby="ultimas-heading">
+    <div class="section-header">
+      <h2 id="ultimas-heading">Registros publicados</h2>
+      {records.length > 0 && (
+        <a href="/fichas/" class="inline-action">Ver todos ({records.length}) →</a>
+      )}
+    </div>
     {records.length === 0 ? (
-      <div class="box box--notice reading">
+      <div class="box reading">
         <p style="margin-bottom:0.4rem;">
           <strong>Archivo inicializado en fase de cimientos.</strong> No hay fichas publicadas todavía.
         </p>
         <p class="muted" style="margin-bottom:0;">
-          Cada anuario se incorpora mediante el pipeline documental y revisión humana frente al documento
-          primario. Consulta la <a href="/metodologia/">Metodología</a> o el{' '}
+          Cada anuario se incorpora mediante revisión humana frente al documento primario. Consulta la{' '}
+          <a href="/metodologia/">Metodología</a> o el{' '}
           <a href="/anuarios/">índice cronológico 1977–{years[years.length - 1]}</a>.
         </p>
       </div>
     ) : (
       <ul class="record-list">
-        {records.slice(0, 12).map((record) => (
+        {records.slice(0, 10).map((record) => (
           <RecordCard record={record} />
         ))}
       </ul>
     )}
   </section>
 
-  <section aria-labelledby="categorias-heading">
-    <h2 id="categorias-heading">Categorías del archivo</h2>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Código</th>
-            <th>Categoría</th>
-            <th class="num">Registros</th>
-          </tr>
-        </thead>
-        <tbody>
-          {(Object.keys(CATEGORIAS) as CategoriaCodigo[]).map((code) => (
-            <tr>
-              <td class="mono">{code}</td>
-              <td>
-                <a href={`/categorias/${code.toLowerCase()}/`}>{CATEGORIAS[code].nombre}</a>
-              </td>
-              <td class="num">{countByCat.get(code) ?? 0}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+  <section class="section-block" aria-labelledby="linea-tiempo-heading">
+    <div class="section-header">
+      <h2 id="linea-tiempo-heading">Anuarios (1977–{years[years.length - 1]})</h2>
+      <a href="/anuarios/" class="inline-action">Índice completo →</a>
+    </div>
+
+    {anuarios.length > 0 && (
+      <div class="active-years">
+        {anuarios.map((a) => (
+          <a href={`/anuarios/${a.anio}/`} class="year-feature">
+            <span class="year-feature__year">{a.anio}</span>
+            <span class="year-feature__meta">
+              {countByYear.get(a.anio) ?? 0} registros · {a.legislatura} →
+            </span>
+          </a>
+        ))}
+      </div>
+    )}
+
+    <div class="decade-list">
+      {decades.map(([dec, decYears]) => (
+        <div class="decade-row">
+          <div class="decade-label">{dec}s</div>
+          <div class="year-strip">
+            {decYears.map((y) => {
+              const active = publishedYears.has(y) || (countByYear.get(y) ?? 0) > 0;
+              return (
+                <a
+                  href={`/anuarios/${y}/`}
+                  class:list={['year-chip', { 'year-chip--active': active }]}
+                >
+                  <span>{y}</span>
+                </a>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 
-  <section aria-labelledby="linea-tiempo-heading">
-    <h2 id="linea-tiempo-heading">Anuarios (1977–{years[years.length - 1]})</h2>
-    <div class="year-grid">
-      {years.map((y) => (
-        <a
-          href={`/anuarios/${y}/`}
-          class:list={['year-cell', { 'year-cell--active': publishedYears.has(y) }]}
-        >
-          <span>{y}</span>
-          <small>{publishedYears.has(y) ? 'Publicado' : 'Pendiente'}</small>
-        </a>
-      ))}
+  <section class="section-block" aria-labelledby="categorias-heading">
+    <div class="section-header">
+      <h2 id="categorias-heading">Categorías del archivo</h2>
+      <a href="/metodologia/" class="inline-action">Criterios de entrada →</a>
+    </div>
+    <div class="cat-grid">
+      {(Object.keys(CATEGORIAS) as CategoriaCodigo[]).map((code) => {
+        const count = countByCat.get(code) ?? 0;
+        return (
+          <a
+            href={`/categorias/${code.toLowerCase()}/`}
+            class:list={['cat-card', { 'cat-card--active': count > 0 }]}
+          >
+            <div class="cat-card__main">
+              <span class="cat-card__code">{code}</span>
+              <span class="cat-card__name">{CATEGORIAS[code].nombre}</span>
+            </div>
+            <span class="cat-card__count">{count}</span>
+          </a>
+        );
+      })}
     </div>
   </section>
 </BaseLayout>

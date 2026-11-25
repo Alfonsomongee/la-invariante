@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArchiveSubnav from '../../components/ArchiveSubnav.astro';
 import { getPartidos } from '../../lib/content.js';
 
 const partidos = getPartidos();
@@ -10,36 +11,29 @@ const partidos = getPartidos();
   description="Registros documentales agrupados por siglas vigentes en el momento de los hechos, sin colores de partido."
 >
   <section class="reading">
-    <h1>Partidos (texto y filtro, sin colores de partido)</h1>
-    <p>
+    <span class="section-kicker">Texto y filtro · Sin colores de partido</span>
+    <h1>Partidos</h1>
+    <p class="lead">
       Las siglas corresponden siempre a la denominación del partido en el momento de los hechos.
       El volumen por partido depende del <em>efecto de exposición</em> (quién ostenta el Gobierno
       dicta más actos ejecutivos) y nunca de criterios desiguales.
     </p>
   </section>
 
+  <ArchiveSubnav active="partidos" />
+
   {partidos.length === 0 ? (
-    <div class="box box--notice reading">Sin registros publicados todavía.</div>
+    <div class="box reading">Sin registros publicados todavía.</div>
   ) : (
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>Siglas</th>
-            <th class="num">Registros publicados</th>
-          </tr>
-        </thead>
-        <tbody>
-          {partidos.map((p) => (
-            <tr>
-              <td class="mono">
-                <a href={`/partidos/${encodeURIComponent(p.sigla)}/`}>{p.sigla}</a>
-              </td>
-              <td class="num">{p.total}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div class="cat-grid">
+      {partidos.map((p) => (
+        <a href={`/partidos/${encodeURIComponent(p.sigla)}/`} class="cat-card cat-card--active">
+          <div class="cat-card__main">
+            <span class="cat-card__name mono" style="font-size:0.95rem;">{p.sigla}</span>
+          </div>
+          <span class="cat-card__count">{p.total}</span>
+        </a>
+      ))}
     </div>
   )}
 </BaseLayout>

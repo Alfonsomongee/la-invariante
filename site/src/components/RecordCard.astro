@@ -24,14 +24,9 @@ const isNeutralStamp =
     <span>·</span>
     <a href={`/anuarios/${record.anuario}/`}>{record.anuario}</a>
     <span>·</span>
-    <a href={`/categorias/${record.categoria.toLowerCase()}/`}>{cat.codigo} ({cat.nombre})</a>
-    {record.contraprueba && (
-      <>
-        <span>·</span>
-        <strong>Contraprueba</strong>
-      </>
-    )}
-    <StampBadge label={estadoLabel} neutral={isNeutralStamp} />
+    <a href={`/categorias/${record.categoria.toLowerCase()}/`}>{cat.nombre}</a>
+    {record.contraprueba && <StampBadge label="Contraprueba" neutral />}
+    {!isNeutralStamp && <StampBadge label={estadoLabel} />}
   </div>
   <h3 class="record-title">
     <a href={record._rutaUrl}>{record.titulo}</a>
@@ -44,5 +39,6 @@ const isNeutralStamp =
       </li>
     ))}
     <li class="tag">{record.nivel}</li>
+    {isNeutralStamp && <li class="tag">{estadoLabel}</li>}
   </ul>
 </li>

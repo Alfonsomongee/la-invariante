@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArchiveSubnav from '../../components/ArchiveSubnav.astro';
 import RecordCard from '../../components/RecordCard.astro';
 import { CATEGORIAS, getAllPublishedRecords, type CategoriaCodigo } from '../../lib/content.js';
 
@@ -7,16 +8,19 @@ const records = getAllPublishedRecords();
 ---
 
 <BaseLayout
-  title="Fichas documentales"
+  title="Archivo documental"
   description="Catálogo completo de fichas, promesas y votaciones verificadas con documentos primarios en La Invariante."
 >
   <section class="reading">
-    <h1>Fichas documentales ({records.length})</h1>
-    <p>
-      Todas las entradas publicadas cumplen los criterios de entrada de <a href="/metodologia/">Metodología</a>,
-      incluyen documento primario con huella SHA-256 y pasan validación de estado procesal y estilo neutro.
+    <span class="section-kicker">Catálogo completo</span>
+    <h1>Archivo documental ({records.length})</h1>
+    <p class="lead">
+      Todas las entradas cumplen los criterios de <a href="/metodologia/">Metodología</a>, enlazan
+      documento primario con huella SHA-256 y pasan validación de estado procesal y estilo neutro.
     </p>
   </section>
+
+  <ArchiveSubnav active="fichas" />
 
   <nav class="filter-bar" aria-label="Filtrar por categoría">
     {(Object.keys(CATEGORIAS) as CategoriaCodigo[]).map((code) => (
@@ -27,7 +31,7 @@ const records = getAllPublishedRecords();
   </nav>
 
   {records.length === 0 ? (
-    <div class="box box--notice reading">
+    <div class="box reading">
       Todavía no hay fichas publicadas. Cada ficha entra mediante pull request y revisión humana.
     </div>
   ) : (

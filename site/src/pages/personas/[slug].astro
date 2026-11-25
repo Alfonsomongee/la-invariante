@@ -22,24 +22,26 @@ const { persona } = Astro.props;
   title={persona.nombre}
   description={`Registros vinculados al ejercicio del cargo público de ${persona.nombre} en La Invariante.`}
 >
-  <p class="mono muted" style="margin-bottom:0.4rem;">
-    <a href="/personas/">← Cargos públicos</a>
-  </p>
+  <nav class="breadcrumb" aria-label="Ruta de cargo público">
+    <div class="breadcrumb-trail">
+      <a href="/personas/" class="crumb">← Cargos públicos</a>
+    </div>
+  </nav>
 
-  <section class="reading">
+  <section class="reading" style="margin-bottom:2rem;">
+    <span class="section-kicker">Cargo público documentado</span>
     <h1>{persona.nombre}</h1>
-    <p class="muted">
-      <strong>Cargos en el momento de los hechos:</strong> {persona.cargos.join(' · ')}
+    <p class="lead">
+      {persona.cargos.join(' · ')}
       {persona.wikidata && (
-        <span class="mono">
-          {' · '}
+        <span class="mono" style="margin-left:0.5rem;">
           <a href={`https://www.wikidata.org/wiki/${persona.wikidata}`} target="_blank" rel="noopener noreferrer">
-            Wikidata {persona.wikidata}
+            Wikidata {persona.wikidata} ↗
           </a>
         </span>
       )}
     </p>
-    <p class="muted" style="font-size:0.9rem;">
+    <p class="muted" style="font-size:0.88rem;">
       Esta página reúne exclusivamente hechos documentados relativos al ejercicio de un cargo público.
     </p>
   </section>
