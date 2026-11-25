@@ -1,0 +1,174 @@
+anio: 1977
+legislatura: Legislatura Constituyente (1977–1979)
+moneda_curso: ESP
+gobiernos:
+  - presidente: Adolfo Suárez González
+    partido: institucional
+    tipo_mayoria: en_funciones
+    desde: "1976-07-05"
+    hasta: "1977-07-04"
+  - presidente: Adolfo Suárez González
+    partido: UCD
+    tipo_mayoria: minoria_apoyo_parlamentario
+    desde: "1977-07-05"
+    hasta: "1979-04-06"
+composicion_congreso:
+  - partido: UCD
+    escanos: 165
+  - partido: PSOE
+    escanos: 103
+  - partido: AP
+    escanos: 16
+  - partido: PSC-PSOE
+    escanos: 15
+  - partido: PCE
+    escanos: 12
+  - partido: PDC
+    escanos: 11
+  - partido: PSUC
+    escanos: 8
+  - partido: PNV
+    escanos: 8
+  - partido: PSP-US
+    escanos: 6
+  - partido: UDC-CD
+    escanos: 2
+  - partido: CIC
+    escanos: 2
+  - partido: EC-FED
+    escanos: 1
+  - partido: EE-IE
+    escanos: 1
+gobiernos_autonomicos:
+  - comunidad: Cataluña (Generalidad provisional, RDL 41/1977)
+    presidente: Josep Tarradellas i Joan
+    partido: institucional
+contexto_resumen: >-
+  El 5 de enero de 1977 se publicó en el BOE la Ley 1/1977 para la Reforma Política. El 15 de junio
+  se celebraron las primeras elecciones generales democráticas desde 1936, configurando un Congreso
+  de 350 escaños encabezado por UCD (165), PSOE (103), AP (16), PSC-PSOE (15), PCE (12), PDC (11),
+  PSUC (8), PNV (8) y PSP-US (6), según actas compiladas por la Junta Electoral Central. Adolfo
+  Suárez formó nuevo Gobierno en minoría mediante Real Decreto 1563/1977, de 4 de julio (publicado
+  en el BOE el 5 de julio). Las Cortes Constituyentes se constituyeron en julio y aprobaron la Ley
+  46/1977 de Amnistía y la Ley 50/1977 de reforma fiscal. La moneda de curso fue la peseta.
+nota_exposicion: >-
+  Durante todo 1977 el Poder Ejecutivo recayó en Adolfo Suárez (hasta el 4 de julio en gobierno de
+  transición pre-Cortes y desde el 5 de julio con UCD en minoría). Por efecto de exposición, los 44
+  reales decretos-ley de 1977 se desagregan en dos tramos: 38 dictados por el gobierno de transición
+  antes de constituirse las Cortes el 13 de julio y 6 dictados por el Gobierno de UCD tras esa
+  fecha. Las fuerzas parlamentarias de oposición y ámbito territorial se examinan con idéntico
+  criterio en votaciones del Congreso y en la fiscalización de cuentas electorales realizada por la
+  Junta Electoral Central.
+hitos:
+  - fecha: "1977-01-05"
+    descripcion: Publicación de la Ley 1/1977 para la Reforma Política y los Reales Decretos-ley 1/1977 y 2/1977.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-165
+  - fecha: "1977-03-23"
+    descripcion: Publicación del Real Decreto-ley 20/1977 sobre Normas Electorales (listas cerradas, D'Hondt y subvenciones).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+  - fecha: "1977-06-15"
+    descripcion: Celebración de elecciones generales a Cortes Constituyentes (350 diputados).
+    fuente_url: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Resultados.pdf
+  - fecha: "1977-07-05"
+    descripcion: Nombramiento del segundo Gobierno de Adolfo Suárez (Real Decreto 1563/1977).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-15206
+  - fecha: "1977-10-05"
+    descripcion: Restablecimiento provisional de la Generalidad de Cataluña mediante Real Decreto-ley 41/1977.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24354
+  - fecha: "1977-10-14"
+    descripcion: Aprobación en el Congreso de la proposición de Ley de Amnistía (296 a favor, 2 en contra, 18 abstenciones, 1 nulo).
+    fuente_url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF
+  - fecha: "1977-11-16"
+    descripcion: Publicación de la Ley 50/1977 de reforma fiscal (delito fiscal y supresión del secreto bancario).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-27150
+descartes:
+  - pista: Ley 53/1977, de 14 de noviembre (suplemento de crédito de 4.295.758.648 pesetas para Hunosa)
+    motivo_descarte: >-
+      Hunosa pertenecía ya al Instituto Nacional de Industria desde 1967; aunque se financiaron
+      pérdidas acumuladas mediante anticipos del Banco de España, no consta rescate directo de
+      entidad privada en 1977 bajo el criterio estricto de SOC.
+    requisito_entrada: >-
+      Informe oficial del Tribunal de Cuentas o del INI que desglose asunción de pasivos privados
+      frente a pérdidas operativas de empresa estatal preexistente.
+  - pista: Real Decreto-ley 24/1977, de 1 de abril, sobre libertad de expresión
+    motivo_descarte: >-
+      Norma mixta: suprimió la suspensión administrativa del art. 69 de la Ley de Prensa de 1966,
+      pero mantuvo en su art. 3.B el secuestro administrativo para supuestos tasados (unidad de
+      España, Monarquía y Fuerzas Armadas). No encaja sin matiz como contraprueba plena ni como
+      retroceso respecto a la legislación previa.
+    requisito_entrada: >-
+      Análisis comparado de resoluciones judiciales o administrativas concretas de aplicación del
+      art. 3.B en 1977.
+  - pista: Pactos de la Moncloa (octubre de 1977)
+    motivo_descarte: >-
+      Falta descargar y verificar el Diario de Sesiones del Congreso del 27 de octubre de 1977 con
+      el resultado exacto de la votación y la literalidad de los compromisos.
+    requisito_entrada: >-
+      Descarga del PDF oficial del Diario de Sesiones correspondiente en congreso.es con cálculo
+      de sha256.
+  - pista: Clasificación de 199 indultos individuales publicados en el BOE durante 1977
+    motivo_descarte: >-
+      Se localizaron los 199 reales decretos en los 313 boletines de 1977, pero los XML del BOE de
+      1977 no incluyen el cuerpo textual del delito (solo imagen PDF escaneada).
+    requisito_entrada: >-
+      Revisión u OCR de los 199 PDF del BOE de 1977 para clasificar con certeza cuántos
+      corresponden a delitos de corrupción según la tipología del CGPJ.
+cobertura:
+  notas: >-
+    Cobertura inicial del año 1977 centrada en arquitectura electoral (DEC), financiación y
+    fiscalización de partidos (FIN), amnistía y consenso parlamentario (VOT, GRA), continuidad
+    judicial tras supresión del TOP (CTL) y dos contrapruebas verificadas (reforma fiscal y
+    garantía judicial de inscripción de partidos).
+  huecos:
+    - "COR, PRM, PGI, SOC, LMD, LEN, CRI, SOB, DET sin fichas en esta primera entrega (año preconstitucional y falta de series o causas primarias digitalizadas)."
+    - "indultos_corrupcion.csv pendiente para 1977 hasta revisar los 199 PDF escaneados de indultos del BOE."
+    - "paro_epa.csv y deuda_publica_pib.csv pendientes de enlace directo a tabla oficial homogénea de INE y Banco de España para 1977."
+  documentos_manuales:
+    - "https://www.congreso.es/public_oficiales/L0/CONG/DS/ (sesión del 27 de octubre de 1977 sobre los Pactos de la Moncloa)"
+    - "199 PDFs de Reales Decretos de indulto en boe.es (1977) para clasificar delitos CGPJ"
+    - "Serie histórica homogénea EPA 1977 en ine.es y serie PDE en bde.es"
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 1/1977, de 4 de enero, para la Reforma Política (BOE núm. 4, 5 de enero de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-165
+    sha256: 2ce3fd911b4f2bb1da3d21957c980f41172bbea5ed62e238700af9dc03f1151e
+    capturado: "2026-11-25"
+    pagina: "170-171"
+    fragmento: >-
+      La democracia, en el Estado español, se basa en la supremacía de la Ley, expresión de la
+      voluntad soberana del pueblo. Las Cortes se componen del Congreso de los Diputados y del Senado.
+  - tipo: oficial
+    titulo_documento: Junta Electoral Central — Elecciones Generales 15 de junio de 1977. Resultados
+    url: https://www.juntaelectoralcentral.es/cs/jec/documentos/GENERALES_1977_Resultados.pdf
+    sha256: 5ec122fa62771a40aaa3d384a52421c04218e1cfac94026f1d0e5c4a69a2d2e6
+    capturado: "2026-11-25"
+    pagina: 5
+    fragmento: >-
+      Resumen de resultados correspondientes a cada uno de los partidos: UCD 165, PSOE 103, AP 16,
+      PCE 12, PSC-PSOE 15, PSP-US 6, PSUC 8, PDC 11, PNV 8, UDC-CD 2, EC-FED 1, CIC 2, EE-IE 1.
+      Total: 350 escaños.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto 1563/1977, de 4 de julio, por el que se nombran Ministros del Gobierno (BOE núm. 159, 5 de julio de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-15206
+    sha256: ada64b371ce1109b956720b69bb4bc1ffddb4aef054da730e47a2e4beeb2769b
+    capturado: "2026-11-25"
+    pagina: "15045-15046"
+    fragmento: >-
+      Real Decreto 1563/1977, de 4 de julio, por el que se nombran Ministros del Gobierno.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 41/1977, de 29 de septiembre, sobre restablecimiento provisional de la Generalidad de Cataluña (BOE núm. 238, 5 de octubre de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24354
+    sha256: 22391fa3553e2d188505fb9c1e709214adeb41ec1bc04a24551f5b0c90104fda
+    capturado: "2026-11-25"
+    pagina: "22047-22048"
+    fragmento: >-
+      Real Decreto-ley 41/1977, de 29 de septiembre, sobre restablecimiento provisional de la
+      Generalidad de Cataluña.
+estado_anuario: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Borrador inicial de Anuario 1977 pasado a revisión humana
+    motivo: Recolección primaria verificada en BOE, Congreso y Junta Electoral Central

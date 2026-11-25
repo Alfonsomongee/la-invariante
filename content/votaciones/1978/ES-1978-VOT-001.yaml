@@ -1,0 +1,122 @@
+id: ES-1978-VOT-001
+anuario: 1978
+categoria: VOT
+partidos:
+  - UCD
+  - PSOE
+  - PSC-PSOE
+  - PCE
+  - PSUC
+  - PDC
+  - AP
+  - PNV
+  - EE-IE
+  - EC-FED
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+titulo: Votación nominal definitiva de la Constitución Española en el Congreso (31 de octubre de 1978)
+resumen: >-
+  El Congreso aprobó en votación nominal el 31 de octubre de 1978 el texto definitivo de la
+  Constitución Española con 325 votos a favor (UCD, PSOE, PSC-PSOE, PCE-PSUC, Minoría Catalana y
+  parte de AP), 6 en contra (cinco de AP y Letamendía) y 14 abstenciones (PNV, tres de AP, ERC y
+  dos diputados) sobre 345 emitidos.
+sesion:
+  fecha: "1978-10-31"
+  legislatura: Legislatura Constituyente
+  camara: congreso
+  numero_sesion: "Pleno núm. 52 (DSCD núm. 130)"
+  asunto: Dictamen de la Comisión Mixta Congreso-Senado sobre el proyecto de Constitución
+  norma_resultante: Constitución Española (BOE núm. 311, de 29 de diciembre de 1978)
+resultado:
+  a_favor: 325
+  en_contra: 6
+  abstenciones: 14
+  total_emitidos: 345
+grupos:
+  - grupo: Unión de Centro Democrático
+    partido: UCD
+    sentido: a_favor
+  - grupo: Socialistas del Congreso
+    partido: PSOE
+    sentido: a_favor
+  - grupo: Socialistas de Cataluña
+    partido: PSC-PSOE
+    sentido: a_favor
+  - grupo: Comunista
+    partido: PCE
+    sentido: a_favor
+  - grupo: Comunista
+    partido: PSUC
+    sentido: a_favor
+  - grupo: Minoría Catalana
+    partido: PDC
+    sentido: a_favor
+  - grupo: Alianza Popular (a favor, 5 en contra y 3 abstenciones)
+    partido: AP
+    sentido: dividido
+  - grupo: Minoría del Partido Nacionalista Vasco
+    partido: PNV
+    sentido: abstencion
+  - grupo: Mixto (Euskadiko Ezkerra — Letamendía)
+    partido: EE-IE
+    sentido: en_contra
+  - grupo: Mixto (Esquerra de Catalunya — Barrera)
+    partido: EC-FED
+    sentido: abstencion
+descargo: >-
+  Los grupos partidarios del texto defendieron el consenso constitucional como marco común de
+  libertades y Estado de Derecho. El PNV explicó su abstención por el encaje de los derechos
+  históricos forales (Xabier Arzalluz, págs. 5185-5187); Alianza Popular votó dividida (cinco votos
+  en contra y tres abstenciones); en UCD consta la abstención individual de Jesús Aizpún Tuero. En
+  la lectura de viva voz en pág. 5185 se pronunciaron 326 a favor y 13 abstenciones, corregidos en
+  el sumario oficial (pág. 5179) a 325 y 14 conforme a los 14 nombres impresos en la lista nominal.
+fuentes:
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados, núm. 130, Sesión Plenaria núm. 52, de 31 de octubre de 1978
+    url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_130.PDF
+    sha256: 284316882fddbb1bfe1a22fbce9e030b8226db05b34e6a2ab13d3f41ee5bbb44
+    capturado: "2026-11-25"
+    pagina: "5179-5185"
+    fragmento: >-
+      Sesión Plenaria núm. 52 celebrada el martes, 31 de octubre de 1978, en la que fue aprobado el
+      texto de la Constitución [UCD, PSOE, PSC-PSOE, PCE-PSUC, Minoría Catalana, AP, PNV, ERC].
+      [...] votos emitidos 345; ausencias, cinco; a favor, 325; en contra, seis [6]; abstenciones,
+      14. [...] Señores Diputados que votaron NO: Fernández de la Mora y Mon, Jarabo Payá,
+      Letamendía Belzunce, Martínez Emperador, Mendizábal Uriarte, Silva Muñoz. Señores Diputados
+      que se ABSTUVIERON: Elorriaga Zarandona, Fuente de la Fuente, Lapuerta y Quintero, Morales
+      Moya, Piñeiro Ceballos, Sodupe Corcuera, Vizcaya Retana, Aguirre Querexeta, Aizpún Tuero,
+      Arana i Pelegrí, Arzalluz Antía, Barrera Costa, Bujanda Sarasola, Cuerda Montoya.
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Constitución Española (BOE núm. 311, de 29 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229
+    sha256: a4421fa6326ae5c28ea4d1cfaf457db5e8ce09c556ab942adeb661aa7a9b0e4d
+    capturado: "2026-11-25"
+    pagina: "29313-29424"
+    fragmento: >-
+      Constitución Española [BOE núm. 311, 29 de diciembre de 1978]. Las Cortes han aprobado y el
+      pueblo español ratificado la siguiente Constitución.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Cortes Generales — Diario de Sesiones del Congreso de los Diputados
+  origen: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_130.PDF
+  archivo: /facsimiles/1978/ES-1978-VOT-001.png
+  alt: Página 5185 del Diario de Sesiones del Congreso (31 de octubre de 1978) con la votación nominal de la Constitución
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de registro de votación nominal para revisión humana con facsímil PNG oficial
+    motivo: Verificación visual y textual de C_1978_130.PDF (págs. 5179 y 5185) y BOE-A-1978-31229
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_130.PDF (págs. 5179-5206)"
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó visualmente el facsímil de pág. 5185 frente al sumario de pág. 5179: la lista
+    impresa contiene exactamente 6 votos negativos y 14 abstenciones, confirmando la cifra corregida
+    del sumario (325/6/14 = 345 emitidos y 5 ausencias) y documentando la lectura oral errónea de
+    326/6/13 en el hemiciclo.

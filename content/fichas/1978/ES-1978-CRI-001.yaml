@@ -1,0 +1,70 @@
+id: ES-1978-CRI-001
+anuario: 1978
+categoria: CRI
+partidos:
+  - UCD
+nivel: estatal
+ambito_territorial: Navarra y País Vasco
+protagonistas:
+  - nombre: Rodolfo Martín Villa
+    cargo_en_el_momento: Ministro del Interior
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Comparecencia por los sucesos de Pamplona, San Sebastián y Rentería y rechazo de responsabilidades
+resumen: >-
+  El 19 de julio de 1978, Rodolfo Martín Villa admitió en el Congreso la entrada de la Policía
+  Armada en la plaza de toros de Pamplona, las muertes de Germán Rodríguez y José Ignacio
+  Barandiarán y destrozos en Rentería; la Comisión rechazó exigirle responsabilidad (19 votos a 14)
+  y anular el traslado del comisario (19 a 17).
+descargo: >-
+  Martín Villa atribuyó los incidentes a un clima de tensión callejera, sostuvo que la nota oficial
+  inicial sobre un supuesto asalto al cuartel de San Sebastián resultó inexacta tras comprobarse los
+  hechos, señaló que la responsabilidad correspondía a los mandos que ordenaron entrar en la plaza
+  y apoyó aprobar el punto 4 pidiendo claridad sobre medidas disciplinarias (35 votos a favor).
+cifras: []
+fuentes:
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados, Comisión de Interior, núm. 114, de 19 de julio de 1978
+    url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_114.PDF
+    sha256: a044c2c7f90d89bb54c61200b9acd0b1379b710449cdf6b117d504dace05d6b5
+    capturado: "2026-11-25"
+    pagina: "4444-4445, 4480-4487"
+    fragmento: >-
+      [19 de julio de 1978, Ministro del Interior Rodolfo Martín Villa] Producidos aquellos hechos,
+      se ordena la entrada de la Policía Armada en la plaza de toros [de Pamplona], cuya actuación
+      fue desproporcionada [...]. Con posterioridad [...], una Sección de la Compañía de la Reserva
+      General [...] procede de forma incomprensible a causar destrozos y daños materiales en
+      establecimientos y edificios de Rentería. [...] es innegable que tanto la herida mortal de
+      Germán Rodríguez Sainz como la de José Ignacio Barandiarán Urcola se producen cuando en las
+      calles se hostiga violentamente a las Fuerzas Públicas. [...] [Votación Comisión de Interior,
+      pág. 4487] El apartado 1 [...] dice: «Que el señor Ministro del Interior asuma su
+      responsabilidad [...] cuando su política de orden público ha fracasado». Efectuada la
+      votación, fue rechazado el apartado 1 por 19 votos en contra y 14 a favor, con tres
+      abstenciones. [...] El apartado 6 [...] «La anulación de la decisión de traslado del Comisario
+      de Policía de Pamplona a la localidad de Chirivella». Efectuada la votación, fue rechazado por
+      19 votos en contra y 17 a favor.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Cortes Generales — Diario de Sesiones del Congreso de los Diputados
+  origen: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_114.PDF
+  archivo: /facsimiles/1978/ES-1978-CRI-001.png
+  alt: Página 4444 del Diario de Sesiones del Congreso (19 de julio de 1978) con la comparecencia de Rodolfo Martín Villa
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Verificación directa sobre el PDF oficial C_1978_114.PDF
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_114.PDF (págs. 4441-4488)"
+  documentos_no_localizados:
+    - "Autos judiciales de archivo posteriores de los sumarios de Pamplona y San Sebastián (se mantiene estado no_judicial por referirse a la comparecencia y votación parlamentaria)"
+  intento_de_refutacion: >-
+    Se verificó la literalidad de los seis puntos votados en la Comisión de Interior (pág. 4487):
+    se aprobaron los apartados 3 (tramitación urgente de la Ley de Policía) y 4 (exigencia de
+    claridad informativa, 35 a favor y 1 abstención), mientras se rechazaron los puntos 1, 2, 5 y 6.
+    Todos esos matices y la postura del ministro se recogen en descargo.

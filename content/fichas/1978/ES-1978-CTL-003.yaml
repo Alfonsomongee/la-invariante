@@ -1,0 +1,67 @@
+id: ES-1978-CTL-003
+anuario: 1978
+categoria: CTL
+contraprueba: true
+contraprueba_motivo: >-
+  Las Cortes incorporaron por primera vez al Código Penal el delito específico de tortura cometida
+  por autoridades o funcionarios policiales, judiciales y penitenciarios, ampliando el control penal
+  sobre abusos del aparato estatal.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Tipificación penal del delito de tortura cometida por autoridades o funcionarios (Ley 31/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 31/1978, de 17 de julio (BOE del 20 de julio), que introdujo el
+  artículo 204 bis en el Código Penal para castigar con pena en grado máximo e inhabilitación la
+  tortura cometida por autoridades o funcionarios en investigaciones policiales, judiciales o
+  prisiones, y a los superiores que la permitieran.
+descargo: >-
+  El tipo penal exigió que los hechos se cometieran en el curso de una investigación policial o
+  judicial con el fin de obtener una confesión o testimonio, o en instituciones penitenciarias
+  respecto de detenidos o presos, graduando las penas según la gravedad de las lesiones o
+  intimidación.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 31/1978, de 17 de julio, de modificación del Código Penal para tipificar el delito de tortura (BOE núm. 172, de 20 de julio de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18551
+    sha256: 90e69751b8fd6e0c19a935d20dd8f5f1dd04368482c364017d3ad9e43baba847
+    capturado: "2026-11-25"
+    pagina: 17160
+    fragmento: >-
+      Ley 31/1978, de 17 de julio, de modificación del Código Penal para tipificar el delito de
+      tortura [BOE núm. 172, 20 de julio de 1978]. De conformidad con la Ley aprobada por las
+      Cortes [...]. Artículo único. Se introduce en el Código Penal un artículo doscientos cuatro
+      bis [204 bis] [...]: La Autoridad o funcionario público que, en el curso de la investigación
+      policial o judicial [...] será castigado con la pena señalada al delito en su grado máximo y,
+      además, la de inhabilitación especial. [...] Instituciones Penitenciarias [prisiones] [...].
+      Igualmente se impondrán las penas [...] a la Autoridad o funcionario que, faltando a los
+      deberes de su cargo, permitiesen que otras personas ejecuten los hechos previstos en ellos.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/07/20/pdfs/A17160-17160.pdf
+  archivo: /facsimiles/1978/ES-1978-CTL-003.png
+  alt: Facsímil del BOE núm. 172 (20 de julio de 1978) con la Ley 31/1978 que tipifica el delito de tortura
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1978 para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-18551 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18551 (pág. 17160)"
+    - "https://www.boe.es/boe/dias/1978/07/20/pdfs/A17160-17160.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la amplitud y los límites del art. 204 bis: castigó expresamente a funcionarios y
+    superiores permisivos, aunque exigió finalidad indagatoria en su primer párrafo (recogido en
+    descargo). Constituye un límite legal verificado frente a abusos estatales.

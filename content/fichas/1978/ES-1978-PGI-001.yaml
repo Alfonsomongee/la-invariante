@@ -1,0 +1,67 @@
+id: ES-1978-PGI-001
+anuario: 1978
+categoria: PGI
+contraprueba: true
+contraprueba_motivo: >-
+  Las Cortes suprimieron la excedencia especial que permitía a magistrados del Tribunal Supremo,
+  jueces y fiscales pasar a cargos políticos del Ejecutivo conservando su plaza judicial, pasando a
+  excedencia voluntaria con pérdida de vacante.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Supresión de la excedencia especial para jueces y fiscales en cargos políticos (Ley 12/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 12/1978, de 20 de febrero (BOE del 23 de febrero), que suprimió la
+  excedencia especial para magistrados del Tribunal Supremo, jueces y fiscales nombrados para
+  cargos políticos o de confianza, aplicando automáticamente la excedencia voluntaria y dejando
+  vacante su plaza judicial (artículo 1).
+descargo: >-
+  El artículo 2 permitió solicitar posteriormente el reingreso al servicio activo conforme a las
+  disposiciones orgánicas de cada carrera, y la Disposición Transitoria concedió tres meses de
+  plazo de opción a quienes ya ocupaban cargos administrativos.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 12/1978, de 20 de febrero, sobre regularización de la situación administrativa de los Magistrados, Jueces y Fiscales que desempeñen cargos de la Administración Civil del Estado (BOE núm. 46, de 23 de febrero de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-5337
+    sha256: 108679b321413a81c9662eee9684d2b1d8c3b08e0e9f9938eca690651f4f04c8
+    capturado: "2026-11-25"
+    pagina: "4394-4395"
+    fragmento: >-
+      Ley 12/1978, de 20 de febrero [BOE núm. 46, 23 de febrero de 1978]. De conformidad con la Ley
+      aprobada por las Cortes, vengo en sancionar. Artículo primero [1]. Uno. Queda sin efecto para
+      los Magistrados del Tribunal Supremo, miembros de las carreras Judicial y Fiscal y Jueces y
+      Fiscales de Distrito la posibilidad de acogerse a la situación de excedencia especial por su
+      nombramiento por Decreto para cargo político o de confianza de carácter no permanente. [...]
+      Tres. La toma de posesión del cargo determinará automáticamente la aplicación al nombrado del
+      régimen previsto para la excedencia voluntaria, quedando vacante el respectivo cargo judicial
+      o fiscal [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/02/23/pdfs/A04394-04395.pdf
+  archivo: /facsimiles/1978/ES-1978-PGI-001.png
+  alt: Facsímil del BOE núm. 46 (23 de febrero de 1978) con la Ley 12/1978 sobre jueces y fiscales en cargos políticos
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1978 para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-5337 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-5337 (págs. 4394-4395)"
+    - "https://www.boe.es/boe/dias/1978/02/23/pdfs/A04394-04395.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se leyó íntegramente la Ley 12/1978 para confirmar que no otorgaba privilegios de retorno sino
+    que restringió efectivamente el paso entre judicatura y cargos políticos suprimiendo la
+    excedencia especial con reserva de plaza; el derecho general de reingreso del art. 2 consta en
+    descargo.

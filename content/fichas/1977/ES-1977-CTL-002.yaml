@@ -1,0 +1,77 @@
+id: ES-1977-CTL-002
+anuario: 1977
+categoria: CTL
+contraprueba: true
+contraprueba_motivo: >-
+  Reforma aprobada por las Cortes Constituyentes que amplió la capacidad de control público y redujo
+  la opacidad patrimonial al tipificar el delito fiscal e imponer a las entidades bancarias el deber
+  de colaboración tributaria sin poder ampararse en el secreto bancario.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Ley 50/1977 de reforma fiscal, creación del delito fiscal y fin del secreto bancario
+resumen: >-
+  Las Cortes aprobaron la Ley 50/1977, de 14 de noviembre (BOE del 16 de noviembre), que tipificó
+  el delito fiscal desde 2.000.000 de pesetas (12.020,24 euros) en el artículo 35 y obligó a bancos
+  y cajas a colaborar con la Administración Tributaria (artículos 41 y 43).
+descargo: >-
+  La ley incorporó una regularización voluntaria sin sanción (artículo 30), reservó la persecución
+  del delito fiscal a instancia de la Administración tras firmeza administrativa o resolución del
+  Tribunal Económico-Administrativo Central (artículo 37) y exigió autorización administrativa
+  previa para investigar cuentas concretas (artículo 42).
+cifras:
+  - concepto: Umbral mínimo de defraudación para la comisión de delito fiscal (art. 35, art. 319 Código Penal)
+    valor: 2000000
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 12020.24
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-27150
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 50/1977, de 14 de noviembre, sobre medidas urgentes de reforma fiscal (BOE núm. 274, de 16 de noviembre de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-27150
+    sha256: 9d3ebf5aa78b486068cd7b7408130c78e8301e925fde6d6c97859b6bc64fceae
+    capturado: "2026-11-25"
+    pagina: "24945-24951"
+    fragmento: >-
+      Ley 50/1977, de 14 de noviembre, sobre medidas urgentes de reforma fiscal [BOE núm. 274, 16
+      de noviembre de 1977]. De conformidad con la Ley aprobada por las Cortes, vengo en sancionar.
+      [...] Artículo treinta y cinco [35]. [...] Cometerá delito fiscal el que defraude a la
+      Hacienda estatal o local [...] en una cantidad igual o superior a dos millones de pesetas
+      [2.000.000]. [...] Artículo cuarenta y uno [41]. Quedan plenamente sujetos al deber de
+      colaboración [...] los Bancos, Cajas de Ahorros, Cooperativas de Crédito [...] sin que puedan
+      exonerarse [...]. Artículo cuarenta y tres [43]. [...] estarán obligadas a comunicar a la
+      Administración Tributaria [...] los números de las cuentas activas y pasivas y de los
+      depósitos de valores mobiliarios de sus clientes.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-27150
+  alt: Ley 50/1977, de 14 de noviembre, sobre medidas urgentes de reforma fiscal
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1977 para revisión humana
+    motivo: Texto literal BOE-A-1977-27150 verificado
+  - fecha: "2026-11-25"
+    cambio: Corrección de partidos a institucional (sin DSCD de votación adjunto), inclusión de art. 37 y corchetes editoriales
+    motivo: Auditoría adversarial del Verificador (Regla 1)
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-27150 (arts. 30, 35, 37, 41–43, págs. 24945-24951)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación parlamentaria de la Ley 50/1977 (por ello se atribuye a institucional/Cortes y no a partidos concretos)"
+  intento_de_refutacion: >-
+    Se incorporaron las dos cautelas clave del articulado: el filtro de procedibilidad del art. 37
+    (persecución solo a instancia administrativa tras firmeza o resolución del TEAC) y la
+    autorización administrativa previa del art. 42, además de corregir la atribución partidista a
+    institucional al carecer de DSCD de la votación en fuentes. Pese a esos límites, la ley creó el
+    delito fiscal y levantó el secreto bancario frente a Hacienda.

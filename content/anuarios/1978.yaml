@@ -1,0 +1,175 @@
+anio: 1978
+legislatura: Legislatura Constituyente (1977–1979)
+moneda_curso: ESP
+gobiernos:
+  - presidente: Adolfo Suárez González
+    partido: UCD
+    tipo_mayoria: minoria_apoyo_parlamentario
+    desde: "1977-07-05"
+    hasta: "1979-04-06"
+composicion_congreso:
+  - partido: UCD
+    escanos: 165
+  - partido: PSOE
+    escanos: 103
+  - partido: AP
+    escanos: 16
+  - partido: PSC-PSOE
+    escanos: 15
+  - partido: PCE
+    escanos: 12
+  - partido: PDC
+    escanos: 11
+  - partido: PSUC
+    escanos: 8
+  - partido: PNV
+    escanos: 8
+  - partido: PSP-US
+    escanos: 6
+  - partido: UDC-CD
+    escanos: 2
+  - partido: CIC
+    escanos: 2
+  - partido: EC-FED
+    escanos: 1
+  - partido: EE-IE
+    escanos: 1
+gobiernos_autonomicos:
+  - comunidad: Cataluña (Generalidad provisional)
+    presidente: Josep Tarradellas i Joan
+    partido: institucional
+  - comunidad: País Vasco (Consejo General Vasco, RDL 1/1978)
+    presidente: Ramón Rubial Cavia
+    partido: PSOE
+contexto_resumen: >-
+  Durante 1978 gobernó Adolfo Suárez (UCD) en minoría parlamentaria con la composición salida de las
+  elecciones de junio de 1977 (350 diputados). El Ejecutivo aprobó 49 reales decretos-ley, incluidos
+  regímenes preautonómicos y normas de orden público, mientras las Cortes aprobaron 62 leyes: la
+  Constitución Española (aprobada en el Congreso el 31 de octubre por 325 votos a favor, 6 en contra
+  y 14 abstenciones, ratificada en referéndum el 6 de diciembre con 15.706.078 votos afirmativos
+  sobre 17.873.301 votantes), la Ley 39/1978 de Elecciones Locales, la Ley 48/1978 de Secretos
+  Oficiales, la Ley 54/1978 de Partidos Políticos y créditos extraordinarios de rescate industrial.
+nota_exposicion: >-
+  Todo el año 1978 correspondió al segundo Gobierno de Adolfo Suárez (UCD) en minoría. Por efecto
+  de exposición, los 49 reales decretos-ley publicados en el BOE y la dirección de los cuerpos de
+  orden público corresponden al Ejecutivo de UCD; las leyes estructurales aprobadas por consenso
+  parlamentario (Constitución, elecciones locales, partidos, secretos oficiales y rescates
+  industriales) se atribuyen al marco institucional de las Cortes salvo cuando consta votación
+  nominal en el Diario de Sesiones.
+hitos:
+  - fecha: "1978-02-23"
+    descripcion: Publicación de la Ley 12/1978 que suprime la excedencia especial para jueces y fiscales en cargos políticos.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-5337
+  - fecha: "1978-03-07"
+    descripcion: Real Decreto-ley 5/1978 que amplía las facultades de intervención del Banco de España sobre la banca privada.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-6472
+  - fecha: "1978-07-01"
+    descripcion: Real Decreto-ley 21/1978 sobre medidas policiales y judiciales frente a grupos armados.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-16969
+  - fecha: "1978-07-19"
+    descripcion: Comparecencia del ministro del Interior en el Congreso sobre los sucesos de Pamplona, San Sebastián y Rentería.
+    fuente_url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_114.PDF
+  - fecha: "1978-07-21"
+    descripcion: Publicación de la Ley 39/1978 de Elecciones Locales (listas cerradas, barrera del 5 % y Diputaciones indirectas).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18636
+  - fecha: "1978-10-11"
+    descripcion: Publicación de la Ley 48/1978 que mantiene la Ley de Secretos Oficiales de 1968 sin plazo de desclasificación.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-25567
+  - fecha: "1978-10-31"
+    descripcion: Aprobación definitiva del texto constitucional en el Congreso (325 a favor, 6 en contra, 14 abstenciones).
+    fuente_url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_130.PDF
+  - fecha: "1978-12-08"
+    descripcion: Publicación de la Ley 54/1978 de Partidos Políticos (financiación estatal permanente) y la Ley 53/1978 (asistencia letrada al detenido).
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-29843
+  - fecha: "1978-12-25"
+    descripcion: Publicación de las Leyes 59/1978 y 60/1978 con 24.800 millones de pesetas en créditos extraordinarios para sectores naval y siderúrgico.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074
+  - fecha: "1978-12-29"
+    descripcion: Publicación en el BOE de la Constitución Española ratificada en referéndum el 6 de diciembre.
+    fuente_url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229
+descartes:
+  - pista: Catástrofe del camping de Los Alfaques (11 de julio de 1978, Alcanar)
+    motivo_descarte: >-
+      Falta localizar y descargar la sentencia firme de la Audiencia Provincial de Tarragona (1982)
+      y el Diario de Sesiones del Congreso con la respuesta gubernamental sobre inspección de
+      cisternas de propileno.
+    requisito_entrada: >-
+      Descarga con sha256 de la sentencia judicial firme o del Diario de Sesiones oficial del
+      Congreso correspondiente a julio de 1978.
+  - pista: Intervención del Banco de Navarra y creación de Corporación Bancaria S.A. (enero–marzo 1978)
+    motivo_descarte: >-
+      Aunque el RDL 5/1978 (BOE-A-1978-6472) habilitó la intervención cautelar de bancos por el
+      Banco de España, la cifra consolidada del coste público del rescate de Banco de Navarra y
+      Corporación Bancaria exige citar el informe oficial del Banco de España o de la Comisión
+      Parlamentaria de la crisis bancaria.
+    requisito_entrada: >-
+      Descarga del informe oficial del Banco de España (Memoria Anual 1978 o informe sobre la crisis
+      bancaria 1977–1985) con detalle contable del Banco de Navarra.
+  - pista: Ley 59/1978 (9.800 millones para Astilleros Españoles y ASTANO) y Ley 36/1978 (8.309 millones para Hunosa)
+    motivo_descarte: >-
+      Ambas operaciones corresponden a empresas ya integradas en el INI; se priorizó la Ley 60/1978
+      (compra de capital y crédito a las privadas Altos Hornos del Mediterráneo y Altos Hornos de
+      Vizcaya) y la Ley 21/1978 (aval y seguro de cambio a concesionaria privada de autopista) bajo
+      el criterio estricto de SOC.
+    requisito_entrada: >-
+      Desglose del Tribunal de Cuentas sobre pasivos privados asumidos en la integración previa de
+      ASTANO y Astilleros Españoles.
+  - pista: Clasificación de 200 indultos individuales publicados en el BOE durante 1978
+    motivo_descarte: >-
+      Localizados los 200 reales decretos en los 312 boletines de 1978, pero los XML históricos del
+      BOE no incluyen el texto del delito (solo imagen PDF escaneada).
+    requisito_entrada: >-
+      Revisión u OCR de los 200 PDF del BOE de 1978 para clasificar delitos de corrupción según la
+      tipología del CGPJ.
+cobertura:
+  notas: >-
+    Cobertura ampliada de 1978 en 8 categorías (FIN, LMD, DEC, SOC, CTL, CRI, VOT y PGI), con
+    facsímiles PNG verificados del BOE y del Diario de Sesiones en los 12 registros, 3 contrapruebas
+    documentadas y conteo íntegro de 49 reales decretos-ley en 365 días de BOE.
+  huecos:
+    - "COR, PRM, GRA, LEN, SOB y DET sin fichas en esta primera entrega de 1978."
+    - "indultos_corrupcion.csv pendiente para 1978 hasta clasificar los 200 PDF de indultos."
+    - "paro_epa.csv y deuda_publica_pib.csv pendientes de descarga directa de tablas históricas homogéneas de INE y Banco de España."
+  documentos_manuales:
+    - "Sentencia de la Audiencia Provincial de Tarragona (1982) sobre Los Alfaques"
+    - "Memoria Anual 1978 del Banco de España (intervención Banco de Navarra y Corporación Bancaria)"
+    - "Diarios de Sesiones de las votaciones de Ley 39/1978, Ley 48/1978 y Ley 54/1978 para atribuir voto nominal por partido"
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Constitución Española (BOE núm. 311, de 29 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229
+    sha256: a4421fa6326ae5c28ea4d1cfaf457db5e8ce09c556ab942adeb661aa7a9b0e4d
+    capturado: "2026-11-25"
+    pagina: "29313-29424"
+    fragmento: >-
+      Constitución Española [BOE núm. 311, 29 de diciembre de 1978]. [...] Artículo 1. 1. España se
+      constituye en un Estado social y democrático de Derecho [...]. 2. La soberanía nacional reside
+      en el pueblo español, del que emanan los poderes del Estado.
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados núm. 130 (31 de octubre de 1978)
+    url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1978_130.PDF
+    sha256: 284316882fddbb1bfe1a22fbce9e030b8226db05b34e6a2ab13d3f41ee5bbb44
+    capturado: "2026-11-25"
+    pagina: "5179-5185"
+    fragmento: >-
+      Sesión Plenaria núm. 52 celebrada el martes, 31 de octubre de 1978, en la que fue aprobado el
+      texto de la Constitución. [...] votos emitidos 345; ausencias, cinco; a favor, 325; en contra,
+      seis; abstenciones, 14.
+  - tipo: boe
+    subtipo: resolucion_administrativa
+    titulo_documento: Acuerdo de la Junta Electoral Central con el resumen de la votación en el Referéndum Constitucional (BOE núm. 305, de 22 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-30906
+    sha256: 7d92664e6427b85be9e795ab96fb8f829471888a4b2a5582dc4ebcb44457ff7a
+    capturado: "2026-11-25"
+    pagina: 28934
+    fragmento: >-
+      Junta Electoral Central. Resumen de la votación en el Referéndum a que ha sido sometido el
+      Proyecto de Constitución [6 de diciembre de 1978]: Electores 26.632.180; Votantes 17.873.301;
+      Votos en pro 15.706.078; Votos en contra 1.400.505; Papeletas en blanco 632.902; Papeletas
+      nulas 133.786.
+estado_anuario: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Borrador inicial de Anuario 1978 pasado a revisión humana
+    motivo: Escaneo completo de 312 BOE de 1978 y verificación de documentos primarios en BOE y Congreso

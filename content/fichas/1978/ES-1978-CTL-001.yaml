@@ -1,0 +1,64 @@
+id: ES-1978-CTL-001
+anuario: 1978
+categoria: CTL
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Reforma de la Ley de Secretos Oficiales de 1968 sin plazo de desclasificación (Ley 48/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 48/1978, de 7 de octubre (BOE del 11 de octubre), que reformó la Ley
+  de 5 de abril de 1968 sobre Secretos Oficiales manteniendo en el Consejo de Ministros y la Junta
+  de Jefes de Estado Mayor la clasificación y cancelación exclusiva de materias reservadas
+  (artículos 4 y 7), sin plazo de desclasificación.
+descargo: >-
+  La reforma suprimió la facultad de clasificación que tenían los ministros individualmente y
+  reconoció en el artículo 10.2 el acceso del Congreso y del Senado a materias clasificadas en la
+  forma que determinasen sus Reglamentos, incluso en sesiones secretas.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 48/1978, de 7 de octubre, por la que se modifica la Ley de 5 de abril de 1968, sobre Secretos Oficiales (BOE núm. 243, de 11 de octubre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-25567
+    sha256: 7b506cdc77a52071d814b3d0c17355346957eff810c55405c8aafd020979a52e
+    capturado: "2026-11-25"
+    pagina: "23605-23606"
+    fragmento: >-
+      Ley 48/1978, de 7 de octubre, por la que se modifica la Ley de 5 de abril de 1968, sobre
+      Secretos Oficiales [BOE núm. 243, 11 de octubre de 1978]. De conformidad con la Ley aprobada
+      por las Cortes [...]. Artículo cuarto [4]. La calificación a que se refiere el artículo
+      anterior corresponderá exclusivamente, en la esfera de su competencia, al Consejo de Ministros
+      y a la Junta de Jefes de Estado Mayor. [...] Artículo séptimo [7]. La cancelación de
+      cualquiera de las calificaciones previstas en el artículo tercero de esta Ley será dispuesta
+      por el órgano que hizo la respectiva declaración. [...] Artículo trece. Las actividades
+      reservadas por declaración de Ley y las «materias clasificadas» no podrán ser comunicadas,
+      difundidas ni publicadas [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/10/11/pdfs/A23605-23606.pdf
+  archivo: /facsimiles/1978/ES-1978-CTL-001.png
+  alt: Facsímil del BOE núm. 243 (11 de octubre de 1978) con la Ley 48/1978 sobre Secretos Oficiales
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-25567 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-25567 (arts. 4, 7, 10 y 13, págs. 23605-23606)"
+    - "https://www.boe.es/boe/dias/1978/10/11/pdfs/A23605-23606.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación de la Ley 48/1978 (se atribuye a institucional/Cortes)"
+  intento_de_refutacion: >-
+    Se verificó todo el texto articulado de la Ley 48/1978: no contiene ningún plazo máximo de
+    clasificación ni mecanismo de desclasificación automática, dejando la cancelación únicamente en
+    manos del órgano que clasificó (art. 7). La apertura del acceso parlamentario (art. 10.2) se
+    recoge íntegra en descargo.

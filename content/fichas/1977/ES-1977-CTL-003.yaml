@@ -1,0 +1,72 @@
+id: ES-1977-CTL-003
+anuario: 1977
+categoria: CTL
+contraprueba: true
+contraprueba_motivo: >-
+  Reforma que redujo la discrecionalidad gubernativa al sustituir la autorización política previa de
+  partidos por un trámite reglado de diez días y trasladar al Tribunal Supremo la decisión sobre
+  ilicitud penal y sanciones a asociaciones políticas.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Real Decreto-ley 12/1977 de garantía judicial para la inscripción de partidos políticos
+resumen: >-
+  El Gobierno aprobó el Real Decreto-ley 12/1977, de 8 de febrero (BOE del 10 de febrero), que fijó
+  un plazo máximo de 10 días para inscribir asociaciones políticas y reservó a una Sala del Tribunal
+  Supremo la denegación por ilicitud penal y las sanciones de la Ley 21/1976.
+descargo: >-
+  El Ministerio de la Gobernación conservó la facultad de suspender la inscripción durante ese plazo
+  y remitir la documentación al Tribunal Supremo mediante acuerdo motivado si presumía ilicitud
+  penal de la asociación (artículo 1.2), quedando la resolución judicial fijada en un plazo de
+  treinta días (artículo 1.3).
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 12/1977, de 8 de febrero, sobre el derecho de asociación política (BOE núm. 35, de 10 de febrero de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-3663
+    sha256: 171040d22528e0a42cea68667769cd1f3d24239547c25a9e2dc450bde18bdb00
+    capturado: "2026-11-25"
+    pagina: 3223
+    fragmento: >-
+      Real Decreto-ley 12/1977, de 8 de febrero, sobre el derecho de asociación política [BOE núm.
+      35, 10 de febrero de 1977]. [...] Artículo primero. Uno. [...] En el plazo máximo de diez
+      días [10], el Ministerio de la Gobernación procederá a la inscripción de la Asociación en
+      dicho Registro. Dos. Ello, no obstante, si se presume la ilicitud penal de la Asociación, el
+      Ministerio de la Gobernación, dentro del mismo plazo y con suspensión de la inscripción,
+      remitirá la documentación presentada a la Sala del Tribunal Supremo [...]. Artículo tercero.
+      Las sanciones previstas en el apartado cinco del artículo seis de la Ley veintiuno/mil
+      novecientos setenta y seis, de catorce de junio [Ley 21/1976], solo podrán imponerse por
+      resolución judicial de la Sala del Tribunal Supremo [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-3663
+  alt: Real Decreto-ley 12/1977, de 8 de febrero, sobre el derecho de asociación política
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1977 para revisión humana
+    motivo: Texto literal BOE-A-1977-3663 verificado
+  - fecha: "2026-11-25"
+    cambio: Retirada de mención histórica sin fuente en descargo, precisión sobre art. 3 (Ley 21/1976) y corchetes en cita
+    motivo: Auditoría adversarial del Verificador (Regla 1)
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-3663 (pág. 3223)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó si el Ministerio de la Gobernación mantuvo margen de bloqueo: el artículo 1.2
+    permitía suspender y elevar al Tribunal Supremo, pero la decisión sobre la inscripción y las
+    sanciones del art. 6.5 de la Ley 21/1976 pasaron a exigir resolución judicial. Se eliminó del
+    descargo toda referencia histórica ajena al texto del BOE-A-1977-3663.

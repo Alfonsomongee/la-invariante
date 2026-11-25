@@ -1,0 +1,64 @@
+id: ES-1978-CTL-002
+anuario: 1978
+categoria: CTL
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Designación política de órganos de control, aforamientos e inviolabilidad en la Constitución
+resumen: >-
+  La Constitución Española (BOE del 29 de diciembre de 1978) fijó la inviolabilidad del Rey
+  (artículo 56.3), el aforamiento ante el Supremo y el suplicatorio parlamentario (artículo 71),
+  8 vocales del CGPJ propuestos por las Cortes (artículo 122.3), 12 magistrados del Tribunal
+  Constitucional (artículo 159.1) y el Tribunal de Cuentas dependiente de las Cortes (artículo 136).
+descargo: >-
+  El texto constitucional exigió mayorías cualificadas de tres quintos en las Cámaras para los
+  nombramientos del CGPJ y del Tribunal Constitucional, reservó 12 de los 20 vocales del CGPJ entre
+  jueces y magistrados y reconoció independencia judicial e inamovilidad en el artículo 117.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Constitución Española (BOE núm. 311, de 29 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229
+    sha256: a4421fa6326ae5c28ea4d1cfaf457db5e8ce09c556ab942adeb661aa7a9b0e4d
+    capturado: "2026-11-25"
+    pagina: "29313-29424"
+    fragmento: >-
+      Constitución Española [BOE núm. 311, 29 de diciembre de 1978]. [...] Artículo 56. 3 [56.3].
+      La persona del Rey es inviolable y no está sujeta a responsabilidad. [...] Artículo 71. 2.
+      [...] No podrán ser inculpados ni procesados sin la previa autorización de la Cámara
+      respectiva [suplicatorio]. 3. En las causas contra Diputados y Senadores será competente la
+      Sala de lo Penal del Tribunal Supremo. [...] Artículo 122. 3 [122.3]. El Consejo General del
+      Poder Judicial [CGPJ] estará integrado por [...] veinte miembros [...]: doce entre Jueces y
+      Magistrados [...] cuatro a propuesta del Congreso [...] y cuatro a propuesta del Senado [8
+      vocales] [...]. Artículo 136. 1. El Tribunal de Cuentas [...] Dependerá directamente de las
+      Cortes Generales [...]. Artículo 159. 1 [159.1]. El Tribunal Constitucional se compone de 12
+      miembros [...]; cuatro a propuesta del Congreso [...]; cuatro a propuesta del Senado [...];
+      dos a propuesta del Gobierno, y dos a propuesta del Consejo General del Poder Judicial.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/12/29/pdfs/A29313-29424.pdf
+  archivo: /facsimiles/1978/ES-1978-CTL-002.png
+  alt: Facsímil del BOE núm. 311 (29 de diciembre de 1978) con la Constitución Española
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-31229 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31229 (arts. 56, 71, 117, 122, 136 y 159)"
+    - "https://www.boe.es/boe/dias/1978/12/29/pdfs/A29313-29424.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se equilibró el diseño de nombramientos y aforamientos con las salvaguardas textuales de
+    mayorías de tres quintos, los 12 vocales judiciales del art. 122.3 y la independencia judicial
+    del art. 117 en el descargo. El voto nominal por partidos se documenta en ES-1978-VOT-001.

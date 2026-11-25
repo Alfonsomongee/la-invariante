@@ -1,0 +1,61 @@
+id: ES-1978-FIN-001
+anuario: 1978
+categoria: FIN
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Financiación estatal permanente de partidos políticos en la Ley 54/1978
+resumen: >-
+  Las Cortes aprobaron la Ley 54/1978, de 4 de diciembre (BOE del 8 de diciembre), cuyo artículo 6
+  estableció la financiación estatal anual permanente de las actividades ordinarias de los partidos
+  con cargo a los Presupuestos Generales del Estado según escaños y votos en ambas Cámaras.
+descargo: >-
+  La norma vinculó la financiación pública al reconocimiento del derecho de asociación política y
+  exigió en su artículo 4 que la organización interna de los partidos se ajustase a principios
+  democráticos y sufragio secreto, reservando la disolución a la autoridad judicial (artículo 5).
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 54/1978, de 4 de diciembre, de Partidos Políticos (BOE núm. 293, de 8 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-29843
+    sha256: aa1ba8e045fed6ae3b30699f8ec9b301cc4de3cb71f8404e12475374b08fdf73
+    capturado: "2026-11-25"
+    pagina: "27781-27782"
+    fragmento: >-
+      Ley 54/1978, de 4 de diciembre, de Partidos Políticos [BOE núm. 293, 8 de diciembre de 1978].
+      De conformidad con la Ley aprobada por las Cortes, vengo en sancionar. [...] Artículo sexto
+      [6]. La Administración del Estado financiará las actividades de los partidos con arreglo a las
+      siguientes normas: a) Cada partido percibirá anualmente una cantidad fija por cada escaño
+      obtenido en cada una de las dos Cámaras y, asimismo, una cantidad fija por cada uno de los
+      votos obtenidos por cada candidatura a cada una de las dos Cámaras. b) En los Presupuestos
+      Generales del Estado se consignará la cantidad global destinada a estos fines [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/12/08/pdfs/A27781-27782.pdf
+  archivo: /facsimiles/1978/ES-1978-FIN-001.png
+  alt: Facsímil del BOE núm. 293 (8 de diciembre de 1978) con el artículo 6 de la Ley 54/1978 de Partidos Políticos
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-29843 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-29843 (art. 6, págs. 27781-27782)"
+    - "https://www.boe.es/boe/dias/1978/12/08/pdfs/A27781-27782.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación nominal de la Ley 54/1978 (por ello figura partidos: [institucional])"
+  intento_de_refutacion: >-
+    Se verificó si la ley incluía límites de financiación privada o auditoría del Tribunal de
+    Cuentas; el artículo 6 remitió las cuantías globales a los Presupuestos Generales del Estado y
+    no incorporó mecanismos específicos de fiscalización externa en la propia norma. Se recoge en
+    descargo la exigencia de democracia interna y garantía judicial de disolución.
