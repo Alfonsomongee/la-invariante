@@ -17,6 +17,7 @@
     "build": "npm --workspace site run build && pagefind --site site/dist --output-subdir pagefind",
     "preview": "npm --workspace site run preview",
     "agent": "tsx agents/cli.ts",
+    "facsimil": "python scripts/facsimil.py",
     "test": "tsx scripts/run-tests.ts",
     "typecheck": "tsc --noEmit && npm --workspace site run check"
   },

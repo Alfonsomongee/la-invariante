@@ -334,6 +334,7 @@ export interface Votacion {
     a_favor: number;
     en_contra: number;
     abstenciones: number;
+    nulos?: number;
     ausentes?: number;
     total_emitidos?: number;
   };
