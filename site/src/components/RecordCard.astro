@@ -1,0 +1,48 @@
+---
+import { CATEGORIAS, etiquetaEstadoProcesal, type AnyRecord } from '../lib/content.js';
+import StampBadge from './StampBadge.astro';
+
+interface Props {
+  record: AnyRecord;
+}
+
+const { record } = Astro.props;
+const cat = CATEGORIAS[record.categoria];
+const estadoLabel =
+  'estado_procesal' in record
+    ? etiquetaEstadoProcesal(record.estado_procesal)
+    : record._tipo === 'promesa'
+      ? 'Dijo / Firmó'
+      : 'Votación parlamentaria';
+const isNeutralStamp =
+  !('estado_procesal' in record) || record.estado_procesal.actual === 'no_judicial';
+---
+
+<li class="record-item">
+  <div class="record-meta">
+    <span>{record.id}</span>
+    <span>·</span>
+    <a href={`/anuarios/${record.anuario}/`}>{record.anuario}</a>
+    <span>·</span>
+    <a href={`/categorias/${record.categoria.toLowerCase()}/`}>{cat.codigo} ({cat.nombre})</a>
+    {record.contraprueba && (
+      <>
+        <span>·</span>
+        <strong>Contraprueba</strong>
+      </>
+    )}
+    <StampBadge label={estadoLabel} neutral={isNeutralStamp} />
+  </div>
+  <h3 class="record-title">
+    <a href={record._rutaUrl}>{record.titulo}</a>
+  </h3>
+  <p class="record-summary">{record.resumen}</p>
+  <ul class="tag-list" aria-label="Partidos y ámbito">
+    {record.partidos.map((p) => (
+      <li>
+        <a href={`/partidos/${encodeURIComponent(p)}/`} class="tag">{p}</a>
+      </li>
+    ))}
+    <li class="tag">{record.nivel}</li>
+  </ul>
+</li>

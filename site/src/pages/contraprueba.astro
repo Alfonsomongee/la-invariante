@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecordCard from '../components/RecordCard.astro';
+import { getContrapruebas } from '../lib/content.js';
+
+const { registros, seriesVariables } = getContrapruebas();
+---
+
+<BaseLayout
+  title="Contraprueba"
+  description="Sección obligatoria de falsabilidad: hechos documentados y series en las que un contrapeso funcionó o el indicador cambió según el gobierno."
+>
+  <section class="reading">
+    <h1>Contraprueba</h1>
+    <p>
+      Esta sección es obligatoria, no decorativa. Si la tesis de <strong>La Invariante</strong> es
+      falsable, debe registrar con el mismo rigor documental los hechos que la contradicen:
+      tribunales que anularon normas del Ejecutivo, reformas que redujeron discrecionalidad,
+      mecanismos de rendición de cuentas efectivos y series cuantitativas cuya evolución sí cambió
+      con la alternancia de gobierno.
+    </p>
+  </section>
+
+  <section aria-labelledby="series-variables-heading">
+    <h2 id="series-variables-heading">Series cuya evolución cambia por gobierno ({seriesVariables.length})</h2>
+    {seriesVariables.length === 0 ? (
+      <div class="box box--notice reading">
+        Todavía no hay series con datos multilegislatura suficientes para evaluar diferencias entre gobiernos.
+        A medida que se completen los CSV en <code>content/series/</code>, toda serie con variación significativa
+        aparecerá automáticamente aquí.
+      </div>
+    ) : (
+      <ul>
+        {seriesVariables.map((s) => (
+          <li>
+            <a href={`/series/#${s.id}`}><strong>{s.titulo}</strong></a>: {s.notaVariacion}
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+
+  <section aria-labelledby="hechos-contra-heading">
+    <h2 id="hechos-contra-heading">Hechos documentados en Contraprueba ({registros.length})</h2>
+    {registros.length === 0 ? (
+      <div class="box box--notice reading">
+        No hay fichas de contraprueba publicadas todavía. Cada anuario anual incorpora obligatoriamente
+        la búsqueda activa de contrapruebas con el mismo umbral de documento primario.
+      </div>
+    ) : (
+      <ul class="record-list">
+        {registros.map((r) => (
+          <RecordCard record={r} />
+        ))}
+      </ul>
+    )}
+  </section>
+</BaseLayout>

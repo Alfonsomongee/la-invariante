@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { getPersonasPublicas, type PersonaPublica } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  // Regla §8: getPersonasPublicas() filtra estrictamente cargo_publico === true
+  return getPersonasPublicas().map((persona) => ({
+    params: { slug: persona.slug },
+    props: { persona },
+  }));
+}
+
+interface Props {
+  persona: PersonaPublica;
+}
+
+const { persona } = Astro.props;
+---
+
+<BaseLayout
+  title={persona.nombre}
+  description={`Registros vinculados al ejercicio del cargo público de ${persona.nombre} en La Invariante.`}
+>
+  <p class="mono muted" style="margin-bottom:0.4rem;">
+    <a href="/personas/">← Cargos públicos</a>
+  </p>
+
+  <section class="reading">
+    <h1>{persona.nombre}</h1>
+    <p class="muted">
+      <strong>Cargos en el momento de los hechos:</strong> {persona.cargos.join(' · ')}
+      {persona.wikidata && (
+        <span class="mono">
+          {' · '}
+          <a href={`https://www.wikidata.org/wiki/${persona.wikidata}`} target="_blank" rel="noopener noreferrer">
+            Wikidata {persona.wikidata}
+          </a>
+        </span>
+      )}
+    </p>
+    <p class="muted" style="font-size:0.9rem;">
+      Esta página reúne exclusivamente hechos documentados relativos al ejercicio de un cargo público.
+    </p>
+  </section>
+
+  <ul class="record-list">
+    {persona.registros.map((r) => (
+      <RecordCard record={r} />
+    ))}
+  </ul>
+</BaseLayout>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getErratas } from '../lib/content.js';
+
+const erratas = getErratas();
+---
+
+<BaseLayout
+  title="Fe de erratas (CHANGELOG)"
+  description="Registro público de correcciones, cambios de estado procesal y actualizaciones generado desde el historial de Git y las fichas."
+>
+  <section class="reading">
+    <h1>Fe de erratas y registro de cambios (CHANGELOG)</h1>
+    <p>
+      Toda corrección, cambio de estado procesal, adición de descargo o retirada de ficha queda
+      registrada públicamente a partir del historial de Git sobre <code>content/</code> y del campo
+      <code>versiones</code> de cada ficha.
+    </p>
+  </section>
+
+  {erratas.length === 0 ? (
+    <div class="box box--notice reading">
+      Sin modificaciones editoriales registradas todavía en <code>content/</code>.
+    </div>
+  ) : (
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Origen</th>
+            <th>Referencia</th>
+            <th>Cambio</th>
+            <th>Motivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          {erratas.map((e) => (
+            <tr>
+              <td class="mono">{e.fecha}</td>
+              <td class="mono">{e.fuente}</td>
+              <td class="mono">{e.referencia}</td>
+              <td>{e.cambio}</td>
+              <td>{e.motivo ?? '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</BaseLayout>

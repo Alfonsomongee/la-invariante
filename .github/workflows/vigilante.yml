@@ -1,0 +1,44 @@
+name: Vigilante mensual de causas abiertas
+
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+    inputs:
+      anio:
+        description: 'Filtrar por año (vacío = todo el archivo)'
+        required: false
+        type: string
+
+jobs:
+  vigilante:
+    name: Revisar fichas con estado procesal abierto
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ejecutar Vigilante y Auditor
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.anio }}" ]; then
+            npm run agent -- vigilante --anio "${{ inputs.anio }}"
+            npm run agent -- auditor --anio "${{ inputs.anio }}"
+          else
+            npm run agent -- vigilante
+            npm run agent -- auditor
+          fi
+
+      - name: Subir informes de Vigilante y Auditor
+        uses: actions/upload-artifact@v4
+        with:
+          name: informes-vigilante-auditor-${{ github.run_id }}
+          path: |
+            reports/vigilante/
+            reports/auditor/

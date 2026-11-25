@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StampBadge from '../components/StampBadge.astro';
+import { formatNumberEs, getSeries } from '../lib/content.js';
+import { renderSeriesSvg } from '../lib/charts.js';
+
+const seriesList = getSeries();
+---
+
+<BaseLayout
+  title="Series cuantitativas por gobierno"
+  description="Indicadores históricos desagregados por gobierno desde 1977, con gráficas SVG generadas en compilación y sin colores de partido."
+>
+  <section class="reading">
+    <h1>Series cuantitativas por gobierno</h1>
+    <p>
+      Cada indicador de <code>content/series/*.csv</code> se publica segmentado por gobierno con
+      gráficas SVG generadas en compilación (cero JavaScript de cliente, sin colores de partido).
+      Cuando una serie cambia de forma relevante entre gobiernos, la web lo declara y la enlaza
+      en <a href="/contraprueba/">Contraprueba</a>.
+    </p>
+  </section>
+
+  {seriesList.map((s) => (
+    <section id={s.id} style="margin-top:2.5rem;" aria-labelledby={`heading-${s.id}`}>
+      <div class="record-meta" style="margin-bottom:0.35rem;">
+        <span>{s.categoria}</span>
+        <span>·</span>
+        <span>Fuente: {s.fuente_institucional}</span>
+        {s.variaPorGobierno && <StampBadge label="Varía por gobierno → Contraprueba" />}
+      </div>
+      <h2 id={`heading-${s.id}`} style="margin-top:0;">{s.titulo}</h2>
+      <p class="reading">{s.descripcion}</p>
+
+      <div class:list={['box', s.variaPorGobierno ? 'box--stamp' : 'box--notice', 'reading']}>
+        <strong>Lectura por gobierno:</strong> {s.notaVariacion}
+        <div class="muted" style="font-size:0.86rem; margin-top:0.35rem;">
+          Criterio de falsabilidad: {s.criterio_variacion_gobierno}
+        </div>
+      </div>
+
+      <figure class="chart-figure">
+        <div set:html={renderSeriesSvg(s)} />
+        <figcaption class="chart-caption">
+          Archivo fuente: <code>content/series/{s.archivo}</code> · Unidad: {s.unidad}
+        </figcaption>
+      </figure>
+
+      {s.statsByGovernment.length > 0 && (
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Gobierno</th>
+                <th>Partido</th>
+                <th class="num">Periodo</th>
+                <th class="num">Años</th>
+                <th class="num">Media ({s.unidad})</th>
+                <th class="num">Mín.</th>
+                <th class="num">Máx.</th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.statsByGovernment.map((g) => (
+                <tr>
+                  <td>{g.gobierno}</td>
+                  <td class="mono">{g.partido}</td>
+                  <td class="num mono">{g.desde}–{g.hasta}</td>
+                  <td class="num">{g.anios}</td>
+                  <td class="num"><strong>{formatNumberEs(g.media)}</strong></td>
+                  <td class="num">{formatNumberEs(g.min)}</td>
+                  <td class="num">{formatNumberEs(g.max)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {s.rows.length > 0 && (
+        <details>
+          <summary>Ver tabla anual completa ({s.rows.length} observaciones)</summary>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Año</th>
+                  <th>Gobierno</th>
+                  <th>Partido</th>
+                  <th class="num">Valor ({s.unidad})</th>
+                  <th>Fuente</th>
+                  <th>Notas</th>
+                </tr>
+              </thead>
+              <tbody>
+                {s.rows.map((r) => (
+                  <tr>
+                    <td class="mono">{r.anio}</td>
+                    <td>{r.gobierno}</td>
+                    <td class="mono">{r.partido_gobierno}</td>
+                    <td class="num">{formatNumberEs(r.valor)}</td>
+                    <td class="mono">
+                      <a href={r.fuente_url} target="_blank" rel="noopener noreferrer">Documento</a>
+                    </td>
+                    <td>{r.notas}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </details>
+      )}
+    </section>
+  ))}
+</BaseLayout>

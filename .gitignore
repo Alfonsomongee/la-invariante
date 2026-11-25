@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+site/node_modules/
+
+# Build outputs
+site/dist/
+site/.astro/
+dist/
+
+# Local caches and downloaded primary documents (documents go to Cloudflare R2, NEVER Git)
+.cache/
+downloads/
+*.pdf
+*.tmp
+
+# Local agent run artifacts / temporary reports (unless explicitly committed)
+reports/
+
+# Environment variables & secrets (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*

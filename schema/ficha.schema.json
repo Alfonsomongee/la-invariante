@@ -1,0 +1,462 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://lainvariante.es/schema/ficha.schema.json",
+  "title": "Ficha documental — La Invariante",
+  "description": "Esquema de validación de una unidad documental básica (content/fichas/AAAA/ID.yaml).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "anuario",
+    "categoria",
+    "partidos",
+    "nivel",
+    "protagonistas",
+    "estado_procesal",
+    "titulo",
+    "resumen",
+    "descargo",
+    "cifras",
+    "fuentes",
+    "imagen",
+    "estado_ficha",
+    "versiones"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ES-(197[7-9]|19[89]\\d|20\\d\\d)-(COR|FIN|PRM|VOT|GRA|PGI|SOC|CTL|DEC|LMD|LEN|CRI|SOB|DET)-\\d{3}$",
+      "description": "Identificador inmutable: ES-AAAA-CAT-NNN. Nunca se reutiliza."
+    },
+    "anuario": {
+      "type": "integer",
+      "minimum": 1977,
+      "maximum": 2100
+    },
+    "categoria": {
+      "type": "string",
+      "enum": [
+        "COR",
+        "FIN",
+        "PRM",
+        "VOT",
+        "GRA",
+        "PGI",
+        "SOC",
+        "CTL",
+        "DEC",
+        "LMD",
+        "LEN",
+        "CRI",
+        "SOB",
+        "DET"
+      ]
+    },
+    "contraprueba": {
+      "type": "boolean",
+      "default": false,
+      "description": "True si el hecho documentado contradice la tesis de invariancia o muestra un contrapeso efectivo."
+    },
+    "contraprueba_motivo": {
+      "type": ["string", "null"],
+      "description": "Explicación factual de por qué este hecho figura en la sección Contraprueba."
+    },
+    "partidos": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 40
+      },
+      "description": "Siglas vigentes en el momento de los hechos (o 'institucional' si no corresponde a un partido)."
+    },
+    "nivel": {
+      "type": "string",
+      "enum": ["estatal", "autonomico", "local"]
+    },
+    "ambito_territorial": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "protagonistas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["nombre", "cargo_en_el_momento", "cargo_publico"],
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 140
+          },
+          "cargo_en_el_momento": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 180
+          },
+          "cargo_publico": {
+            "type": "boolean",
+            "description": "false implica exclusión del buscador interno y noindex según STC 58/2018."
+          },
+          "wikidata": {
+            "type": ["string", "null"],
+            "pattern": "^Q\\d+$"
+          }
+        }
+      }
+    },
+    "estado_procesal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actual", "historial"],
+      "properties": {
+        "actual": {
+          "$ref": "#/definitions/estadoProcesalEnum"
+        },
+        "motivo_extincion": {
+          "type": ["string", "null"],
+          "description": "Obligatorio si actual es 'extinguido' (salud, fallecimiento, prescripción)."
+        },
+        "historial": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["fecha", "estado", "documento"],
+            "properties": {
+              "fecha": {
+                "type": "string",
+                "format": "date"
+              },
+              "estado": {
+                "$ref": "#/definitions/estadoProcesalEnum"
+              },
+              "documento": {
+                "type": "string",
+                "format": "uri"
+              },
+              "nota": {
+                "type": "string",
+                "maxLength": 240
+              }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "actual": { "const": "extinguido" } },
+            "required": ["actual"]
+          },
+          "then": {
+            "required": ["motivo_extincion"],
+            "properties": {
+              "motivo_extincion": { "type": "string", "minLength": 3 }
+            }
+          }
+        }
+      ]
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 140,
+      "description": "Sin adjetivos valorativos."
+    },
+    "resumen": {
+      "type": "string",
+      "minLength": 15,
+      "description": "Máximo 60 palabras. Sujeto, verbo del documento, objeto, fecha, cifra."
+    },
+    "descargo": {
+      "type": ["string", "null"],
+      "description": "Versión del afectado, recurso o resolución favorable; null si no existe."
+    },
+    "descargo_justificacion_null": {
+      "type": ["string", "null"],
+      "description": "Motivo documentado cuando descargo es null."
+    },
+    "cifras": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/cifra"
+      }
+    },
+    "fuentes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/fuente"
+      }
+    },
+    "imagen": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/definitions/imagen" }
+      ]
+    },
+    "estado_ficha": {
+      "type": "string",
+      "enum": ["borrador", "revision", "publicada", "retirada"]
+    },
+    "motivo_retirada": {
+      "type": ["string", "null"],
+      "description": "Obligatorio si estado_ficha es 'retirada'."
+    },
+    "versiones": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/version"
+      }
+    },
+    "etiquetas": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 40
+      }
+    },
+    "investigacion": {
+      "$ref": "#/definitions/investigacion"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "estado_ficha": { "const": "retirada" } },
+        "required": ["estado_ficha"]
+      },
+      "then": {
+        "required": ["motivo_retirada"],
+        "properties": {
+          "motivo_retirada": { "type": "string", "minLength": 5 }
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "estadoProcesalEnum": {
+      "type": "string",
+      "enum": [
+        "denunciado",
+        "investigado",
+        "acusado",
+        "condenado_no_firme",
+        "condenado_firme",
+        "absuelto",
+        "archivado",
+        "extinguido",
+        "indultado",
+        "amnistiado",
+        "sancion_administrativa",
+        "no_judicial"
+      ]
+    },
+    "cifra": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["concepto", "valor", "moneda", "anio_moneda", "fuente"],
+      "properties": {
+        "concepto": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 160
+        },
+        "valor": {
+          "type": "number"
+        },
+        "moneda": {
+          "type": "string",
+          "enum": ["ESP", "EUR"]
+        },
+        "anio_moneda": {
+          "type": "integer",
+          "minimum": 1977,
+          "maximum": 2100
+        },
+        "valor_eur_conversion": {
+          "type": "number",
+          "description": "Conversión a euros a 166,386 ptas/€ para cifras en ESP (anteriores a 2002)."
+        },
+        "fuente": {
+          "type": "string",
+          "format": "uri"
+        },
+        "fuente_ipc": {
+          "type": "string",
+          "description": "Referencia a serie del IPC del INE si se incluye campo valor_eur_reales_AAAA."
+        }
+      },
+      "patternProperties": {
+        "^valor_eur_reales_\\d{4}$": {
+          "type": "number",
+          "description": "Valor deflactado con IPC del INE a euros constantes del año AAAA."
+        }
+      }
+    },
+    "fuente": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "url", "sha256", "capturado", "pagina", "fragmento"],
+      "properties": {
+        "tipo": {
+          "type": "string",
+          "enum": [
+            "boe",
+            "sentencia",
+            "auto",
+            "diario_sesiones",
+            "tcu",
+            "oficial",
+            "programa",
+            "prensa"
+          ]
+        },
+        "subtipo": {
+          "type": "string",
+          "enum": [
+            "auto_admision",
+            "auto_imputacion",
+            "auto_procesamiento",
+            "auto_apertura_juicio_oral",
+            "sentencia_recurrible",
+            "sentencia_firme",
+            "sentencia_absolutoria",
+            "auto_sobreseimiento",
+            "auto_extincion",
+            "boe_indulto",
+            "boe_amnistia",
+            "resolucion_administrativa",
+            "norma",
+            "otro"
+          ]
+        },
+        "titulo_documento": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "wayback_url": {
+          "type": ["string", "null"],
+          "format": "uri"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^([a-f0-9]{64}|pendiente)$",
+          "description": "SHA-256 del documento almacenado en R2; 'pendiente' solo se admite en estado_ficha=borrador."
+        },
+        "capturado": {
+          "type": "string",
+          "format": "date"
+        },
+        "pagina": {
+          "type": ["integer", "string", "null"]
+        },
+        "fragmento": {
+          "type": "string",
+          "minLength": 5,
+          "description": "Extracto literal del documento oficial (art. 13 TRLPI) o dato breve si tipo=prensa."
+        }
+      }
+    },
+    "imagen": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tipo", "licencia", "autor", "origen"],
+      "properties": {
+        "tipo": {
+          "type": "string",
+          "enum": ["facsimil", "foto"]
+        },
+        "licencia": {
+          "type": "string",
+          "enum": [
+            "art13_trlpi",
+            "pool_moncloa",
+            "pd",
+            "cc0",
+            "cc-by",
+            "cc-by-sa"
+          ]
+        },
+        "autor": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 160
+        },
+        "origen": {
+          "type": "string",
+          "format": "uri"
+        },
+        "archivo": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "alt": {
+          "type": "string",
+          "maxLength": 240
+        }
+      }
+    },
+    "version": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fecha", "cambio", "motivo"],
+      "properties": {
+        "fecha": {
+          "type": "string",
+          "format": "date"
+        },
+        "cambio": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 240
+        },
+        "motivo": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 240
+        }
+      }
+    },
+    "investigacion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "confianza",
+        "documentos_localizados",
+        "documentos_no_localizados",
+        "intento_de_refutacion"
+      ],
+      "properties": {
+        "confianza": {
+          "type": "string",
+          "enum": ["alta", "media", "baja"]
+        },
+        "documentos_localizados": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "documentos_no_localizados": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "intento_de_refutacion": {
+          "type": "string",
+          "minLength": 5
+        }
+      }
+    }
+  }
+}

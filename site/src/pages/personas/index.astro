@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPersonasPublicas } from '../../lib/content.js';
+
+const personas = getPersonasPublicas();
+---
+
+<BaseLayout
+  title="Cargos públicos"
+  description="Índice exclusivo de personas que ostentaron cargo público (STC 58/2018), restringido a hechos vinculados al ejercicio de su cargo."
+>
+  <section class="reading">
+    <h1>Cargos públicos ({personas.length})</h1>
+    <p>
+      En cumplimiento de la doctrina del Tribunal Constitucional (<strong>STC 58/2018</strong>) y de
+      las reglas jurídicas del archivo, este índice incluye exclusivamente a personas que ostentaban
+      cargo público en el momento de los hechos (<code>cargo_publico: true</code>), y solo recoge actos
+      vinculados al ejercicio de dicho cargo.
+    </p>
+  </section>
+
+  {personas.length === 0 ? (
+    <div class="box box--notice reading">Sin fichas de cargos públicos publicadas todavía.</div>
+  ) : (
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Cargos documentados</th>
+            <th>Partidos</th>
+            <th class="num">Registros</th>
+          </tr>
+        </thead>
+        <tbody>
+          {personas.map((p) => (
+            <tr>
+              <td>
+                <a href={`/personas/${p.slug}/`}><strong>{p.nombre}</strong></a>
+              </td>
+              <td>{p.cargos.join('; ')}</td>
+              <td class="mono">{p.partidos.join(', ')}</td>
+              <td class="num">{p.registros.length}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</BaseLayout>

@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Buscar en el archivo"
+  description="Búsqueda estática mediante Pagefind sobre fichas, promesas y votaciones publicadas en La Invariante."
+>
+  <section class="reading">
+    <h1>Buscar en el archivo</h1>
+    <p>
+      El índice se genera estáticamente con <strong>Pagefind</strong> en compilación (ver ADR 0003).
+      Los nombres marcados con <code>cargo_publico: false</code> quedan excluidos del índice en
+      cumplimiento de la STC 58/2018.
+    </p>
+  </section>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <div id="search" style="margin: 1.5rem 0; max-width: 720px;"></div>
+  <noscript>
+    <div class="box box--notice reading">
+      La búsqueda interactiva requiere JavaScript. Sin JavaScript puedes navegar directamente por{' '}
+      <a href="/anuarios/">Anuarios</a>, <a href="/fichas/">Fichas</a>,{' '}
+      <a href="/partidos/">Partidos</a> o <a href="/series/">Series</a>.
+    </div>
+  </noscript>
+
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      const script = document.createElement('script');
+      script.src = '/pagefind/pagefind-ui.js';
+      script.onload = () => {
+        if (window.PagefindUI) {
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            translations: {
+              placeholder: 'Buscar por BOE, categoría, año, norma o cargo público…',
+              zero_results: 'Sin resultados para [SEARCH_TERM]',
+            },
+          });
+        }
+      };
+      script.onerror = () => {
+        const el = document.getElementById('search');
+        if (el) {
+          el.innerHTML =
+            '<div class="box box--notice">Índice de búsqueda disponible tras ejecutar <code>npm run build</code> (Pagefind).</div>';
+        }
+      };
+      document.head.appendChild(script);
+    });
+  </script>
+</BaseLayout>

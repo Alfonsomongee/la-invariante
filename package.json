@@ -1,0 +1,36 @@
+{
+  "name": "la-invariante",
+  "version": "0.1.0",
+  "private": true,
+  "description": "La Invariante — Archivo hemerográfico y documental del fallo sistémico en España, 1977–hoy",
+  "type": "module",
+  "workspaces": [
+    "site"
+  ],
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "scripts": {
+    "validate": "tsx scripts/validate.ts",
+    "lint:estilo": "tsx scripts/estilo/lint.ts",
+    "dev": "npm --workspace site run dev",
+    "build": "npm --workspace site run build && pagefind --site site/dist --output-subdir pagefind",
+    "preview": "npm --workspace site run preview",
+    "agent": "tsx agents/cli.ts",
+    "test": "tsx scripts/run-tests.ts",
+    "typecheck": "tsc --noEmit && npm --workspace site run check"
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "csv-parse": "^5.6.0",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.2",
+    "pagefind": "^1.3.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

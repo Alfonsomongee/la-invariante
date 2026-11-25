@@ -1,0 +1,45 @@
+---
+import type { Fuente } from '../../../scripts/lib/constants.js';
+
+interface Props {
+  fuentes: Fuente[];
+}
+
+const { fuentes } = Astro.props;
+
+const etiquetasTipo: Record<string, string> = {
+  boe: 'BOE',
+  sentencia: 'Sentencia',
+  auto: 'Auto judicial',
+  diario_sesiones: 'Diario de Sesiones',
+  tcu: 'Tribunal de Cuentas',
+  oficial: 'Documento oficial',
+  programa: 'Programa electoral',
+  prensa: 'Prensa (contexto)',
+};
+---
+
+<div class="sources-list">
+  {fuentes.map((f, idx) => (
+    <article class="source-card">
+      <div class="mono">
+        <strong>[{idx + 1}] {etiquetasTipo[f.tipo] ?? f.tipo}</strong>
+        {f.pagina !== null && f.pagina !== undefined && <span> · pág. {f.pagina}</span>}
+      </div>
+      {f.titulo_documento && <div style="margin-top:0.2rem;">{f.titulo_documento}</div>}
+      <p class="source-fragment">«{f.fragmento}»</p>
+      <div class="mono" style="margin-top:0.25rem;">
+        <a href={f.url} target="_blank" rel="noopener noreferrer">Documento de origen</a>
+        {f.wayback_url && (
+          <span>
+            {' · '}
+            <a href={f.wayback_url} target="_blank" rel="noopener noreferrer">Wayback</a>
+          </span>
+        )}
+      </div>
+      <div class="sha" title={`SHA-256 íntegro: ${f.sha256}`}>
+        Capturado: {f.capturado} · SHA-256: {f.sha256 === 'pendiente' ? 'pendiente' : `${f.sha256.slice(0, 16)}…`}
+      </div>
+    </article>
+  ))}
+</div>

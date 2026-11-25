@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { getPartidos } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return getPartidos().map((p) => ({
+    params: { partido: p.sigla },
+    props: { sigla: p.sigla, registros: p.registros },
+  }));
+}
+
+interface Props {
+  sigla: string;
+  registros: ReturnType<typeof getPartidos>[number]['registros'];
+}
+
+const { sigla, registros } = Astro.props;
+---
+
+<BaseLayout
+  title={`Partido: ${sigla}`}
+  description={`Registros documentales en los que figura ${sigla} en La Invariante.`}
+>
+  <p class="mono muted" style="margin-bottom:0.4rem;">
+    <a href="/partidos/">← Todos los partidos</a>
+  </p>
+  <h1>{sigla} ({registros.length})</h1>
+  <p class="reading muted">
+    Agrupación estrictamente analítica por siglas vigentes en la fecha de los hechos.
+  </p>
+
+  <ul class="record-list">
+    {registros.map((r) => (
+      <RecordCard record={r} />
+    ))}
+  </ul>
+</BaseLayout>

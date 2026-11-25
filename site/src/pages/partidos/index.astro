@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPartidos } from '../../lib/content.js';
+
+const partidos = getPartidos();
+---
+
+<BaseLayout
+  title="Índice por partido"
+  description="Registros documentales agrupados por siglas vigentes en el momento de los hechos, sin colores de partido."
+>
+  <section class="reading">
+    <h1>Partidos (texto y filtro, sin colores de partido)</h1>
+    <p>
+      Las siglas corresponden siempre a la denominación del partido en el momento de los hechos.
+      El volumen por partido depende del <em>efecto de exposición</em> (quién ostenta el Gobierno
+      dicta más actos ejecutivos) y nunca de criterios desiguales.
+    </p>
+  </section>
+
+  {partidos.length === 0 ? (
+    <div class="box box--notice reading">Sin registros publicados todavía.</div>
+  ) : (
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Siglas</th>
+            <th class="num">Registros publicados</th>
+          </tr>
+        </thead>
+        <tbody>
+          {partidos.map((p) => (
+            <tr>
+              <td class="mono">
+                <a href={`/partidos/${encodeURIComponent(p.sigla)}/`}>{p.sigla}</a>
+              </td>
+              <td class="num">{p.total}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</BaseLayout>

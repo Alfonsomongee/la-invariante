@@ -1,0 +1,60 @@
+series:
+  - id: decretos_ley
+    archivo: decretos_ley.csv
+    titulo: Reales decretos-ley aprobados por año
+    categoria: DEC
+    unidad: decretos-ley
+    fuente_institucional: Boletín Oficial del Estado (BOE)
+    descripcion: >-
+      Número anual de reales decretos-ley publicados en el BOE (art. 86 CE),
+      desagregado por gobierno y partido en el Ejecutivo.
+    criterio_variacion_gobierno: >-
+      Si la media anual difiere en más de un 35 % entre dos gobiernos sucesivos
+      con serie completa, el indicador se enlaza en Contraprueba.
+  - id: indultos_corrupcion
+    archivo: indultos_corrupcion.csv
+    titulo: Indultos concedidos en delitos de corrupción por año
+    categoria: GRA
+    unidad: indultos
+    fuente_institucional: Boletín Oficial del Estado (BOE) y clasificación CGPJ
+    descripcion: >-
+      Indultos totales o parciales publicados en el BOE correspondientes a
+      delitos clasificados como corrupción por el CGPJ (malversación, cohecho,
+      prevaricación, tráfico de influencias, fraude, negociaciones prohibidas).
+    criterio_variacion_gobierno: >-
+      Si la media anual cae de forma sostenida bajo un gobierno concreto, el
+      indicador se señala en Contraprueba.
+  - id: condenas_corrupcion
+    archivo: condenas_corrupcion.csv
+    titulo: Procedimientos con condena firme en delitos de corrupción
+    categoria: COR
+    unidad: procedimientos
+    fuente_institucional: Consejo General del Poder Judicial (Repositorio de datos sobre corrupción) y CENDOJ
+    descripcion: >-
+      Número anual de procedimientos con sentencia firme condenatoria en
+      delitos de corrupción pública registrados por año de sentencia o hechos.
+    criterio_variacion_gobierno: >-
+      Se interpreta atendiendo al desfase temporal entre la fecha de los hechos
+      y la sentencia firme.
+  - id: paro_epa
+    archivo: paro_epa.csv
+    titulo: Tasa de paro anual (media EPA)
+    categoria: DET
+    unidad: "% población activa"
+    fuente_institucional: Instituto Nacional de Estadística (INE — EPA)
+    descripcion: >-
+      Tasa media anual de desempleo según la Encuesta de Población Activa del INE.
+    criterio_variacion_gobierno: >-
+      Serie macroeconómica sensible al ciclo económico y a reformas laborales;
+      variaciones marcadas entre gobiernos se destacan en Contraprueba.
+  - id: deuda_publica_pib
+    archivo: deuda_publica_pib.csv
+    titulo: Deuda pública sobre PIB (Protocolo de Déficit Excesivo)
+    categoria: DET
+    unidad: "% PIB"
+    fuente_institucional: Banco de España (Boletín Estadístico — PDE)
+    descripcion: >-
+      Ratio deuda de las Administraciones Públicas sobre PIB a cierre de cada
+      ejercicio según metodología PDE del Banco de España.
+    criterio_variacion_gobierno: >-
+      Descensos sostenidos de ratio en una legislatura se destacan en Contraprueba.

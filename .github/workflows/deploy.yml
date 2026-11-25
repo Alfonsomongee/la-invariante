@@ -1,0 +1,48 @@
+name: Despliegue de web estática (Cloudflare Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  desplegar:
+    name: Validar, compilar y desplegar site/dist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validar contenido y estilo antes de publicar
+        run: |
+          npm run validate
+          npm run lint:estilo
+
+      - name: Compilar Astro + Satori OG + Pagefind
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://lainvariante.es' }}
+          RECTIFICACION_URL: ${{ vars.RECTIFICACION_URL }}
+          RECTIFICACION_EMAIL: ${{ vars.RECTIFICACION_EMAIL }}
+        run: npm run build
+
+      - name: Subir artefacto estático compilado
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-dist-${{ github.sha }}
+          path: site/dist/
+
+      - name: Publicar en Cloudflare Pages
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site/dist --project-name=${{ vars.CF_PAGES_PROJECT || 'la-invariante' }}

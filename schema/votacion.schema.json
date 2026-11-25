@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://lainvariante.es/schema/votacion.schema.json",
+  "title": "Votación («Votan juntos») — La Invariante",
+  "description": "Esquema de validación para registros de votaciones parlamentarias (content/votaciones/AAAA/ID.yaml).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "anuario",
+    "categoria",
+    "partidos",
+    "nivel",
+    "titulo",
+    "resumen",
+    "sesion",
+    "resultado",
+    "grupos",
+    "descargo",
+    "fuentes",
+    "imagen",
+    "estado_ficha",
+    "versiones"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ES-(197[7-9]|19[89]\\d|20\\d\\d)-VOT-\\d{3}$"
+    },
+    "anuario": {
+      "type": "integer",
+      "minimum": 1977,
+      "maximum": 2100
+    },
+    "categoria": {
+      "const": "VOT"
+    },
+    "contraprueba": {
+      "type": "boolean",
+      "default": false
+    },
+    "contraprueba_motivo": {
+      "type": ["string", "null"]
+    },
+    "partidos": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 40
+      }
+    },
+    "nivel": {
+      "type": "string",
+      "enum": ["estatal", "autonomico", "local"]
+    },
+    "ambito_territorial": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "protagonistas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["nombre", "cargo_en_el_momento", "cargo_publico"],
+        "properties": {
+          "nombre": { "type": "string", "minLength": 2, "maxLength": 140 },
+          "cargo_en_el_momento": { "type": "string", "minLength": 2, "maxLength": 180 },
+          "cargo_publico": { "type": "boolean" },
+          "wikidata": { "type": ["string", "null"], "pattern": "^Q\\d+$" }
+        }
+      }
+    },
+    "titulo": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 140
+    },
+    "resumen": {
+      "type": "string",
+      "minLength": 15
+    },
+    "sesion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fecha", "legislatura", "camara", "asunto"],
+      "properties": {
+        "fecha": { "type": "string", "format": "date" },
+        "legislatura": { "type": "string", "minLength": 1, "maxLength": 40 },
+        "camara": {
+          "type": "string",
+          "enum": ["congreso", "senado", "parlamento_autonomico"]
+        },
+        "numero_sesion": { "type": ["string", "integer", "null"] },
+        "asunto": { "type": "string", "minLength": 5, "maxLength": 280 },
+        "norma_resultante": { "type": ["string", "null"], "maxLength": 240 }
+      }
+    },
+    "resultado": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["a_favor", "en_contra", "abstenciones"],
+      "properties": {
+        "a_favor": { "type": "integer", "minimum": 0 },
+        "en_contra": { "type": "integer", "minimum": 0 },
+        "abstenciones": { "type": "integer", "minimum": 0 },
+        "ausentes": { "type": "integer", "minimum": 0 },
+        "total_emitidos": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "grupos": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["grupo", "partido", "sentido"],
+        "properties": {
+          "grupo": { "type": "string", "minLength": 2, "maxLength": 120 },
+          "partido": { "type": "string", "minLength": 2, "maxLength": 40 },
+          "sentido": {
+            "type": "string",
+            "enum": ["a_favor", "en_contra", "abstencion", "dividido", "ausente"]
+          },
+          "a_favor": { "type": "integer", "minimum": 0 },
+          "en_contra": { "type": "integer", "minimum": 0 },
+          "abstenciones": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "descargo": {
+      "type": ["string", "null"]
+    },
+    "descargo_justificacion_null": {
+      "type": ["string", "null"]
+    },
+    "cifras": {
+      "type": "array",
+      "items": { "$ref": "ficha.schema.json#/definitions/cifra" }
+    },
+    "fuentes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "ficha.schema.json#/definitions/fuente" }
+    },
+    "imagen": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "ficha.schema.json#/definitions/imagen" }
+      ]
+    },
+    "estado_ficha": {
+      "type": "string",
+      "enum": ["borrador", "revision", "publicada", "retirada"]
+    },
+    "motivo_retirada": {
+      "type": ["string", "null"]
+    },
+    "versiones": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "ficha.schema.json#/definitions/version" }
+    },
+    "investigacion": {
+      "$ref": "ficha.schema.json#/definitions/investigacion"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "estado_ficha": { "const": "retirada" } },
+        "required": ["estado_ficha"]
+      },
+      "then": {
+        "required": ["motivo_retirada"],
+        "properties": {
+          "motivo_retirada": { "type": "string", "minLength": 5 }
+        }
+      }
+    }
+  ]
+}

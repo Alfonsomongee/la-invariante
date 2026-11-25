@@ -1,0 +1,14 @@
+---
+import { marked } from 'marked';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getMetodologiaMarkdown } from '../lib/content.js';
+
+const html = await marked.parse(getMetodologiaMarkdown());
+---
+
+<BaseLayout
+  title="Metodología"
+  description="Criterios de entrada, escala cerrada de estado procesal, reglas de cifras, privacidad y respuestas a objeciones frecuentes."
+>
+  <article class="reading" set:html={html} />
+</BaseLayout>

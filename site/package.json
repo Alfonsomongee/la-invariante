@@ -1,0 +1,28 @@
+{
+  "name": "@la-invariante/site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "tsx ../scripts/astro-check.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.1.0",
+    "@fontsource/ibm-plex-sans": "^5.1.0",
+    "@fontsource/source-serif-4": "^5.1.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "astro": "^5.1.0",
+    "csv-parse": "^5.6.0",
+    "js-yaml": "^4.1.0",
+    "marked": "^15.0.0",
+    "satori": "^0.12.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@types/js-yaml": "^4.0.9",
+    "typescript": "^5.7.2"
+  }
+}

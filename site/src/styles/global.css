@@ -1,0 +1,563 @@
+/* ==========================================================================
+   La Invariante — Sistema visual documental (CLAUDE.md §7)
+   - Fondo hueso, tinta casi negra, contraste AA/AAA.
+   - Sin colores de partido.
+   - Un único acento (rojo sello) reservado a estado procesal y cambios de estado.
+   - Cero degradados, cero sombras flotantes, cero efecto cristal, cero emoji.
+   ========================================================================== */
+
+:root {
+  --bg: #f6f3ec;
+  --bg-subtle: #eee9de;
+  --ink: #171614;
+  --ink-muted: #524e46;
+  --rule: #cdc6b6;
+  --rule-strong: #171614;
+  --accent-stamp: #8c1d18;
+  --accent-stamp-bg: #f4e6e4;
+
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 66ch;
+  --container-max: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: -0.01em;
+  margin-top: 1.8rem;
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  font-size: clamp(1.65rem, 2.8vw, 2.2rem);
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.35rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+}
+
+.tabular {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--ink-muted);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.reading {
+  max-width: var(--measure);
+}
+
+/* Cabecera editorial */
+.site-header {
+  border-bottom: 2px solid var(--rule-strong);
+  padding: 1.1rem 0 0.85rem;
+  background-color: var(--bg);
+}
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.65rem;
+}
+
+.site-brand {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-edition {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+  letter-spacing: 0.03em;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 0.15rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current='page'] {
+  border-bottom-color: var(--ink);
+  font-weight: 600;
+}
+
+/* Contenido principal */
+main {
+  flex: 1;
+  padding: 2rem 0 3.5rem;
+}
+
+/* Disposición con notas al margen en escritorio */
+.doc-grid {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure)) minmax(250px, 1fr);
+  gap: 1.5rem 2.75rem;
+  align-items: start;
+}
+
+.doc-main {
+  min-width: 0;
+}
+
+.doc-margin {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  border-left: 1px solid var(--rule);
+  padding-left: 1.25rem;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .doc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-margin {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin: 1.5rem 0;
+  }
+}
+
+/* Sello de estado procesal (único acento permitido) */
+.stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-stamp);
+  border: 1.5px solid var(--accent-stamp);
+  background-color: var(--accent-stamp-bg);
+  padding: 0.18rem 0.5rem;
+  line-height: 1.25;
+}
+
+.stamp--neutral {
+  color: var(--ink);
+  border-color: var(--ink);
+  background-color: transparent;
+}
+
+/* Etiquetas neutras (partidos, categorías, nivel — SIN colores de partido) */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid var(--rule);
+  background-color: var(--bg-subtle);
+  padding: 0.12rem 0.45rem;
+  text-decoration: none;
+}
+
+a.tag:hover {
+  border-color: var(--ink);
+}
+
+/* Listados documentales */
+.record-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.record-item {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.1rem 0;
+}
+
+.record-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.record-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.record-title a {
+  text-decoration: none;
+}
+
+.record-title a:hover {
+  text-decoration: underline;
+}
+
+.record-summary {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+/* Cajas documentales sobrias */
+.box {
+  border: 1px solid var(--rule);
+  background-color: var(--bg-subtle);
+  padding: 1rem 1.2rem;
+  margin: 1.25rem 0;
+}
+
+.box--notice {
+  border-left: 3px solid var(--ink);
+}
+
+.box--stamp {
+  border-left: 3px solid var(--accent-stamp);
+}
+
+/* Tablas de datos */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  border-bottom: 2px solid var(--rule-strong);
+  background-color: var(--bg-subtle);
+}
+
+td.num,
+th.num {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Comparativa Dijo / Firmó */
+.dijo-firmo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 720px) {
+  .dijo-firmo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dijo-firmo__col {
+  border: 1px solid var(--rule-strong);
+  padding: 1.1rem;
+  background-color: var(--bg);
+}
+
+.dijo-firmo__label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+blockquote.literal {
+  margin: 0.75rem 0;
+  padding: 0.65rem 0.9rem;
+  border-left: 2px solid var(--rule-strong);
+  background-color: var(--bg-subtle);
+  font-style: italic;
+}
+
+/* Notas de fuente al margen */
+.source-card {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.65rem 0;
+}
+
+.source-card:last-child {
+  border-bottom: none;
+}
+
+.source-fragment {
+  font-size: 0.85rem;
+  margin: 0.35rem 0;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--rule);
+}
+
+.sha {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  word-break: break-all;
+}
+
+/* Cronología procesal */
+.timeline {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid var(--rule);
+}
+
+.timeline li {
+  margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -1.32rem;
+  top: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--accent-stamp);
+}
+
+/* Rejilla de años (1977–hoy) */
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.year-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--rule);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  background-color: var(--bg);
+}
+
+.year-cell--active {
+  border-color: var(--ink);
+  background-color: var(--bg-subtle);
+  font-weight: 600;
+}
+
+.year-cell small {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+/* Gráficas SVG */
+.chart-figure {
+  margin: 1.5rem 0;
+  border: 1px solid var(--rule);
+  background-color: var(--bg);
+  padding: 1rem;
+}
+
+.chart-figure svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.chart-caption {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--ink-muted);
+  margin-top: 0.6rem;
+}
+
+/* Figuras y facsímiles */
+.doc-figure {
+  margin: 1.5rem 0;
+  border: 1px solid var(--rule);
+  padding: 0.75rem;
+  background-color: var(--bg-subtle);
+}
+
+.doc-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--rule);
+}
+
+.doc-figure figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+
+/* Detalles plegables en móvil */
+details {
+  border: 1px solid var(--rule);
+  padding: 0.65rem 0.9rem;
+  background-color: var(--bg-subtle);
+}
+
+summary {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Pie de página */
+.site-footer {
+  border-top: 2px solid var(--rule-strong);
+  padding: 1.5rem 0 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.print-meta {
+  display: none;
+}
+
+/* Filtros estáticos */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 1.5rem;
+}

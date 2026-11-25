@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getRectificacionConfig } from '../lib/content.js';
+
+const cfg = getRectificacionConfig();
+---
+
+<BaseLayout
+  title="Derecho de réplica y rectificación"
+  description="Procedimiento público para aportar descargos, sentencias absolutorias, autos de sobreseimiento o correcciones documentales en La Invariante."
+>
+  <article class="reading">
+    <h1>Derecho de réplica, descargo y rectificación</h1>
+    <p>
+      <strong>La Invariante</strong> aplica de manera prioritaria la actualización de estados procesales
+      (especialmente autos de archivo, sobreseimiento y sentencias absolutorias), la incorporación de
+      descargos omitidos y la rectificación de cualquier error fáctico o de privacidad (STC 58/2018).
+    </p>
+
+    <h2>Qué debe incluir una solicitud</h2>
+    <ol>
+      <li><strong>Identificador de la ficha</strong> (formato <code>ES-AAAA-CAT-NNN</code>) o URL exacta.</li>
+      <li><strong>Texto o dato concreto</strong> que se solicita corregir, actualizar o añadir como descargo.</li>
+      <li><strong>Documento primario acreditativo</strong> (referencia de BOE, sentencia, auto, Diario de Sesiones o comunicado oficial verificable).</li>
+    </ol>
+
+    <div class="box box--notice">
+      <p style="margin-bottom:0.5rem;">
+        <strong>Canales habilitados:</strong>
+      </p>
+      <ul style="margin:0;">
+        <li>
+          Correo electrónico editorial:{' '}
+          <a href={`mailto:${cfg.email}`} class="mono">{cfg.email}</a>
+        </li>
+        {cfg.url !== '/rectificacion/' && (
+          <li>
+            Formulario público en repositorio:{' '}
+            <a href={cfg.url} target="_blank" rel="noopener noreferrer">Abrir solicitud de rectificación</a>
+          </li>
+        )}
+      </ul>
+    </div>
+
+    <h2>Compromiso de trazabilidad</h2>
+    <p>
+      Toda actualización acreditada mediante documento primario se incorpora mediante pull request,
+      actualiza el estado procesal y la primera línea del resumen si se trata de un archivo o absolución,
+      y queda reflejada públicamente en <a href="/erratas/">Fe de erratas (CHANGELOG)</a>.
+    </p>
+  </article>
+</BaseLayout>

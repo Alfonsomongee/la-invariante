@@ -1,0 +1,10 @@
+---
+interface Props {
+  label: string;
+  neutral?: boolean;
+}
+
+const { label, neutral = false } = Astro.props;
+---
+
+<span class:list={['stamp', { 'stamp--neutral': neutral }]}>{label}</span>

@@ -1,0 +1,208 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StampBadge from '../../components/StampBadge.astro';
+import MarginSources from '../../components/MarginSources.astro';
+import ProtagonistasList from '../../components/ProtagonistasList.astro';
+import CifrasTable from '../../components/CifrasTable.astro';
+import {
+  CATEGORIAS,
+  ESTADOS_PROCESALES,
+  etiquetaEstadoProcesal,
+  getFichas,
+  hasNonPublicProtagonist,
+  type Ficha,
+} from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return getFichas({ includeRetiradas: true }).map((ficha) => ({
+    params: { id: ficha.id },
+    props: { ficha },
+  }));
+}
+
+interface Props {
+  ficha: Ficha;
+}
+
+const { ficha } = Astro.props;
+const cat = CATEGORIAS[ficha.categoria];
+const esRetirada = ficha.estado_ficha === 'retirada';
+const noindex = esRetirada || hasNonPublicProtagonist(ficha);
+const estadoLabel = esRetirada ? 'Ficha retirada' : etiquetaEstadoProcesal(ficha.estado_procesal);
+const neutralStamp = !esRetirada && ficha.estado_procesal.actual === 'no_judicial';
+---
+
+<BaseLayout
+  title={`${ficha.id} — ${ficha.titulo}`}
+  description={ficha.resumen}
+  noindex={noindex}
+  ogImage={esRetirada ? '/og/default.png' : `/og/${ficha.id}.png`}
+>
+  <p class="mono muted" style="margin-bottom:0.5rem;">
+    <a href="/fichas/">← Fichas</a> · <a href={`/anuarios/${ficha.anuario}/`}>Anuario {ficha.anuario}</a> ·{' '}
+    <a href={`/categorias/${ficha.categoria.toLowerCase()}/`}>{cat.codigo} ({cat.nombre})</a>
+  </p>
+
+  {esRetirada ? (
+    <article class="reading">
+      <div style="margin-bottom:0.75rem;">
+        <StampBadge label="Ficha retirada" />
+      </div>
+      <h1>{ficha.id}</h1>
+      <div class="box box--stamp">
+        <p style="margin-bottom:0.4rem;">
+          <strong>Esta ficha ha sido retirada del archivo.</strong> Los identificadores nunca se reutilizan.
+        </p>
+        <p style="margin-bottom:0;">
+          <strong>Motivo documentado:</strong> {ficha.motivo_retirada}
+        </p>
+      </div>
+    </article>
+  ) : (
+    <article class="doc-grid" data-pagefind-body>
+      <div class="doc-main">
+        <header style="margin-bottom:1.25rem;">
+          <div class="record-meta" style="margin-bottom:0.65rem;">
+            <strong>{ficha.id}</strong>
+            <span>·</span>
+            <span>Anuario {ficha.anuario}</span>
+            <span>·</span>
+            <span>{ficha.nivel}</span>
+            {ficha.ambito_territorial && (
+              <>
+                <span>·</span>
+                <span>{ficha.ambito_territorial}</span>
+              </>
+            )}
+          </div>
+
+          <div style="margin-bottom:0.85rem;">
+            <StampBadge label={estadoLabel} neutral={neutralStamp} />
+            {ficha.contraprueba && (
+              <span style="margin-left:0.5rem;">
+                <StampBadge label="Contraprueba" neutral />
+              </span>
+            )}
+          </div>
+
+          <h1>{ficha.titulo}</h1>
+
+          <ul class="tag-list" aria-label="Partidos en el momento de los hechos">
+            {ficha.partidos.map((p) => (
+              <li>
+                <a href={`/partidos/${encodeURIComponent(p)}/`} class="tag">{p}</a>
+              </li>
+            ))}
+          </ul>
+        </header>
+
+        <section aria-labelledby="resumen-heading">
+          <h2 id="resumen-heading">Resumen factual</h2>
+          <p>{ficha.resumen}</p>
+        </section>
+
+        {ficha.contraprueba && ficha.contraprueba_motivo && (
+          <div class="box box--notice">
+            <strong>Por qué figura en Contraprueba:</strong> {ficha.contraprueba_motivo}
+          </div>
+        )}
+
+        <section aria-labelledby="descargo-heading">
+          <h2 id="descargo-heading">Descargo y contexto de defensa</h2>
+          {ficha.descargo ? (
+            <div class="box box--notice">
+              <p style="margin-bottom:0;">{ficha.descargo}</p>
+            </div>
+          ) : (
+            <p class="muted">
+              No consta descargo registrado en este momento.
+              {ficha.descargo_justificacion_null && ` (${ficha.descargo_justificacion_null})`}
+            </p>
+          )}
+        </section>
+
+        <ProtagonistasList protagonistas={ficha.protagonistas} />
+
+        <CifrasTable cifras={ficha.cifras} />
+
+        {ficha.estado_procesal.historial.length > 0 && (
+          <section aria-labelledby="historial-heading">
+            <h2 id="historial-heading">Historial procesal</h2>
+            <ol class="timeline">
+              {ficha.estado_procesal.historial.map((h) => (
+                <li>
+                  <div class="mono">
+                    <strong>{h.fecha}</strong> · {ESTADOS_PROCESALES[h.estado].etiqueta}
+                  </div>
+                  {h.nota && <div>{h.nota}</div>}
+                  <div class="mono">
+                    <a href={h.documento} target="_blank" rel="noopener noreferrer">Documento acreditativo</a>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {ficha.imagen && (
+          <figure class="doc-figure">
+            {ficha.imagen.archivo && (
+              <img
+                src={ficha.imagen.archivo}
+                alt={ficha.imagen.alt ?? ficha.titulo}
+                loading="lazy"
+              />
+            )}
+            <figcaption>
+              <strong>{ficha.imagen.tipo === 'facsimil' ? 'Facsímil documental' : 'Fotografía'}:</strong>{' '}
+              {ficha.imagen.alt ?? ficha.titulo}. Autoría/institución: {ficha.imagen.autor}. Licencia:{' '}
+              <span class="mono">{ficha.imagen.licencia}</span>.{' '}
+              <a href={ficha.imagen.origen} target="_blank" rel="noopener noreferrer">Origen</a>.
+            </figcaption>
+          </figure>
+        )}
+
+        <div class="mobile-only">
+          <details>
+            <summary>Fuentes primarias y extractos ({ficha.fuentes.length})</summary>
+            <MarginSources fuentes={ficha.fuentes} />
+          </details>
+        </div>
+
+        <section aria-labelledby="versiones-heading">
+          <h2 id="versiones-heading">Control de versiones y rectificación</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Cambio</th>
+                  <th>Motivo</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ficha.versiones.map((v) => (
+                  <tr>
+                    <td class="mono">{v.fecha}</td>
+                    <td>{v.cambio}</td>
+                    <td>{v.motivo}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="mono no-print" style="margin-top:0.85rem;">
+            <a href={`/rectificacion/?ficha=${encodeURIComponent(ficha.id)}`}>
+              Solicitar réplica, descargo o rectificación para {ficha.id} →
+            </a>
+          </p>
+        </section>
+      </div>
+
+      <aside class="doc-margin" aria-label="Fuentes y notas al margen">
+        <h3 style="margin-top:0;">Fuentes ({ficha.fuentes.length})</h3>
+        <MarginSources fuentes={ficha.fuentes} />
+      </aside>
+    </article>
+  )}
+</BaseLayout>

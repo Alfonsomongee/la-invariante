@@ -1,0 +1,43 @@
+---
+import { slugify, type Protagonista } from '../lib/content.js';
+
+interface Props {
+  protagonistas: Protagonista[];
+}
+
+const { protagonistas } = Astro.props;
+---
+
+{protagonistas.length > 0 && (
+  <section aria-labelledby="protagonistas-heading">
+    <h2 id="protagonistas-heading">Protagonistas</h2>
+    <ul>
+      {protagonistas.map((p) => (
+        <li>
+          {p.cargo_publico ? (
+            <>
+              <a href={`/personas/${slugify(p.nombre)}/`}>
+                <strong>{p.nombre}</strong>
+              </a>
+              {' — '}
+              <span>{p.cargo_en_el_momento}</span>
+              {p.wikidata && (
+                <span class="mono muted">
+                  {' '}
+                  (<a href={`https://www.wikidata.org/wiki/${p.wikidata}`} target="_blank" rel="noopener noreferrer">{p.wikidata}</a>)
+                </span>
+              )}
+            </>
+          ) : (
+            <span data-pagefind-ignore="all">
+              <strong>{p.nombre}</strong>
+              {' — '}
+              <span>{p.cargo_en_el_momento}</span>
+              <span class="mono muted"> [no cargo público · excluido de índice según STC 58/2018]</span>
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

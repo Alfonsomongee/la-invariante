@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { CATEGORIAS, getAllPublishedRecords, type CategoriaCodigo } from '../../lib/content.js';
+
+const records = getAllPublishedRecords();
+---
+
+<BaseLayout
+  title="Fichas documentales"
+  description="Catálogo completo de fichas, promesas y votaciones verificadas con documentos primarios en La Invariante."
+>
+  <section class="reading">
+    <h1>Fichas documentales ({records.length})</h1>
+    <p>
+      Todas las entradas publicadas cumplen los criterios de entrada de <a href="/metodologia/">Metodología</a>,
+      incluyen documento primario con huella SHA-256 y pasan validación de estado procesal y estilo neutro.
+    </p>
+  </section>
+
+  <nav class="filter-bar" aria-label="Filtrar por categoría">
+    {(Object.keys(CATEGORIAS) as CategoriaCodigo[]).map((code) => (
+      <a href={`/categorias/${code.toLowerCase()}/`} class="tag">
+        {code} · {CATEGORIAS[code].nombre}
+      </a>
+    ))}
+  </nav>
+
+  {records.length === 0 ? (
+    <div class="box box--notice reading">
+      Todavía no hay fichas publicadas. Cada ficha entra mediante pull request y revisión humana.
+    </div>
+  ) : (
+    <ul class="record-list">
+      {records.map((r) => (
+        <RecordCard record={r} />
+      ))}
+    </ul>
+  )}
+</BaseLayout>

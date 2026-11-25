@@ -1,0 +1,112 @@
+---
+import '@fontsource/source-serif-4/400.css';
+import '@fontsource/source-serif-4/600.css';
+import '@fontsource/source-serif-4/700.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/600.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '../styles/global.css';
+import '../styles/print.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  ogImage?: string;
+  canonicalPath?: string;
+}
+
+const {
+  title,
+  description = 'Archivo hemerográfico y documental del funcionamiento institucional en España desde 1977 hasta hoy.',
+  noindex = false,
+  ogImage = '/og/default.png',
+  canonicalPath,
+} = Astro.props;
+
+const siteBase = Astro.site?.toString().replace(/\/$/, '') ?? 'https://lainvariante.es';
+const currentPath = canonicalPath ?? Astro.url.pathname;
+const canonicalUrl = `${siteBase}${currentPath}`;
+const ogUrl = ogImage.startsWith('http') ? ogImage : `${siteBase}${ogImage}`;
+const fechaConsulta = new Date().toISOString().slice(0, 10);
+
+const navItems = [
+  { href: '/anuarios/', label: 'Anuarios' },
+  { href: '/fichas/', label: 'Fichas' },
+  { href: '/promesas/', label: 'Dijo / Firmó' },
+  { href: '/votaciones/', label: 'Votan juntos' },
+  { href: '/series/', label: 'Series' },
+  { href: '/contraprueba/', label: 'Contraprueba' },
+  { href: '/partidos/', label: 'Partidos' },
+  { href: '/metodologia/', label: 'Metodología' },
+  { href: '/buscar/', label: 'Buscar' },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — La Invariante</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="La Invariante" />
+    <meta property="og:title" content={`${title} — La Invariante`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} — La Invariante`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogUrl} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="masthead">
+          <a href="/" class="site-brand">La Invariante</a>
+          <span class="site-edition">Archivo documental · España 1977–hoy</span>
+        </div>
+        <nav class="site-nav" aria-label="Navegación principal">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="print-meta">
+          La Invariante · {canonicalUrl} · Fecha de compilación/consulta: {fechaConsulta}
+        </div>
+        <slot />
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>La Invariante</strong> — Archivo hemerográfico y documental (1977–hoy).
+          Sin adjetivos valorativos, sin colores de partido y con documento primario obligatorio.
+        </div>
+        <div class="footer-links">
+          <a href="/metodologia/">Metodología</a>
+          <a href="/contraprueba/">Contraprueba</a>
+          <a href="/erratas/">Fe de erratas (CHANGELOG)</a>
+          <a href="/rectificacion/">Réplica y rectificación</a>
+          <a href="/personas/">Cargos públicos</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

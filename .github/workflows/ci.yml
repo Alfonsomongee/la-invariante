@@ -1,0 +1,40 @@
+name: CI — Validación, estilo y compilación
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verificar:
+    name: Validar esquemas, estilo, tests y sitio estático
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Validar esquemas y reglas cruzadas
+        run: npm run validate
+
+      - name: Linter de estilo (adjetivos, longitud, léxico procesal)
+        run: npm run lint:estilo
+
+      - name: Pruebas unitarias
+        run: npm test
+
+      - name: Comprobación de tipos
+        run: npm run typecheck
+
+      - name: Compilar web estática + índice Pagefind
+        run: npm run build

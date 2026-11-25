@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { getPromesas, type AnyRecord } from '../../lib/content.js';
+
+const promesas: AnyRecord[] = getPromesas().map((p) => ({
+  ...p,
+  _tipo: 'promesa',
+  _rutaUrl: `/promesas/${p.id}/`,
+}));
+---
+
+<BaseLayout
+  title="Promesas frente a BOE (Dijo / Firmó)"
+  description="Comparativa documental entre compromisos literales fechados y normas o actos contrarios publicados en el BOE."
+>
+  <section class="reading">
+    <h1>Promesas frente a BOE — Dijo / Firmó ({promesas.length})</h1>
+    <p>
+      Cada entrada contrasta una cita literal fechada (programa electoral, Diario de Sesiones o
+      documento oficial) con la norma o acto contrario publicado posteriormente en el BOE.
+    </p>
+  </section>
+
+  {promesas.length === 0 ? (
+    <div class="box box--notice reading">
+      Sin fichas Dijo / Firmó publicadas todavía.
+    </div>
+  ) : (
+    <ul class="record-list">
+      {promesas.map((p) => (
+        <RecordCard record={p} />
+      ))}
+    </ul>
+  )}
+</BaseLayout>

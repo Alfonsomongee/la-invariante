@@ -1,0 +1,215 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import MarginSources from '../../components/MarginSources.astro';
+import {
+  getAllPublishedRecords,
+  getAnuarios,
+  getArchiveYears,
+  type Anuario,
+} from '../../lib/content.js';
+
+export function getStaticPaths() {
+  const years = getArchiveYears();
+  const anuarios = new Map(getAnuarios().map((a) => [a.anio, a]));
+  const allRecords = getAllPublishedRecords();
+
+  return years.map((anio) => ({
+    params: { anio: String(anio) },
+    props: {
+      anio,
+      anuario: anuarios.get(anio) ?? null,
+      registros: allRecords.filter((r) => r.anuario === anio),
+    },
+  }));
+}
+
+interface Props {
+  anio: number;
+  anuario: Anuario | null;
+  registros: ReturnType<typeof getAllPublishedRecords>;
+}
+
+const { anio, anuario, registros } = Astro.props;
+const contrapruebas = registros.filter((r) => r.contraprueba === true);
+const ordinarios = registros.filter((r) => !r.contraprueba);
+---
+
+<BaseLayout
+  title={`Anuario ${anio}`}
+  description={`Archivo documental del año ${anio} en La Invariante: gobierno, composición parlamentaria, fichas y contraprueba.`}
+>
+  <p class="mono muted" style="margin-bottom:0.4rem;">
+    <a href="/anuarios/">← Todos los anuarios</a> · {anio > 1977 && <a href={`/anuarios/${anio - 1}/`}>{anio - 1}</a>}
+    {' '}
+    <a href={`/anuarios/${anio + 1}/`}>{anio + 1}</a>
+  </p>
+
+  <h1>Anuario {anio}</h1>
+
+  {!anuario && registros.length === 0 ? (
+    <div class="box box--notice reading">
+      <p style="margin-bottom:0.4rem;">
+        <strong>Anuario {anio} pendiente de documentación.</strong>
+      </p>
+      <p class="muted" style="margin-bottom:0;">
+        Todavía no se ha incorporado el expediente anual de {anio} con fuentes primarias verificadas.
+        Para iniciar su recolección: <code>npm run agent -- recolector --fuente boe --anio {anio}</code>.
+      </p>
+    </div>
+  ) : (
+    <div class="doc-grid">
+      <div class="doc-main">
+        {anuario && (
+          <>
+            <p class="mono muted">
+              {anuario.legislatura}
+              {anuario.moneda_curso ? ` · Moneda de curso: ${anuario.moneda_curso}` : ''}
+            </p>
+            <p>{anuario.contexto_resumen}</p>
+
+            <div class="box box--notice">
+              <strong>Nota sobre efecto de exposición ({anio}):</strong> {anuario.nota_exposicion}
+            </div>
+
+            <h2>Gobierno y composición del Congreso</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Presidente</th>
+                    <th>Partido</th>
+                    <th>Mayoría</th>
+                    <th>Periodo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {anuario.gobiernos.map((g) => (
+                    <tr>
+                      <td>{g.presidente}</td>
+                      <td class="mono">{g.partido}</td>
+                      <td>{g.tipo_mayoria.replaceAll('_', ' ')}</td>
+                      <td class="mono">{g.desde}{g.hasta ? ` – ${g.hasta}` : ' – …'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Formación (Congreso)</th>
+                    <th class="num">Escaños</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {anuario.composicion_congreso.map((c) => (
+                    <tr>
+                      <td class="mono">{c.partido}</td>
+                      <td class="num">{c.escanos}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {anuario.gobiernos_autonomicos.length > 0 && (
+              <>
+                <h3>Gobiernos autonómicos relevantes</h3>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Comunidad</th>
+                        <th>Presidencia</th>
+                        <th>Partido</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {anuario.gobiernos_autonomicos.map((ga) => (
+                        <tr>
+                          <td>{ga.comunidad}</td>
+                          <td>{ga.presidente}</td>
+                          <td class="mono">{ga.partido}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
+          </>
+        )}
+
+        <h2>Fichas, promesas y votaciones ({ordinarios.length})</h2>
+        {ordinarios.length === 0 ? (
+          <p class="muted">Sin registros publicados en este bloque.</p>
+        ) : (
+          <ul class="record-list">
+            {ordinarios.map((r) => (
+              <RecordCard record={r} />
+            ))}
+          </ul>
+        )}
+
+        <h2>Contraprueba {anio} ({contrapruebas.length})</h2>
+        {contrapruebas.length === 0 ? (
+          <p class="muted">
+            Sin fichas de contraprueba publicadas todavía para {anio}. Consulta el bloque general de{' '}
+            <a href="/contraprueba/">Contraprueba</a>.
+          </p>
+        ) : (
+          <ul class="record-list">
+            {contrapruebas.map((r) => (
+              <RecordCard record={r} />
+            ))}
+          </ul>
+        )}
+
+        {anuario?.descartes && anuario.descartes.length > 0 && (
+          <>
+            <h2>Descartes documentados ({anuario.descartes.length})</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Pista o hecho</th>
+                    <th>Motivo del descarte</th>
+                    <th>Qué haría falta para entrar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {anuario.descartes.map((d) => (
+                    <tr>
+                      <td><strong>{d.pista}</strong></td>
+                      <td>{d.motivo_descarte}</td>
+                      <td>{d.requisito_entrada}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
+
+        {anuario && (
+          <div class="mobile-only">
+            <details>
+              <summary>Fuentes del contexto anual ({anuario.fuentes.length})</summary>
+              <MarginSources fuentes={anuario.fuentes} />
+            </details>
+          </div>
+        )}
+      </div>
+
+      {anuario && (
+        <aside class="doc-margin" aria-label="Fuentes del anuario">
+          <h3 style="margin-top:0;">Fuentes del anuario</h3>
+          <MarginSources fuentes={anuario.fuentes} />
+        </aside>
+      )}
+    </div>
+  )}
+</BaseLayout>

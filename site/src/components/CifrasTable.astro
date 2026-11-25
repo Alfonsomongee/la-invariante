@@ -1,0 +1,65 @@
+---
+import { PESETAS_POR_EURO, formatNumberEs } from '../lib/content.js';
+import type { Cifra } from '../../../scripts/lib/constants.js';
+
+interface Props {
+  cifras: Cifra[];
+}
+
+const { cifras } = Astro.props;
+
+const filas = cifras.map((c) => {
+  const conversion =
+    c.moneda === 'ESP'
+      ? c.valor_eur_conversion ?? Number((c.valor / PESETAS_POR_EURO).toFixed(2))
+      : null;
+  const realKey = Object.keys(c).find((k) => /^valor_eur_reales_\d{4}$/.test(k));
+  const realYear = realKey ? realKey.replace('valor_eur_reales_', '') : null;
+  const recordMap = c as unknown as Record<string, number | undefined>;
+  const realVal = realKey ? recordMap[realKey] ?? null : null;
+  return { c, conversion, realYear, realVal };
+});
+---
+
+{filas.length > 0 && (
+  <section aria-labelledby="cifras-heading">
+    <h2 id="cifras-heading">Cifras documentadas</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th class="num">Importe original</th>
+            <th class="num">Conversión a € (166,386 ptas/€)</th>
+            <th class="num">Euros reales (IPC INE)</th>
+            <th>Fuente</th>
+          </tr>
+        </thead>
+        <tbody>
+          {filas.map(({ c, conversion, realYear, realVal }) => (
+            <tr>
+              <td>{c.concepto}</td>
+              <td class="num">
+                {formatNumberEs(c.valor)}{' '}
+                {c.moneda === 'ESP' ? 'ptas' : '€'} corrientes de {c.anio_moneda}
+              </td>
+              <td class="num">
+                {conversion !== null ? `${formatNumberEs(conversion)} €` : '—'}
+              </td>
+              <td class="num">
+                {realVal !== null && realYear
+                  ? `${formatNumberEs(realVal)} € (base ${realYear})`
+                  : '—'}
+              </td>
+              <td>
+                <a href={c.fuente} target="_blank" rel="noopener noreferrer" class="mono">
+                  Documento
+                </a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+)}

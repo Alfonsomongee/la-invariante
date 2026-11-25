@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StampBadge from '../../components/StampBadge.astro';
+import MarginSources from '../../components/MarginSources.astro';
+import CifrasTable from '../../components/CifrasTable.astro';
+import { getPromesas, hasNonPublicProtagonist, slugify, type Promesa } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  return getPromesas({ includeRetiradas: true }).map((promesa) => ({
+    params: { id: promesa.id },
+    props: { promesa },
+  }));
+}
+
+interface Props {
+  promesa: Promesa;
+}
+
+const { promesa } = Astro.props;
+const esRetirada = promesa.estado_ficha === 'retirada';
+const noindex = esRetirada || hasNonPublicProtagonist(promesa);
+---
+
+<BaseLayout
+  title={`${promesa.id} — ${promesa.titulo}`}
+  description={promesa.resumen}
+  noindex={noindex}
+  ogImage={esRetirada ? '/og/default.png' : `/og/${promesa.id}.png`}
+>
+  <p class="mono muted" style="margin-bottom:0.5rem;">
+    <a href="/promesas/">← Dijo / Firmó</a> · <a href={`/anuarios/${promesa.anuario}/`}>Anuario {promesa.anuario}</a>
+  </p>
+
+  {esRetirada ? (
+    <article class="reading">
+      <StampBadge label="Ficha retirada" />
+      <h1>{promesa.id}</h1>
+      <div class="box box--stamp">{promesa.motivo_retirada}</div>
+    </article>
+  ) : (
+    <article class="doc-grid" data-pagefind-body>
+      <div class="doc-main">
+        <div class="record-meta" style="margin-bottom:0.6rem;">
+          <strong>{promesa.id}</strong>
+          <span>·</span>
+          <span>PRM (Promesa frente a BOE)</span>
+          <span>·</span>
+          <span>Anuario {promesa.anuario}</span>
+        </div>
+        <h1>{promesa.titulo}</h1>
+        <p>{promesa.resumen}</p>
+
+        <section class="dijo-firmo" aria-label="Comparativa Dijo y Firmó">
+          <div class="dijo-firmo__col">
+            <div class="dijo-firmo__label">Dijo · {promesa.dijo.fecha}</div>
+            <p>
+              {promesa.dijo.cargo_publico ? (
+                <a href={`/personas/${slugify(promesa.dijo.autor)}/`}>
+                  <strong>{promesa.dijo.autor}</strong>
+                </a>
+              ) : (
+                <strong data-pagefind-ignore="all">{promesa.dijo.autor}</strong>
+              )}{' '}
+              ({promesa.dijo.cargo_en_el_momento}, <span class="mono">{promesa.dijo.partido}</span>)
+            </p>
+            <blockquote class="literal">«{promesa.dijo.cita_literal}»</blockquote>
+            <p class="muted" style="font-size:0.9rem;">{promesa.dijo.contexto}</p>
+            <p class="mono" style="margin-bottom:0;">
+              <a href={promesa.dijo.fuente_url} target="_blank" rel="noopener noreferrer">Fuente de la cita</a>
+            </p>
+          </div>
+
+          <div class="dijo-firmo__col">
+            <div class="dijo-firmo__label">Firmó · {promesa.firmo.fecha}</div>
+            <p>
+              <strong>{promesa.firmo.norma_o_acto}</strong> — {promesa.firmo.organismo}
+            </p>
+            <p>{promesa.firmo.descripcion_factual}</p>
+            <p class="mono" style="margin-bottom:0;">
+              <a href={promesa.firmo.fuente_url} target="_blank" rel="noopener noreferrer">Documento oficial (BOE / acto)</a>
+            </p>
+          </div>
+        </section>
+
+        <section aria-labelledby="descargo-prm">
+          <h2 id="descargo-prm">Descargo</h2>
+          {promesa.descargo ? (
+            <div class="box box--notice"><p style="margin:0;">{promesa.descargo}</p></div>
+          ) : (
+            <p class="muted">
+              No consta descargo registrado.
+              {promesa.descargo_justificacion_null && ` (${promesa.descargo_justificacion_null})`}
+            </p>
+          )}
+        </section>
+
+        {promesa.cifras && <CifrasTable cifras={promesa.cifras} />}
+
+        <div class="mobile-only">
+          <details>
+            <summary>Fuentes primarias ({promesa.fuentes.length})</summary>
+            <MarginSources fuentes={promesa.fuentes} />
+          </details>
+        </div>
+
+        <p class="mono no-print" style="margin-top:1.5rem;">
+          <a href={`/rectificacion/?ficha=${encodeURIComponent(promesa.id)}`}>
+            Solicitar réplica o rectificación para {promesa.id} →
+          </a>
+        </p>
+      </div>
+
+      <aside class="doc-margin" aria-label="Fuentes al margen">
+        <h3 style="margin-top:0;">Fuentes ({promesa.fuentes.length})</h3>
+        <MarginSources fuentes={promesa.fuentes} />
+      </aside>
+    </article>
+  )}
+</BaseLayout>

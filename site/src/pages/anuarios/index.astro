@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllPublishedRecords, getAnuarios, getArchiveYears } from '../../lib/content.js';
+
+const years = getArchiveYears();
+const anuarios = getAnuarios();
+const records = getAllPublishedRecords();
+
+const anuarioByYear = new Map(anuarios.map((a) => [a.anio, a]));
+const countByYear = new Map<number, number>();
+for (const r of records) {
+  countByYear.set(r.anuario, (countByYear.get(r.anuario) ?? 0) + 1);
+}
+---
+
+<BaseLayout
+  title="Anuarios 1977–hoy"
+  description="Índice cronológico anual de La Invariante desde las elecciones de 1977 hasta la actualidad."
+>
+  <section class="reading">
+    <h1>Anuarios (1977–{years[years.length - 1]})</h1>
+    <p>
+      Cada anuario reúne el contexto parlamentario y gubernamental del año, la declaración del efecto de
+      exposición, las fichas documentadas, la contraprueba anual y la tabla de descartes justificados.
+    </p>
+  </section>
+
+  <div class="year-grid">
+    {years.map((y) => {
+      const anuario = anuarioByYear.get(y);
+      const count = countByYear.get(y) ?? 0;
+      const activo = Boolean(anuario) || count > 0;
+      return (
+        <a href={`/anuarios/${y}/`} class:list={['year-cell', { 'year-cell--active': activo }]}>
+          <span>{y}</span>
+          <small>
+            {anuario
+              ? `${count} reg. · ${anuario.gobiernos[0]?.partido ?? ''}`
+              : count > 0
+                ? `${count} reg.`
+                : 'Pendiente'}
+          </small>
+        </a>
+      );
+    })}
+  </div>
+</BaseLayout>

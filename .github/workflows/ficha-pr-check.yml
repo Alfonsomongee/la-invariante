@@ -1,0 +1,86 @@
+name: Revisión jurídica automática de PR de ficha
+
+on:
+  pull_request:
+    paths:
+      - 'content/**/*.yaml'
+      - 'content/series/*.csv'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  revisar-ficha:
+    name: Validar y comentar dictamen determinista
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Ejecutar validación, estilo y jurista determinista
+        id: check
+        continue-on-error: true
+        shell: bash
+        run: |
+          {
+            echo "## Revisión automática de ficha (CI)"
+            echo ""
+            echo "### 1. Validación de esquemas y reglas cruzadas"
+            echo '```text'
+            npm run validate || VALIDATE_FAIL=1
+            echo '```'
+            echo ""
+            echo "### 2. Linter de estilo"
+            echo '```text'
+            npm run lint:estilo || LINT_FAIL=1
+            echo '```'
+            echo ""
+            echo "### 3. Reglas jurídicas deterministas por archivo modificado"
+            CHANGED=$(git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'content/fichas/*.yaml' 'content/fichas/**/*.yaml' 'content/promesas/**/*.yaml' 'content/votaciones/**/*.yaml')
+            for f in $CHANGED; do
+              if [ -f "$f" ]; then
+                npm run agent -- jurista --ficha "$f" --solo-reglas || JURISTA_FAIL=1
+                BASE=$(basename "$f" .yaml)
+                if [ -f "reports/jurista/${BASE}.md" ]; then
+                  cat "reports/jurista/${BASE}.md"
+                  echo ""
+                fi
+              fi
+            done
+            echo ""
+            echo "_Recuerda (Regla 10): ningún agente publica. Una persona debe contrastar cada afirmación con el documento primario antes de fusionar._"
+          } > pr_report.md
+
+          if [ "${VALIDATE_FAIL:-0}" -ne 0 ] || [ "${LINT_FAIL:-0}" -ne 0 ] || [ "${JURISTA_FAIL:-0}" -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Publicar comentario en el PR
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('pr_report.md', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Fallar si hubo errores de validación o estilo
+        if: steps.check.outcome == 'failure'
+        run: exit 1

@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Hoja de estilo de impresión A4 (CLAUDE.md §7 y §11)
+   Ficha limpia en A4 con URL canónica, fuentes y fecha de consulta.
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 16mm 15mm 18mm 15mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  .site-header,
+  .site-footer,
+  .no-print,
+  .site-nav,
+  .filter-bar {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .doc-grid {
+    display: block !important;
+  }
+
+  .doc-margin {
+    display: block !important;
+    border-left: none !important;
+    border-top: 1px solid #000000;
+    padding-left: 0 !important;
+    padding-top: 0.75rem;
+    margin-top: 1.25rem;
+  }
+
+  .mobile-only {
+    display: none !important;
+  }
+
+  .print-meta {
+    display: block !important;
+    border-bottom: 1.5px solid #000000;
+    padding-bottom: 0.45rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+    font-size: 8.5pt;
+    color: #000000;
+  }
+
+  .box,
+  .doc-figure,
+  .chart-figure,
+  .dijo-firmo__col,
+  .source-card,
+  table,
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .box,
+  .tag,
+  .doc-figure,
+  blockquote.literal,
+  th {
+    background: #ffffff !important;
+    border-color: #333333 !important;
+  }
+
+  .stamp {
+    background: #ffffff !important;
+    color: #7a1410 !important;
+    border-color: #7a1410 !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: none;
+  }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-family: var(--font-mono);
+    font-size: 7.5pt;
+    word-break: break-all;
+  }
+}

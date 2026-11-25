@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { getVotaciones, type AnyRecord } from '../../lib/content.js';
+
+const votaciones: AnyRecord[] = getVotaciones().map((v) => ({
+  ...v,
+  _tipo: 'votacion',
+  _rutaUrl: `/votaciones/${v.id}/`,
+}));
+---
+
+<BaseLayout
+  title="Cuando todos votan juntos"
+  description="Votaciones parlamentarias documentadas en Diario de Sesiones sobre arquitectura del sistema, reglas electorales, órganos de control y autoprotección."
+>
+  <section class="reading">
+    <h1>Cuando todos votan juntos ({votaciones.length})</h1>
+    <p>
+      Registro de votaciones en el Congreso, Senado y parlamentos autonómicos sobre reglas electorales,
+      elección de órganos de control, financiación de partidos y arquitectura institucional, acreditadas
+      mediante Diario de Sesiones.
+    </p>
+  </section>
+
+  {votaciones.length === 0 ? (
+    <div class="box box--notice reading">Sin votaciones publicadas todavía.</div>
+  ) : (
+    <ul class="record-list">
+      {votaciones.map((v) => (
+        <RecordCard record={v} />
+      ))}
+    </ul>
+  )}
+</BaseLayout>

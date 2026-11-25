@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecordCard from '../../components/RecordCard.astro';
+import { CATEGORIAS, getAllPublishedRecords, type CategoriaCodigo } from '../../lib/content.js';
+
+export function getStaticPaths() {
+  const all = getAllPublishedRecords();
+  return (Object.keys(CATEGORIAS) as CategoriaCodigo[]).map((code) => ({
+    params: { cat: code.toLowerCase() },
+    props: {
+      code,
+      nombre: CATEGORIAS[code].nombre,
+      registros: all.filter((r) => r.categoria === code),
+    },
+  }));
+}
+
+interface Props {
+  code: CategoriaCodigo;
+  nombre: string;
+  registros: ReturnType<typeof getAllPublishedRecords>;
+}
+
+const { code, nombre, registros } = Astro.props;
+---
+
+<BaseLayout
+  title={`${code} — ${nombre}`}
+  description={`Registros publicados en la categoría ${code} (${nombre}) de La Invariante.`}
+>
+  <p class="mono muted" style="margin-bottom:0.4rem;">
+    <a href="/fichas/">← Todas las fichas</a> · Categoría {code}
+  </p>
+  <h1>{code} — {nombre} ({registros.length})</h1>
+
+  {registros.length === 0 ? (
+    <div class="box box--notice reading">
+      Sin registros publicados todavía en la categoría <code>{code}</code>. Consulta el criterio mínimo
+      de entrada en <a href="/metodologia/">Metodología</a>.
+    </div>
+  ) : (
+    <ul class="record-list">
+      {registros.map((r) => (
+        <RecordCard record={r} />
+      ))}
+    </ul>
+  )}
+</BaseLayout>

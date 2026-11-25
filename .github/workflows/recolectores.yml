@@ -1,0 +1,85 @@
+name: Recolectores de fuentes primarias
+
+on:
+  schedule:
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      fuente:
+        description: 'Fuente oficial (boe, congreso, tc, ine, url)'
+        required: true
+        default: 'boe'
+        type: choice
+        options:
+          - boe
+          - congreso
+          - tc
+          - ine
+          - url
+      anio:
+        description: 'Año del anuario (1977–hoy)'
+        required: false
+        default: '1985'
+        type: string
+      boe_id:
+        description: 'Identificador BOE concreto (opcional, ej. BOE-A-1985-11672)'
+        required: false
+        type: string
+      url:
+        description: 'URL oficial directa (para congreso, tc o url)'
+        required: false
+        type: string
+      wayback:
+        description: 'Archivar también en Wayback Machine'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  recolectar:
+    name: Descargar documentos primarios y calcular SHA-256
+    runs-on: ubuntu-latest
+    env:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ejecutar recolector (sin LLM)
+        shell: bash
+        run: |
+          FUENTE="${{ inputs.fuente || 'boe' }}"
+          ANIO="${{ inputs.anio || '' }}"
+          ARGS="--fuente $FUENTE"
+          if [ -n "$ANIO" ]; then
+            ARGS="$ARGS --anio $ANIO"
+          elif [ "$FUENTE" = "boe" ]; then
+            ARGS="$ARGS --fecha $(date -u +%Y%m%d)"
+          fi
+          if [ -n "${{ inputs.boe_id }}" ]; then
+            ARGS="$ARGS --boe-id ${{ inputs.boe_id }}"
+          fi
+          if [ -n "${{ inputs.url }}" ]; then
+            ARGS="$ARGS --url ${{ inputs.url }}"
+          fi
+          if [ "${{ inputs.wayback }}" = "true" ]; then
+            ARGS="$ARGS --wayback"
+          fi
+          npm run agent -- recolector $ARGS
+
+      - name: Guardar manifiestos SHA-256 como artefacto
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recolectores-manifests-${{ github.run_id }}
+          path: .cache/manifests/
+          if-no-files-found: ignore

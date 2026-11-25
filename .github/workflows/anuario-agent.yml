@@ -1,0 +1,55 @@
+name: Preparar anuario anual (ejecución año a año)
+
+on:
+  workflow_dispatch:
+    inputs:
+      anio:
+        description: 'Año a investigar (1977–hoy)'
+        required: true
+        default: '1985'
+        type: string
+      recolectar_boe:
+        description: 'Descargar índice anual del BOE (API abierta)'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  preparar-anuario:
+    name: Preparar expediente del Anuario ${{ inputs.anio }}
+    runs-on: ubuntu-latest
+    env:
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Ensamblar prompt de investigación anual
+        run: npm run agent -- anuario --anio "${{ inputs.anio }}" --prompt-only
+
+      - name: Generar informe de cobertura actual del año
+        run: npm run agent -- auditor --anio "${{ inputs.anio }}"
+
+      - name: Recolectar listado BOE del año (sin LLM)
+        if: inputs.recolectar_boe == true
+        continue-on-error: true
+        run: npm run agent -- recolector --fuente boe --anio "${{ inputs.anio }}"
+
+      - name: Subir expediente de trabajo del año
+        uses: actions/upload-artifact@v4
+        with:
+          name: expediente-anuario-${{ inputs.anio }}
+          path: |
+            reports/anuarios/
+            reports/auditor/
+            .cache/manifests/
+          if-no-files-found: ignore
