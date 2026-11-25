@@ -1,0 +1,86 @@
+id: ES-1978-SOC-001
+anuario: 1978
+categoria: SOC
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Rescate siderúrgico de 15.000 millones en créditos y 23.500 en crédito oficial (Ley 60/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 60/1978, de 23 de diciembre (BOE del 25 de diciembre), con 15.000.000.000
+  de pesetas (90.151.815,66 euros) en créditos extraordinarios financiados mediante Banco de España
+  o deuda pública para Altos Hornos del Mediterráneo y Ensidesa, más 23.500.000.000 de pesetas en
+  Crédito Oficial incluida la privada Altos Hornos de Vizcaya.
+descargo: >-
+  El artículo 4 condicionó los abonos al examen previo de cuentas y balances por la Intervención
+  General de la Administración del Estado, el artículo 5.4 facultó al Gobierno a convertir en
+  capital los créditos públicos a Altos Hornos de Vizcaya y la Disposición Adicional Primera obligó
+  a informar semestralmente al Congreso.
+cifras:
+  - concepto: Créditos extraordinarios para suscribir capital de Altos Hornos del Mediterráneo (4.000M) y sanear Ensidesa (11.000M)
+    valor: 15000000000
+    moneda: ESP
+    anio_moneda: 1978
+    valor_eur_conversion: 90151815.66
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074
+  - concepto: Crédito previsto desde 1980 en cuatro anualidades para que el INI adquiera el resto de Altos Hornos del Mediterráneo (art. 3)
+    valor: 8000000000
+    moneda: ESP
+    anio_moneda: 1978
+    valor_eur_conversion: 48080968.35
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074
+  - concepto: Financiación con cargo al Crédito Oficial (8.000M AHM, 11.000M Ensidesa y 4.500M Altos Hornos de Vizcaya, art. 5)
+    valor: 23500000000
+    moneda: ESP
+    anio_moneda: 1978
+    valor_eur_conversion: 141237844.53
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 60/1978, de 23 de diciembre, de medidas urgentes en apoyo del sector siderúrgico (BOE núm. 307, de 25 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074
+    sha256: 2ea38d073a87ea6b5310d24709ab0d7331e8115c075274921592a2d54bdabbdf
+    capturado: "2026-11-25"
+    pagina: "29123-29124"
+    fragmento: >-
+      Ley 60/1978, de 23 de diciembre, de medidas urgentes en apoyo del sector siderúrgico, con
+      concesión [...] de dos créditos extraordinarios, por importe total de 15.000.000.000 de
+      pesetas [BOE núm. 307, 25 de diciembre de 1978]. Artículo primero. [...] cuatro mil millones
+      de pesetas [...] para que el Instituto Nacional de Industria pueda suscribir cuatro millones
+      de acciones del capital social de «Altos Hornos del Mediterráneo, S. A.». Artículo segundo.
+      [...] once mil millones de pesetas [...] «Empresa Nacional Siderúrgica, Sociedad Anónima»
+      [Ensidesa]. [...] Artículo quinto. [...] veintitrés mil quinientos millones [23.500.000.000]
+      a financiar inversiones o capital circulante de «Altos Hornos del Mediterráneo, Sociedad
+      Anónima», «Empresa Nacional Siderúrgica, S. A.», y «Altos Hornos de Vizcaya, S. A.» [...].
+      Artículo sexto. El mayor gasto público derivado de los créditos extraordinarios [...] se
+      financiará con anticipo del Banco de España y/o emisión de Deuda Pública Interior [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/12/25/pdfs/A29123-29124.pdf
+  archivo: /facsimiles/1978/ES-1978-SOC-001.png
+  alt: Facsímil del BOE núm. 307 (25 de diciembre de 1978) con la Ley 60/1978 de rescate siderúrgico
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-31074 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-31074 (arts. 1–6, págs. 29123-29124)"
+    - "https://www.boe.es/boe/dias/1978/12/25/pdfs/A29123-29124.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados:
+    - "Diario de Sesiones de la votación de la Ley 60/1978 (se atribuye a institucional/Cortes)"
+  intento_de_refutacion: >-
+    Se verificó la naturaleza privada de Altos Hornos del Mediterráneo y Altos Hornos de Vizcaya en
+    la propia ley: el art. 4 alude expresamente a «los accionistas privados de Altos Hornos del
+    Mediterráneo» y el art. 5.4 prevé la eventual conversión en capital público de los créditos a
+    Altos Hornos de Vizcaya, acreditando asunción pública de capital y financiación de empresas
+    privadas en crisis.

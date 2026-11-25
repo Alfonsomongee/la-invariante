@@ -262,21 +262,28 @@ export function getSeries(): SeriesEntry[] {
 
     let variaPorGobierno = false;
     let notaVariacion = 'Sin datos suficientes todavía para evaluar variación entre gobiernos.';
-    if (statsByGovernment.length >= 2) {
-      const medias = statsByGovernment.map((s) => s.media);
+    const distinctYears = new Set(rows.map((r) => r.anio));
+    const comparableGovs = statsByGovernment.filter(
+      (s) => s.partido.trim().toLowerCase() !== 'institucional',
+    );
+    if (distinctYears.size >= 2 && comparableGovs.length >= 2) {
+      const medias = comparableGovs.map((s) => s.media);
       const maxM = Math.max(...medias);
       const minM = Math.min(...medias);
       const ratioDiff = maxM > 0 ? (maxM - minM) / maxM : 0;
       if (ratioDiff >= 0.35) {
         variaPorGobierno = true;
-        const mayor = statsByGovernment.find((s) => s.media === maxM)!;
-        const menor = statsByGovernment.find((s) => s.media === minM)!;
+        const mayor = comparableGovs.find((s) => s.media === maxM)!;
+        const menor = comparableGovs.find((s) => s.media === minM)!;
         notaVariacion = `La serie cambia según el gobierno: media más alta en ${mayor.gobierno} (${mayor.media} ${meta.unidad}) y más baja en ${menor.gobierno} (${menor.media} ${meta.unidad}; diferencia del ${Math.round(ratioDiff * 100)} %). Incluida en Contraprueba.`;
       } else {
-        notaVariacion = `La serie muestra continuidad entre los ${statsByGovernment.length} gobiernos registrados (rango de medias: ${minM}–${maxM} ${meta.unidad}).`;
+        notaVariacion = `La serie muestra continuidad entre los ${comparableGovs.length} gobiernos registrados (rango de medias: ${minM}–${maxM} ${meta.unidad}).`;
       }
-    } else if (statsByGovernment.length === 1) {
-      notaVariacion = `Un solo gobierno documentado por ahora (${statsByGovernment[0].gobierno}, media ${statsByGovernment[0].media} ${meta.unidad}).`;
+    } else if (statsByGovernment.length >= 1) {
+      const resumenTramos = statsByGovernment
+        .map((g) => `${g.gobierno}: ${g.media} ${meta.unidad}`)
+        .join(' · ');
+      notaVariacion = `Solo ${distinctYears.size} año documentado todavía (${resumenTramos}); se requieren al menos dos años y dos gobiernos partidistas para evaluar variación intergubernamental.`;
     }
 
     return {

@@ -1,0 +1,64 @@
+id: ES-1978-LMD-001
+anuario: 1978
+categoria: LMD
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Listas cerradas, barrera del 5 %, cese por baja de partido y Diputaciones indirectas
+resumen: >-
+  Las Cortes aprobaron la Ley 39/1978, de 17 de julio (BOE del 21 de julio), que impuso en todos los
+  ayuntamientos listas cerradas y bloqueadas (artículo 11.2), barrera del 5 % (artículo 11.3.b), el
+  cese del concejal que dejara su partido (artículo 11.7) y Diputaciones elegidas indirectamente por
+  concejales (artículo 33).
+descargo: >-
+  La norma reguló las primeras elecciones municipales democráticas desde 1931 y exceptuó el régimen de
+  concejo abierto en municipios de menos de 25 residentes (artículo 5.2).
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 39/1978, de 17 de julio, de elecciones locales (BOE núm. 173, de 21 de julio de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18636
+    sha256: 8cb37547284c8f52606023ffdd9ddab37c334780309089ea7d0b40f79999c425
+    capturado: "2026-11-25"
+    pagina: "17267-17275"
+    fragmento: >-
+      Ley 39/1978, de 17 de julio, de elecciones locales [BOE núm. 173, 21 de julio de 1978]. De
+      conformidad con la Ley aprobada por las Cortes, vengo en sancionar. [...] Artículo once
+      [11.2]. Dos. Cada elector dará su voto a una sola lista, sin introducir en ella modificación
+      alguna ni alterar en la misma el orden de colocación de los candidatos. Tres [11.3.b]. b) No
+      serán tenidas en cuenta aquellas listas que no hubiesen obtenido, por lo menos, el cinco por
+      ciento [5 %] de los votos válidos emitidos en el distrito. [...] Siete [11.7]. Tratándose de
+      listas que representen a Partidos Políticos [...], si alguno de los candidatos electos dejare
+      de pertenecer al Partido que le presentó, cesará en su cargo [...]. Artículo treinta y tres
+      [33]. Realizada la asignación de puestos de Diputados a cada una de las listas, los Concejales
+      [...] se reunirán por separado [...] para elegir por y entre ellos a quienes hayan de
+      proclamarse Diputados por cada lista.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/07/21/pdfs/A17267-17275.pdf
+  archivo: /facsimiles/1978/ES-1978-LMD-001.png
+  alt: Facsímil del BOE núm. 173 (21 de julio de 1978) con el artículo 11 de la Ley 39/1978 de Elecciones Locales
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-18636 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-18636 (arts. 5, 11, 31–33, págs. 17267-17275)"
+    - "https://www.boe.es/boe/dias/1978/07/21/pdfs/A17267-17275.pdf (facsímil PNG pág. 2)"
+  documentos_no_localizados:
+    - "Diario de Sesiones del voto nominal de la Ley 39/1978 (se atribuye a institucional/Cortes)"
+  intento_de_refutacion: >-
+    Se comprobó literalmente el art. 11.7 en el BOE: el precepto estableció el cese automático del
+    concejal electo si dejaba el partido de su lista, concentrando el control del acta en las
+    direcciones partidistas. Se incorpora el régimen de concejo abierto (art. 5.2) en descargo.

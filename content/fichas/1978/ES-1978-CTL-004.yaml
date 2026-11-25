@@ -1,0 +1,71 @@
+id: ES-1978-CTL-004
+anuario: 1978
+categoria: CTL
+contraprueba: true
+contraprueba_motivo: >-
+  Las Cortes reformaron la Ley de Enjuiciamiento Criminal para garantizar asistencia de abogado
+  desde la detención policial, derecho a guardar silencio e información inmediata de cargos,
+  limitando la discrecionalidad en interrogatorios bajo custodia.
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Derecho de defensa y asistencia de abogado desde la detención en la LECrim (Ley 53/1978)
+resumen: >-
+  Las Cortes aprobaron la Ley 53/1978, de 4 de diciembre (BOE del 8 de diciembre), que reformó los
+  artículos 118 y 520 de la Ley de Enjuiciamiento Criminal para garantizar desde la detención el
+  derecho a conocer los motivos, guardar silencio, designar abogado en el lugar de custodia y
+  comunicar la detención a un familiar.
+descargo: >-
+  El artículo 520 contempló dos límites: permitir el interrogatorio tras ocho horas de espera sin
+  comparecencia de letrado notificado al Colegio de Abogados y restringir la comunicación familiar
+  con autorización judicial motivada en supuestos de riesgo grave para la seguridad del Estado o de
+  las personas.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Ley 53/1978, de 4 de diciembre, de reforma de la Ley de Enjuiciamiento Criminal (BOE núm. 293, de 8 de diciembre de 1978)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-29842
+    sha256: e680ff07edaa9e876e23a7282c0cc11168210ca729b359a270565a8b746786b2
+    capturado: "2026-11-25"
+    pagina: "27780-27781"
+    fragmento: >-
+      Ley 53/1978, de 4 de diciembre, por la que se modifican los artículos [...] 118 [...] y 520
+      de la Ley de Enjuiciamiento Criminal [BOE núm. 293, 8 de diciembre de 1978]. De conformidad
+      con la Ley aprobada por las Cortes [...]. Artículo ciento dieciocho [118]. Toda persona a
+      quien se impute un acto punible podrá ejercitar el derecho de defensa [...] desde que se le
+      comunique su existencia, haya sido objeto de detención [...]. Artículo quinientos veinte
+      [520]. Todo detenido o preso debe ser informado [...] de las causas que han determinado su
+      detención y de los derechos que le asisten. En ningún caso se le podrá compeler a prestar
+      declaración si, invitado a hacerlo, se negare. [...] Desde el momento en que se practique su
+      detención [...], el afectado tiene derecho a designar Abogado y a solicitar su presencia en
+      el lugar de custodia para que asista al interrogatorio [...] y a que se comunique al familiar
+      o a la persona que desee el hecho de su detención [...].
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/boe/dias/1978/12/08/pdfs/A27780-27781.pdf
+  archivo: /facsimiles/1978/ES-1978-CTL-004.png
+  alt: Facsímil del BOE núm. 293 (8 de diciembre de 1978) con la Ley 53/1978 de reforma de la Ley de Enjuiciamiento Criminal
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha de Contraprueba 1978 para revisión humana con facsímil PNG oficial
+    motivo: Texto literal BOE-A-1978-29842 verificado
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1978-29842 (arts. 118 y 520, págs. 27780-27781)"
+    - "https://www.boe.es/boe/dias/1978/12/08/pdfs/A27780-27781.pdf (facsímil PNG pág. 1)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se revisaron todas las salvedades del art. 520 (espera máxima de 8 horas y excepción judicial
+    motivada para la comunicación familiar) y la coexistencia ese mismo día con la Ley 56/1978 de
+    terrorismo; pese a esos límites (recogidos en descargo), la ley implantó la asistencia letrada
+    en comisaría como norma general en el ordenamiento penal.
