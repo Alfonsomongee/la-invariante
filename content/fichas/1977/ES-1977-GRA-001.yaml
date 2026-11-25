@@ -1,0 +1,83 @@
+id: ES-1977-GRA-001
+anuario: 1977
+categoria: GRA
+partidos:
+  - UCD
+  - PSOE
+  - PSC-PSOE
+  - PCE
+  - PSUC
+  - PDC
+  - PNV
+  - PSP-US
+nivel: estatal
+ambito_territorial: España
+protagonistas: []
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Ley 46/1977 de Amnistía y extinción de delitos de autoridades y agentes
+resumen: >-
+  Las Cortes aprobaron la Ley 46/1977, de 15 de octubre (BOE del 17 de octubre), que extinguió la
+  responsabilidad penal por actos de intencionalidad política y comprendió en su artículo 2 los
+  delitos cometidos por autoridades, funcionarios y agentes del orden público en su persecución o
+  contra derechos de las personas.
+descargo: >-
+  Los grupos impulsores en el Congreso defendieron la amnistía mutua como instrumento para liberar
+  a los presos políticos, permitir el regreso de exiliados y consolidar el tránsito a la democracia
+  (Diario de Sesiones núm. 24, 14 de octubre de 1977).
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: boe_amnistia
+    titulo_documento: Ley 46/1977, de 15 de octubre, de Amnistía (BOE núm. 248, de 17 de octubre de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24937
+    sha256: ab8130c7111041e273f27ecdc57ff72c5f7719ba5d0ede62ab51cedd23770cd3
+    capturado: "2026-11-25"
+    pagina: "22765-22766"
+    fragmento: >-
+      Ley 46/1977, de 15 de octubre, de Amnistía [BOE núm. 248, 17 de octubre de 1977]. Artículo
+      primero. I. Quedan amnistiados: a) Todos los actos de intencionalidad política, cualquiera
+      que fuese su resultado, tipificados como delitos y faltas realizados con anterioridad al día
+      quince de diciembre de mil novecientos setenta y seis. [...] Artículo segundo [2]. En todo
+      caso están comprendidos en la amnistía: [...] e) Los delitos y faltas que pudieran haber
+      cometido las autoridades, funcionarios y agentes del orden público, con motivo u ocasión de
+      la investigación y persecución de los actos incluidos en esta Ley. f) Los delitos cometidos
+      por los funcionarios y agentes del orden público contra el ejercicio de los derechos de las
+      personas. [...] Artículo sexto. La amnistía determinará en general la extinción de la
+      responsabilidad criminal.
+  - tipo: diario_sesiones
+    titulo_documento: Diario de Sesiones del Congreso de los Diputados núm. 24, de 14 de octubre de 1977
+    url: https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF
+    sha256: c2550b65de899726773a88fc259353867ed146824a616f4d0ce8218c66bc9700
+    capturado: "2026-11-25"
+    pagina: "954-974"
+    fragmento: >-
+      [Sesión Plenaria núm. 11, 14 de octubre de 1977] El resultado de la votación es el siguiente:
+      317 votos emitidos; 296 afirmativos; 2 negativos; 18 abstenciones, y 1 nulo [...]. Queda
+      aprobada la Ley de Amnistía.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-24937
+  alt: Ley 46/1977, de 15 de octubre, de Amnistía (BOE núm. 248)
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana
+    motivo: Texto literal BOE-A-1977-24937 y DSCD núm. 24 verificados
+  - fecha: "2026-11-25"
+    cambio: Uso de corchetes editoriales y marcas de elipsis en citas literales
+    motivo: Auditoría adversarial del Verificador
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-24937 (págs. 22765-22766)"
+    - "https://www.congreso.es/public_oficiales/L0/CONG/DS/C_1977_024.PDF (págs. 954-974)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la calificación de estado procesal: al tratarse de una ley general y no de una
+    sentencia condenatoria individual, se clasifica como no_judicial para no sugerir condena previa
+    de una persona concreta. Se recoge íntegro el contexto de liberación de presos políticos en el
+    descargo.

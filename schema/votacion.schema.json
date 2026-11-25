@@ -108,6 +108,7 @@
         "a_favor": { "type": "integer", "minimum": 0 },
         "en_contra": { "type": "integer", "minimum": 0 },
         "abstenciones": { "type": "integer", "minimum": 0 },
+        "nulos": { "type": "integer", "minimum": 0 },
         "ausentes": { "type": "integer", "minimum": 0 },
         "total_emitidos": { "type": "integer", "minimum": 0 }
       }

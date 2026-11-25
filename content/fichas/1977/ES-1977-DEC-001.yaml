@@ -1,0 +1,66 @@
+id: ES-1977-DEC-001
+anuario: 1977
+categoria: DEC
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Real Decreto-ley 20/1977 de listas cerradas y circunscripción provincial
+resumen: >-
+  El Gobierno de Adolfo Suárez aprobó el Real Decreto-ley 20/1977, de 18 de marzo (BOE del 23 de
+  marzo), que fijó la provincia como distrito electoral (artículo 19), las listas cerradas y
+  bloqueadas sin modificación de orden (artículo 20.3) y la barrera del 3 % (artículo 20.4.b) en el
+  Congreso.
+descargo: >-
+  El Gobierno dictó la norma al amparo de la Disposición Transitoria Primera de la Ley 1/1977 para
+  la Reforma Política, aprobada en referéndum el 15 de diciembre de 1976, para regular con carácter
+  provisional las elecciones generales del 15 de junio de 1977 antes de constituirse las Cortes.
+cifras: []
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales (BOE núm. 70, de 23 de marzo de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+    sha256: 366400fe696d7aa23298e7b102307f05f78a0dde15d876aa6dbd9324da08daf9
+    capturado: "2026-11-25"
+    pagina: "6584-6600"
+    fragmento: >-
+      Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales [BOE núm. 70, 23 de marzo
+      de 1977]. [...] Artículo diecinueve [19]. Uno. Para la elección de Diputados y de Senadores
+      cada provincia y las ciudades de Ceuta y Melilla constituirán un distrito electoral. [...]
+      Artículo veinte [20.3]. Tres. Cada uno de los electores de un distrito sólo podrá dar su voto
+      a una sola lista, sin introducir en ella modificación alguna ni alterar en la misma el orden
+      de colocación de los candidatos. Cuatro [20.4.b]. b) No serán tenidas en cuenta aquellas
+      listas que no hubiesen obtenido, por lo menos, el tres por ciento [3 %] de los votos válidos
+      emitidos en el distrito. [...] El Presidente del Gobierno, Adolfo Suárez González.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-7445
+  alt: Facsímil del Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana
+    motivo: Documento primario BOE-A-1977-7445 verificado
+  - fecha: "2026-11-25"
+    cambio: Revisión adversarial de citas con corchetes editoriales y precisión de art. 20.4.b
+    motivo: Auditoría del Verificador sobre citas literales y alcance preconstitucional de DEC
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445 (págs. 6584-6600)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    Se verificó la habilitación previa en la Disposición Transitoria Primera de la Ley 1/1977 y el
+    carácter preconstitucional de la norma (en marzo de 1977 aún no existía Congreso democrático
+    electo, por lo que no se trata de un decreto-ley del art. 86 CE). Se mantiene como candidata en
+    revisión humana para confirmar si inaugura la categoría DEC por su efecto estructural duradero.

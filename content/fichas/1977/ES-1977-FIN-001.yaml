@@ -1,0 +1,82 @@
+id: ES-1977-FIN-001
+anuario: 1977
+categoria: FIN
+partidos:
+  - institucional
+nivel: estatal
+ambito_territorial: España
+protagonistas:
+  - nombre: Adolfo Suárez González
+    cargo_en_el_momento: Presidente del Gobierno
+    cargo_publico: true
+estado_procesal:
+  actual: no_judicial
+  historial: []
+titulo: Subvenciones estatales a partidos por escaño y voto en el Real Decreto-ley 20/1977
+resumen: >-
+  El artículo 44 del Real Decreto-ley 20/1977, publicado en el BOE el 23 de marzo de 1977, fijó
+  subvenciones estatales electorales de 1.000.000 de pesetas (6.010,12 euros) por escaño, 45 pesetas
+  por voto a candidaturas al Congreso con escaño y 15 pesetas por voto a senadores electos.
+descargo: >-
+  La exposición normativa justificó las subvenciones estatales para sufragar los gastos de
+  campaña en la transición a un sistema pluripartidista, acompañadas de la obligación de rendir
+  cuentas ante la Junta Electoral Central (artículo 48).
+cifras:
+  - concepto: Subvención estatal por cada escaño obtenido en el Congreso o en el Senado (art. 44.1.a)
+    valor: 1000000
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 6010.12
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+  - concepto: Subvención por voto a candidatura al Congreso con al menos un escaño (art. 44.1.b)
+    valor: 45
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 0.27
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+  - concepto: Subvención por voto a candidato elegido Senador (art. 44.1.c)
+    valor: 15
+    moneda: ESP
+    anio_moneda: 1977
+    valor_eur_conversion: 0.09
+    fuente: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+fuentes:
+  - tipo: boe
+    subtipo: norma
+    titulo_documento: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales (BOE núm. 70, de 23 de marzo de 1977)
+    url: https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445
+    sha256: 366400fe696d7aa23298e7b102307f05f78a0dde15d876aa6dbd9324da08daf9
+    capturado: "2026-11-25"
+    pagina: "6584-6600"
+    fragmento: >-
+      Real Decreto-ley 20/1977 [BOE núm. 70, 23 de marzo de 1977]. [...] Artículo cuarenta y cuatro
+      [44]. Uno. El Estado subvencionará los gastos que originen las actividades electorales, de
+      acuerdo con las siguientes reglas: a) Un millón de pesetas [1.000.000] por cada escaño
+      obtenido en el Congreso o en el Senado. b) Cuarenta y cinco [45] pesetas por cada uno de los
+      votos obtenidos por cada candidatura al Congreso, uno de cuyos miembros, al menos, hubiera
+      obtenido escaño de Diputado. c) Quince [15] pesetas por cada uno de los votos obtenidos por
+      cada candidato que hubiera obtenido escaño de Senador.
+imagen:
+  tipo: facsimil
+  licencia: art13_trlpi
+  autor: Agencia Estatal Boletín Oficial del Estado
+  origen: https://www.boe.es/buscar/doc.php?id=BOE-A-1977-7445
+  alt: Artículo 44 del Real Decreto-ley 20/1977 sobre subvenciones electorales
+estado_ficha: revision
+versiones:
+  - fecha: "2026-11-25"
+    cambio: Creación de ficha candidata para revisión humana
+    motivo: Documento primario BOE-A-1977-7445 verificado
+  - fecha: "2026-11-25"
+    cambio: Precisión Congreso/Senado en resumen, corchetes editoriales en cita y nota de alcance FIN
+    motivo: Auditoría adversarial del Verificador
+investigacion:
+  confianza: alta
+  documentos_localizados:
+    - "https://www.boe.es/diario_boe/xml.php?id=BOE-A-1977-7445 (art. 44, págs. 6584-6600)"
+  documentos_no_localizados: []
+  intento_de_refutacion: >-
+    El Verificador advirtió que la norma regula la arquitectura legal de subvenciones electorales y
+    no una irregularidad o sanción concreta (criterio estricto de FIN en METODOLOGIA.md). Se
+    mantiene en revisión humana para decidir si conservarla como ficha fundacional de financiación
+    pública junto a ES-1977-FIN-002 o descartarla antes de publicar.
